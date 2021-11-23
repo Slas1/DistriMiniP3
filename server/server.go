@@ -110,7 +110,6 @@ func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicate
 			}
 		case "CreateNewClient":
 			s.createNewServerClient(int(request.ID))
-			fmt.Println("Done")
 	}
 	
 	fmt.Printf("Server with Id: %s - Time: %s - Parsed the %s change.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time), request.ChangeName)
@@ -225,21 +224,26 @@ func (s *Server) changeHostPort() {
 }
 
 func (s *Server) createNewServerClient(TargetServerID int){
-	fmt.Printf("1\n")
 	var hostString = ":" + strconv.Itoa(8080+TargetServerID)
 	var key = "server" + strconv.Itoa(TargetServerID)
 	var tcpServer = flag.String(key, hostString , "TCP server")
 	var callerOpts []grpc.DialOption
 	callerOpts = append(callerOpts, grpc.WithBlock(), grpc.WithInsecure())
-	fmt.Printf("2 - %s - %s\n", key,hostString)
 	conn, err := grpc.Dial(*tcpServer, callerOpts...)
 	if err != nil {
 		log.Fatalf("Invalid Target Server. Not posible to dial.\n")
 	}
-	fmt.Printf("3\n")
 	client := replicatepb.NewServerCommunicationClient(conn)
 	s.Clients[TargetServerID] = client
-	fmt.Printf("New client created\n")
+
+	
+	go func()  {
+		for{
+			time.Sleep(20 * time.Second)
+			pokeAction(*s, TargetServerID)
+		}
+	}()
+	
 }
 //
 //
@@ -257,6 +261,10 @@ func newServer() *Server {
 }
 func newClient(s Server) string{
 	s.serverInformationUpdate(s.Clients[0], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "CreateNewClient"})
+	return "true"
+}
+func pokeAction(s Server, targetServerID int) string{
+	s.isAlive(s.Clients[targetServerID], replicatepb.Poke{LamportTime: int32(s.LamportTime.time),ID: s.ServerID})
 	return "true"
 }
 
@@ -297,6 +305,16 @@ func main(){
 		go func() {
 			parallel <- newClient(*s)
 		}()
+		
+		
+		go func()  {
+			for{
+				time.Sleep(30 * time.Second)
+				pokeAction(*s, 0)
+			}
+		}()
+		
+		
 	}
 
 	//Setting up Listener to the correct port in regards to ServerID
@@ -310,7 +328,7 @@ func main(){
 	grpcS := grpc.NewServer(opts...)
 	grpcServer := grpcS
 	replicatepb.RegisterServerCommunicationServer(grpcServer, s)
-	fmt.Printf("Server with ID: %s - Is up and lisining.\n", strconv.Itoa(int(s.ServerID)))
-	log.Printf("Server with ID: %s  - Is up and lisining.\n", strconv.Itoa(int(s.ServerID)))
+	fmt.Printf("Server with ID: %s - Is up and listening.\n", strconv.Itoa(int(s.ServerID)))
+	log.Printf("Server with ID: %s - Is up and listening.\n", strconv.Itoa(int(s.ServerID)))
 	grpcServer.Serve(listener)
 }

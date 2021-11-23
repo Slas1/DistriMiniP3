@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option go_package = "./replicatepb";
+
+package replicatepb;
+
+service ServerCommunication {
+    rpc JoinCommunication(JoinRequest) returns (JoinResponse){}
+    rpc ServerInformationUpdate(SIUpdateRequest) returns (SIUpdateResponse){}
+    rpc AuctionInformationUpdate(AIUpdateRequest) returns (AIUpdateResponse){}
+    rpc IsAlive(Poke) returns (HandSign){}
+}
+
+message JoinRequest {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+}
+
+message JoinResponse {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+    int32 HighestServerID = 3;
+    repeated bool AllServerIDs = 4;
+}
+
+message SIUpdateRequest {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+    string ChangeName = 3;
+    repeated int32 NewValue = 4;
+}
+
+message SIUpdateResponse {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+}
+
+message AIUpdateRequest {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+}
+
+message AIUpdateResponse {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+}
+
+message Poke {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+}
+
+message HandSign {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+}

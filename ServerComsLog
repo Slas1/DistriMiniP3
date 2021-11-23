@@ -1,2 +1,26 @@
-18:09:35.780786 Fail to dial leader when joinging, setting myself to leader
-18:11:54.167101 Fail to dial leader when joinging, setting myself to leader
+21:14:24.633113 Fail to dial leader when joinging, setting myself to leader
+21:14:24.646822 Server with ID: 0  - Is up and lisining.
+21:14:30.986884 New Server - Sending Joining-Request.
+21:14:30.988054 Server with ID: 1 - Time: 3 - Joined the ServerCommunication.
+21:14:30.989122 Server with Id: 1 - Time: 4 - Initial values set based on JoinResponse.
+21:14:30.989122 Server with Id: 1 - Time: 5 - Sends update-request with the change: CreateNewClient.
+21:14:30.994719 Server with ID: 1  - Is up and lisining.
+21:14:31.500393 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+21:14:36.143668 New Server - Sending Joining-Request.
+21:14:36.144843 Server with ID: 2 - Time: 9 - Joined the ServerCommunication.
+21:14:36.144843 Server with Id: 0 - Time: 10 - Sends update-request with the change: ServerJoined.
+21:14:36.145896 Server with Id: 1 - Time: 11 - Parsed the ServerJoined change.
+21:14:36.146990 Server with Id: 2 - Time: 14 - Initial values set based on JoinResponse.
+21:14:36.147508 Server with Id: 2 - Time: 15 - Sends update-request with the change: CreateNewClient.
+21:14:36.153344 Server with ID: 2  - Is up and lisining.
+21:14:36.657616 Server with Id: 0 - Time: 16 - Parsed the CreateNewClient change.
+21:14:45.550255 New Server - Sending Joining-Request.
+21:14:45.550780 Server with ID: 3 - Time: 19 - Joined the ServerCommunication.
+21:14:45.550780 Server with Id: 0 - Time: 20 - Sends update-request with the change: ServerJoined.
+21:14:45.551297 Server with Id: 1 - Time: 21 - Parsed the ServerJoined change.
+21:14:45.551821 Server with Id: 0 - Time: 24 - Sends update-request with the change: ServerJoined.
+21:14:45.552478 Server with Id: 2 - Time: 25 - Parsed the ServerJoined change.
+21:14:45.553675 Server with Id: 3 - Time: 28 - Initial values set based on JoinResponse.
+21:14:45.553675 Server with Id: 3 - Time: 29 - Sends update-request with the change: CreateNewClient.
+21:14:45.559863 Server with ID: 3  - Is up and lisining.
+21:14:46.071037 Server with Id: 0 - Time: 30 - Parsed the CreateNewClient change.

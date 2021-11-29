@@ -25,13 +25,13 @@ var grpcServer *grpc.Server
 
 type Server struct {
 	replicatepb.UnimplementedServerCommunicationServer
-	ServerID        	int32
-	HighestServerID 	int32
-	AllServerIDs   		[]bool
-	LamportTime 		lamportTime
-	Clients				[]replicatepb.ServerCommunicationClient
+	ServerID        int32
+	HighestServerID int32
+	AllServerIDs    []bool
+	LamportTime     lamportTime
+	Clients         []replicatepb.ServerCommunicationClient
 
-	ServerLogFile os.File
+	ServerLogFile  os.File
 	AuctionLogFile os.File
 }
 
@@ -39,6 +39,7 @@ type lamportTime struct {
 	time int
 	*sync.Mutex
 }
+
 //
 //
 //
@@ -65,6 +66,7 @@ func (lt *lamportTime) increment() {
 
 	lt.Unlock()
 }
+
 //
 //
 //
@@ -83,7 +85,7 @@ func (s *Server) JoinCommunication(ctx context.Context, request *replicatepb.Joi
 	for i := 1; i < int(s.HighestServerID); i++ {
 		if s.AllServerIDs[i] {
 			s.serverInformationUpdate(s.Clients[i], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "ServerJoined", NewValue: []int32{s.HighestServerID}})
-		}	
+		}
 	}
 
 	return &replicatepb.JoinResponse{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, HighestServerID: s.HighestServerID, AllServerIDs: s.AllServerIDs}, nil
@@ -94,24 +96,35 @@ func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicate
 	s.LamportTime.update(int(request.LamportTime))
 
 	switch request.ChangeName {
-		case "ChangeYourServerID":
-			s.ServerID = request.NewValue[0]
-		case "ServerJoined":
-			s.AllServerIDs[request.NewValue[0]] = true
-		case "ServerLeft":
-			s.AllServerIDs[request.NewValue[0]] = false
-		case "NewAllServerList":
-			for i := 0; i < len(s.AllServerIDs) ; i++ {
-				if request.NewValue[i] == 1 {
-					s.AllServerIDs[i] = true
-				}else {
-					s.AllServerIDs[i] = false
-				}				
+	case "ChangeYourServerID":
+		s.ServerID = request.NewValue[0]
+	case "ServerJoined":
+		s.AllServerIDs[request.NewValue[0]] = true
+	case "ServerLeft":
+		s.AllServerIDs[request.NewValue[0]] = false
+		if request.NewValue[0] == s.HighestServerID {
+			for i, v := range s.AllServerIDs {
+				if v {
+					s.HighestServerID = int32(i)
+				}
 			}
-		case "CreateNewClient":
-			s.createNewServerClient(int(request.ID))
+		}
+	case "NewAllServerList":
+		for i := 0; i < len(s.AllServerIDs); i++ {
+			if request.NewValue[i] == 1 {
+				s.AllServerIDs[i] = true
+			} else {
+				s.AllServerIDs[i] = false
+			}
+		}
+	case "CreateNewClient":
+		s.createNewServerClient(int(request.ID))
+	case "ImTheNewKing":
+		s.AllServerIDs[0] = true
+		s.AllServerIDs[request.ID] = false
+		s.createNewServerClient(0)
 	}
-	
+
 	fmt.Printf("Server with Id: %s - Time: %s - Parsed the %s change.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time), request.ChangeName)
 	log.Printf("Server with Id: %s - Time: %s - Parsed the %s change.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time), request.ChangeName)
 	s.LamportTime.increment()
@@ -121,7 +134,7 @@ func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicate
 func (s *Server) AuctionInformationUpdate(ctx context.Context, request *replicatepb.AIUpdateRequest) (*replicatepb.AIUpdateResponse, error) {
 	log.SetOutput(&s.ServerLogFile)
 	s.LamportTime.update(int(request.LamportTime))
-	
+
 	//To-do
 
 	s.LamportTime.increment()
@@ -130,7 +143,7 @@ func (s *Server) AuctionInformationUpdate(ctx context.Context, request *replicat
 
 func (s *Server) IsAlive(ctx context.Context, request *replicatepb.Poke) (*replicatepb.HandSign, error) {
 	log.SetOutput(&s.ServerLogFile)
-	
+
 	s.LamportTime.update(int(request.LamportTime))
 	s.LamportTime.increment()
 
@@ -139,6 +152,7 @@ func (s *Server) IsAlive(ctx context.Context, request *replicatepb.Poke) (*repli
 
 	return &replicatepb.HandSign{LamportTime: int32(s.LamportTime.time), ID: s.ServerID}, nil
 }
+
 //
 //
 //
@@ -149,11 +163,11 @@ func (s *Server) joinCommunication(client replicatepb.ServerCommunicationClient,
 
 	fmt.Printf("New Server - Sending Joining-Request.\n")
 	log.Printf("New Server - Sending Joining-Request.\n")
-	
+
 	response, err := client.JoinCommunication(context.Background(), &request)
 	if err != nil {
 	}
-	
+
 	s.ServerID = response.HighestServerID
 	s.HighestServerID = response.HighestServerID
 	s.AllServerIDs = response.AllServerIDs
@@ -184,49 +198,79 @@ func (s *Server) auctionInformationUpdate(client replicatepb.ServerCommunication
 
 	s.LamportTime.update(int(response.LamportTime))
 }
-func (s *Server) isAlive(client replicatepb.ServerCommunicationClient, request replicatepb.Poke) {
+func (s *Server) isAlive(client replicatepb.ServerCommunicationClient, request replicatepb.Poke) bool {
 	s.LamportTime.increment()
 	request.LamportTime = int32(s.LamportTime.time)
 
 	fmt.Printf("Server with Id: %s - Time: %s - Pokes to check, if target is alive.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 	log.Printf("Server with Id: %s - Time: %s - Pokes to check, if target is alive.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 
-
 	response, err := client.IsAlive(context.Background(), &request)
 	if err != nil {
+		fmt.Println("Error i poke.")
+		log.Printf("Error i poke")
+		return false
+	} else {
+		s.LamportTime.update(int(response.LamportTime))
+		return true
 	}
-
-	s.LamportTime.update(int(response.LamportTime))
 }
+
 //
 //
 //
 //Helping functions
-func (s *Server) changeServerID(NewServerID int32){
+func (s *Server) changeServerID(NewServerID int32) {
+	fmt.Println("Test0")
+	s.AllServerIDs[s.ServerID] = false
+	s.changeHostPort(int(NewServerID))
+	for i := 1; i < len(s.AllServerIDs); i++ {
+		s.serverInformationUpdate(s.Clients[i], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "ImTheNewKing"})
+	}
 	s.ServerID = NewServerID
-	s.changeHostPort()
 }
 
-func (s *Server) changeHostPort() {
+func (s *Server) changeHostPort(NewServerID int) {
 	grpcServer.GracefulStop()
+	fmt.Println("Test0.5")
 	listener.Close()
-
-	listener, err := net.Listen("tcp", "localhost:" + strconv.Itoa(8080 + int(s.ServerID)))
+	fmt.Println("Test0.6")
+	fmt.Println("Test0.61")
+	fmt.Println("Test0.62")
+	fmt.Println("Test0.63")
+	fmt.Println("Test0.64")
+	fmt.Println("Test0.65")
+	time.Sleep(time.Second * 2)
+	fmt.Println("Test0.66")
+	lis, err := net.Listen("tcp", "localhost:"+strconv.Itoa(8080+NewServerID))
+	fmt.Println("Test0.7")
+	listener = lis
+	fmt.Println("Test0.8")
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
+	fmt.Println("Test0.9")
 	var opts []grpc.ServerOption
+	fmt.Println("Test0.99")
 	grpcS := grpc.NewServer(opts...)
-	grpcServer := grpcS
+	grpcServer = grpcS
 	replicatepb.RegisterServerCommunicationServer(grpcServer, s)
+	fmt.Println("test1")
 	grpcServer.Serve(listener)
 
+	fmt.Println("test2")
+
+	for i := 1; i < len(s.AllServerIDs); i++ {
+		if s.AllServerIDs[i] {
+			s.createNewServerClient(i)
+		}
+	}
 }
 
-func (s *Server) createNewServerClient(TargetServerID int){
+func (s *Server) createNewServerClient(TargetServerID int) {
 	var hostString = ":" + strconv.Itoa(8080+TargetServerID)
 	var key = "server" + strconv.Itoa(TargetServerID)
-	var tcpServer = flag.String(key, hostString , "TCP server")
+	var tcpServer = flag.String(key, hostString, "TCP server")
 	var callerOpts []grpc.DialOption
 	callerOpts = append(callerOpts, grpc.WithBlock(), grpc.WithInsecure())
 	conn, err := grpc.Dial(*tcpServer, callerOpts...)
@@ -236,56 +280,87 @@ func (s *Server) createNewServerClient(TargetServerID int){
 	client := replicatepb.NewServerCommunicationClient(conn)
 	s.Clients[TargetServerID] = client
 
-	
-	go func()  {
-		for{
+	go func() {
+		for {
 			time.Sleep(20 * time.Second)
-			pokeAction(*s, TargetServerID)
+			result := pokeAction(*s, TargetServerID)
+			if !result {
+				break
+			}
 		}
 	}()
-	
+
 }
+
+func (s *Server) TheKingIsDead() {
+	var lowestID int
+	for i := 1; i < len(s.AllServerIDs); i++ {
+		if s.AllServerIDs[i] {
+			lowestID = i
+			break
+		}
+	}
+	if lowestID == int(s.ServerID) {
+		s.changeServerID(0)
+	}
+}
+
 //
 //
 //
 //Initialisation
 func newServer() *Server {
 	s := &Server{
-		LamportTime: lamportTime{0, new(sync.Mutex)},
-		ServerID: -1,
+		LamportTime:     lamportTime{0, new(sync.Mutex)},
+		ServerID:        -1,
 		HighestServerID: -1,
-		AllServerIDs: make([]bool, 20),
-		Clients: make([]replicatepb.ServerCommunicationClient, 20),
+		AllServerIDs:    make([]bool, 20),
+		Clients:         make([]replicatepb.ServerCommunicationClient, 20),
 	}
 	return s
 }
-func newClient(s Server) string{
+func newClient(s Server) string {
 	s.serverInformationUpdate(s.Clients[0], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "CreateNewClient"})
 	return "true"
 }
-func pokeAction(s Server, targetServerID int) string{
-	s.isAlive(s.Clients[targetServerID], replicatepb.Poke{LamportTime: int32(s.LamportTime.time),ID: s.ServerID})
-	return "true"
+func pokeAction(s Server, targetServerID int) bool {
+	result := s.isAlive(s.Clients[targetServerID], replicatepb.Poke{LamportTime: int32(s.LamportTime.time), ID: s.ServerID})
+	if !result {
+		s.Clients[targetServerID] = nil
+		s.AllServerIDs[targetServerID] = false
+		if targetServerID == 0 {
+			s.AllServerIDs[0] = false
+			s.Clients[0] = nil
+			s.TheKingIsDead()
+		} else {
+			for i := 1; i < len(s.AllServerIDs); i++ {
+				if s.ServerID == 0 && s.AllServerIDs[i] {
+					s.serverInformationUpdate(s.Clients[i], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "ServerLeft", NewValue: []int32{int32(targetServerID)}})
+				}
+			}
+		}
+	}
+	return result
 }
 
-func main(){
+func main() {
 	s := newServer()
 
-	//Log Files 
+	//Log Files
 	LOG_FILE_SERVERCOM := "./ServerComsLog"
 	LOG_FILE_AUCTION := "./AuctionLog"
 	logFileServerCom, err := os.OpenFile(LOG_FILE_SERVERCOM, os.O_APPEND|os.O_RDWR|os.O_CREATE, 0644)
 	logFileAuction, err := os.OpenFile(LOG_FILE_AUCTION, os.O_APPEND|os.O_RDWR|os.O_CREATE, 0644)
-    if err != nil {
-        log.Panic(err)
-    }
+	if err != nil {
+		log.Panic(err)
+	}
 	s.ServerLogFile = *logFileServerCom
 	s.AuctionLogFile = *logFileAuction
 	defer logFileServerCom.Close()
 	defer logFileAuction.Close()
 	log.SetFlags(log.Lmicroseconds)
-    log.SetOutput(&s.ServerLogFile)
-	
+	log.SetOutput(&s.ServerLogFile)
+
 	//Initial dial to port 8080. If there is no Server, the caller becomes the Leader.
 	var tcpServer = flag.String("server", ":8080", "TCP server")
 	var callerOpts []grpc.DialOption
@@ -297,7 +372,7 @@ func main(){
 		s.ServerID = 0
 		s.HighestServerID = 0
 		s.AllServerIDs[0] = true
-	}else {
+	} else {
 		client := replicatepb.NewServerCommunicationClient(conn)
 		s.Clients[0] = client
 		s.joinCommunication(s.Clients[0], replicatepb.JoinRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID})
@@ -305,28 +380,29 @@ func main(){
 		go func() {
 			parallel <- newClient(*s)
 		}()
-		
-		
-		go func()  {
-			for{
+
+		go func() {
+			for {
 				time.Sleep(30 * time.Second)
-				pokeAction(*s, 0)
+				result := pokeAction(*s, 0)
+				if !result {
+					break
+				}
 			}
 		}()
-		
-		
+
 	}
 
 	//Setting up Listener to the correct port in regards to ServerID
-	var localhost = "localhost:" + strconv.Itoa(8080 + int(s.ServerID))
+	var localhost = "localhost:" + strconv.Itoa(8080+int(s.ServerID))
 	lis, err := net.Listen("tcp", localhost)
-	listener := lis
+	listener = lis
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
 	var opts []grpc.ServerOption
 	grpcS := grpc.NewServer(opts...)
-	grpcServer := grpcS
+	grpcServer = grpcS
 	replicatepb.RegisterServerCommunicationServer(grpcServer, s)
 	fmt.Printf("Server with ID: %s - Is up and listening.\n", strconv.Itoa(int(s.ServerID)))
 	log.Printf("Server with ID: %s - Is up and listening.\n", strconv.Itoa(int(s.ServerID)))

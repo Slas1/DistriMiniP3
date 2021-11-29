@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"flag"
 	"fmt"
 	"log"
 	"net"
@@ -100,6 +99,7 @@ func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicate
 		s.ServerID = request.NewValue[0]
 	case "ServerJoined":
 		s.AllServerIDs[request.NewValue[0]] = true
+		s.HighestServerID++
 	case "ServerLeft":
 		s.AllServerIDs[request.NewValue[0]] = false
 		if request.NewValue[0] == s.HighestServerID {
@@ -205,15 +205,19 @@ func (s *Server) isAlive(client replicatepb.ServerCommunicationClient, request r
 	fmt.Printf("Server with Id: %s - Time: %s - Pokes to check, if target is alive.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 	log.Printf("Server with Id: %s - Time: %s - Pokes to check, if target is alive.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 
+	if client == nil {
+		return false
+	}
 	response, err := client.IsAlive(context.Background(), &request)
 	if err != nil {
-		fmt.Println("Error i poke.")
-		log.Printf("Error i poke")
+		fmt.Println("Error i poke. The Target is Dead.")
+		log.Printf("Error i poke. The Target is Dead.")
 		return false
-	} else {
+	} else if response != nil {
 		s.LamportTime.update(int(response.LamportTime))
 		return true
 	}
+	return false
 }
 
 //
@@ -221,59 +225,50 @@ func (s *Server) isAlive(client replicatepb.ServerCommunicationClient, request r
 //
 //Helping functions
 func (s *Server) changeServerID(NewServerID int32) {
-	fmt.Println("Test0")
 	s.AllServerIDs[s.ServerID] = false
+	
 	s.changeHostPort(int(NewServerID))
-	for i := 1; i < len(s.AllServerIDs); i++ {
-		s.serverInformationUpdate(s.Clients[i], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "ImTheNewKing"})
-	}
-	s.ServerID = NewServerID
+	
 }
 
 func (s *Server) changeHostPort(NewServerID int) {
-	grpcServer.GracefulStop()
-	fmt.Println("Test0.5")
-	listener.Close()
-	fmt.Println("Test0.6")
-	fmt.Println("Test0.61")
-	fmt.Println("Test0.62")
-	fmt.Println("Test0.63")
-	fmt.Println("Test0.64")
-	fmt.Println("Test0.65")
-	time.Sleep(time.Second * 2)
-	fmt.Println("Test0.66")
 	lis, err := net.Listen("tcp", "localhost:"+strconv.Itoa(8080+NewServerID))
-	fmt.Println("Test0.7")
 	listener = lis
-	fmt.Println("Test0.8")
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
-	fmt.Println("Test0.9")
 	var opts []grpc.ServerOption
-	fmt.Println("Test0.99")
 	grpcS := grpc.NewServer(opts...)
 	grpcServer = grpcS
 	replicatepb.RegisterServerCommunicationServer(grpcServer, s)
-	fmt.Println("test1")
-	grpcServer.Serve(listener)
 
-	fmt.Println("test2")
-
-	for i := 1; i < len(s.AllServerIDs); i++ {
-		if s.AllServerIDs[i] {
-			s.createNewServerClient(i)
+	go func ()  {
+		time.Sleep(time.Second * 10)
+		s.AllServerIDs[0] = true
+		
+		for i := 1; i < len(s.AllServerIDs); i++ {
+			if s.AllServerIDs[i] {
+				s.createNewServerClient(i)
+			}
 		}
-	}
+		for i := 1; i < len(s.AllServerIDs); i++ {
+			if s.AllServerIDs[i] {
+				s.serverInformationUpdate(s.Clients[i], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "ImTheNewKing"})
+			}
+		}
+		fmt.Printf("Server with Id: %s - Time: %s - Changes ID to 0.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
+		log.Printf("Server with Id: %s - Time: %s - Changes ID to 0.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
+		s.ServerID = int32(NewServerID)
+	}()
+	time.Sleep(time.Second * 5)
+	grpcServer.Serve(listener)
 }
 
 func (s *Server) createNewServerClient(TargetServerID int) {
 	var hostString = ":" + strconv.Itoa(8080+TargetServerID)
-	var key = "server" + strconv.Itoa(TargetServerID)
-	var tcpServer = flag.String(key, hostString, "TCP server")
 	var callerOpts []grpc.DialOption
 	callerOpts = append(callerOpts, grpc.WithBlock(), grpc.WithInsecure())
-	conn, err := grpc.Dial(*tcpServer, callerOpts...)
+	conn, err := grpc.Dial(hostString, callerOpts...)
 	if err != nil {
 		log.Fatalf("Invalid Target Server. Not posible to dial.\n")
 	}
@@ -362,10 +357,10 @@ func main() {
 	log.SetOutput(&s.ServerLogFile)
 
 	//Initial dial to port 8080. If there is no Server, the caller becomes the Leader.
-	var tcpServer = flag.String("server", ":8080", "TCP server")
+	var tcpServer = ":8080"
 	var callerOpts []grpc.DialOption
 	callerOpts = append(callerOpts, grpc.WithBlock(), grpc.WithTimeout(time.Duration(2)*time.Second), grpc.WithInsecure())
-	conn, err := grpc.Dial(*tcpServer, callerOpts...)
+	conn, err := grpc.Dial(tcpServer, callerOpts...)
 	if err != nil {
 		log.Printf("Fail to dial leader when joining, setting myself to leader\n")
 		fmt.Printf("Fail to dial leader when joining, setting myself to leader\n")
@@ -375,6 +370,7 @@ func main() {
 	} else {
 		client := replicatepb.NewServerCommunicationClient(conn)
 		s.Clients[0] = client
+		s.AllServerIDs[0] = true
 		s.joinCommunication(s.Clients[0], replicatepb.JoinRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID})
 		parallel := make(chan string)
 		go func() {

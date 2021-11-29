@@ -1,0 +1,1451 @@
+00:02:43.142097 Fail to dial leader when joining, setting myself to leader
+00:02:43.151985 Server with ID: 0 - Is up and listening.
+00:02:48.013923 New Server - Sending Joining-Request.
+00:02:48.015531 Server with ID: 1 - Time: 3 - Joined the ServerCommunication.
+00:02:48.016055 Server with Id: 1 - Time: 4 - Initial values set based on JoinResponse.
+00:02:48.016055 Server with Id: 1 - Time: 5 - Sends update-request with the change: CreateNewClient.
+00:02:48.022447 Server with ID: 1 - Is up and listening.
+00:02:48.522273 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+00:02:52.206581 New Server - Sending Joining-Request.
+00:02:52.207584 Server with ID: 2 - Time: 9 - Joined the ServerCommunication.
+00:02:52.208585 Server with Id: 0 - Time: 10 - Sends update-request with the change: ServerJoined.
+00:02:52.209583 Server with Id: 1 - Time: 11 - Parsed the ServerJoined change.
+00:02:52.211583 Server with Id: 2 - Time: 14 - Initial values set based on JoinResponse.
+00:02:52.217583 Server with Id: 2 - Time: 15 - Sends update-request with the change: CreateNewClient.
+00:02:52.218583 Server with ID: 2 - Is up and listening.
+00:02:52.222255 Server with Id: 0 - Time: 16 - Parsed the CreateNewClient change.
+00:02:55.710803 New Server - Sending Joining-Request.
+00:02:55.711328 Server with ID: 3 - Time: 19 - Joined the ServerCommunication.
+00:02:55.711328 Server with Id: 0 - Time: 20 - Sends update-request with the change: ServerJoined.
+00:02:55.711843 Server with Id: 1 - Time: 21 - Parsed the ServerJoined change.
+00:02:55.711843 Server with Id: 0 - Time: 24 - Sends update-request with the change: ServerJoined.
+00:02:55.712365 Server with Id: 2 - Time: 25 - Parsed the ServerJoined change.
+00:02:55.712895 Server with Id: 3 - Time: 28 - Initial values set based on JoinResponse.
+00:02:55.713488 Server with Id: 3 - Time: 29 - Sends update-request with the change: CreateNewClient.
+00:02:55.718754 Server with ID: 3 - Is up and listening.
+00:02:56.217332 Server with Id: 0 - Time: 30 - Parsed the CreateNewClient change.
+00:03:00.624337 New Server - Sending Joining-Request.
+00:03:00.624880 Server with ID: 4 - Time: 33 - Joined the ServerCommunication.
+00:03:00.624880 Server with Id: 0 - Time: 34 - Sends update-request with the change: ServerJoined.
+00:03:00.625402 Server with Id: 1 - Time: 35 - Parsed the ServerJoined change.
+00:03:00.625402 Server with Id: 0 - Time: 38 - Sends update-request with the change: ServerJoined.
+00:03:00.625919 Server with Id: 2 - Time: 39 - Parsed the ServerJoined change.
+00:03:00.625919 Server with Id: 0 - Time: 42 - Sends update-request with the change: ServerJoined.
+00:03:00.626539 Server with Id: 3 - Time: 43 - Parsed the ServerJoined change.
+00:03:00.627602 Server with Id: 4 - Time: 46 - Initial values set based on JoinResponse.
+00:03:00.627602 Server with Id: 4 - Time: 47 - Sends update-request with the change: CreateNewClient.
+00:03:00.633166 Server with ID: 4 - Is up and listening.
+00:03:01.140925 Server with Id: 0 - Time: 48 - Parsed the CreateNewClient change.
+00:03:04.521801 New Server - Sending Joining-Request.
+00:03:04.522319 Server with ID: 5 - Time: 51 - Joined the ServerCommunication.
+00:03:04.522845 Server with Id: 0 - Time: 52 - Sends update-request with the change: ServerJoined.
+00:03:04.522845 Server with Id: 1 - Time: 53 - Parsed the ServerJoined change.
+00:03:04.523360 Server with Id: 0 - Time: 56 - Sends update-request with the change: ServerJoined.
+00:03:04.523360 Server with Id: 2 - Time: 57 - Parsed the ServerJoined change.
+00:03:04.523360 Server with Id: 0 - Time: 60 - Sends update-request with the change: ServerJoined.
+00:03:04.523360 Server with Id: 3 - Time: 61 - Parsed the ServerJoined change.
+00:03:04.524358 Server with Id: 0 - Time: 64 - Sends update-request with the change: ServerJoined.
+00:03:04.524358 Server with Id: 4 - Time: 65 - Parsed the ServerJoined change.
+00:03:04.525357 Server with Id: 5 - Time: 68 - Initial values set based on JoinResponse.
+00:03:04.525357 Server with Id: 5 - Time: 69 - Sends update-request with the change: CreateNewClient.
+00:03:04.531357 Server with ID: 5 - Is up and listening.
+00:03:05.042034 Server with Id: 0 - Time: 70 - Parsed the CreateNewClient change.
+00:03:08.536123 Server with Id: 0 - Time: 72 - Pokes to check, if target is alive.
+00:03:08.536651 Server with Id: 1 - Time: 74 - Throws Hand Sign and is still alive.
+00:03:08.726276 New Server - Sending Joining-Request.
+00:03:08.727838 Server with ID: 6 - Time: 73 - Joined the ServerCommunication.
+00:03:08.727903 Server with Id: 0 - Time: 74 - Sends update-request with the change: ServerJoined.
+00:03:08.728437 Server with Id: 1 - Time: 75 - Parsed the ServerJoined change.
+00:03:08.728437 Server with Id: 0 - Time: 78 - Sends update-request with the change: ServerJoined.
+00:03:08.728979 Server with Id: 2 - Time: 79 - Parsed the ServerJoined change.
+00:03:08.729496 Server with Id: 0 - Time: 82 - Sends update-request with the change: ServerJoined.
+00:03:08.729496 Server with Id: 3 - Time: 83 - Parsed the ServerJoined change.
+00:03:08.730016 Server with Id: 0 - Time: 86 - Sends update-request with the change: ServerJoined.
+00:03:08.730565 Server with Id: 4 - Time: 87 - Parsed the ServerJoined change.
+00:03:08.731093 Server with Id: 0 - Time: 90 - Sends update-request with the change: ServerJoined.
+00:03:08.731624 Server with Id: 5 - Time: 91 - Parsed the ServerJoined change.
+00:03:08.732155 Server with Id: 6 - Time: 94 - Initial values set based on JoinResponse.
+00:03:08.732677 Server with Id: 6 - Time: 95 - Sends update-request with the change: CreateNewClient.
+00:03:08.738930 Server with ID: 6 - Is up and listening.
+00:03:09.237215 Server with Id: 0 - Time: 96 - Parsed the CreateNewClient change.
+00:03:12.229069 Server with Id: 0 - Time: 98 - Pokes to check, if target is alive.
+00:03:12.229585 Server with Id: 2 - Time: 100 - Throws Hand Sign and is still alive.
+00:03:12.894082 New Server - Sending Joining-Request.
+00:03:12.895147 Server with ID: 7 - Time: 99 - Joined the ServerCommunication.
+00:03:12.895147 Server with Id: 0 - Time: 100 - Sends update-request with the change: ServerJoined.
+00:03:12.895668 Server with Id: 1 - Time: 101 - Parsed the ServerJoined change.
+00:03:12.895668 Server with Id: 0 - Time: 104 - Sends update-request with the change: ServerJoined.
+00:03:12.896236 Server with Id: 2 - Time: 105 - Parsed the ServerJoined change.
+00:03:12.896236 Server with Id: 0 - Time: 108 - Sends update-request with the change: ServerJoined.
+00:03:12.896236 Server with Id: 3 - Time: 109 - Parsed the ServerJoined change.
+00:03:12.896769 Server with Id: 0 - Time: 112 - Sends update-request with the change: ServerJoined.
+00:03:12.896769 Server with Id: 4 - Time: 113 - Parsed the ServerJoined change.
+00:03:12.897283 Server with Id: 0 - Time: 116 - Sends update-request with the change: ServerJoined.
+00:03:12.897819 Server with Id: 5 - Time: 117 - Parsed the ServerJoined change.
+00:03:12.897819 Server with Id: 0 - Time: 120 - Sends update-request with the change: ServerJoined.
+00:03:12.898360 Server with Id: 6 - Time: 121 - Parsed the ServerJoined change.
+00:03:12.898872 Server with Id: 7 - Time: 124 - Initial values set based on JoinResponse.
+00:03:12.899460 Server with Id: 7 - Time: 125 - Sends update-request with the change: CreateNewClient.
+00:03:12.904636 Server with ID: 7 - Is up and listening.
+00:03:13.407459 Server with Id: 0 - Time: 126 - Parsed the CreateNewClient change.
+00:03:16.222543 Server with Id: 0 - Time: 128 - Pokes to check, if target is alive.
+00:03:16.223675 Server with Id: 3 - Time: 130 - Throws Hand Sign and is still alive.
+00:03:18.030582 Server with Id: 1 - Time: 103 - Pokes to check, if target is alive.
+00:03:18.031261 Server with Id: 0 - Time: 129 - Throws Hand Sign and is still alive.
+00:03:22.219227 Server with Id: 2 - Time: 107 - Pokes to check, if target is alive.
+00:03:24.263030 Error i poke. The Target is Dead.
+00:03:25.720444 Server with Id: 3 - Time: 131 - Pokes to check, if target is alive.
+00:03:27.774043 Error i poke. The Target is Dead.
+00:03:30.630969 Server with Id: 4 - Time: 115 - Pokes to check, if target is alive.
+00:03:32.673336 Error i poke. The Target is Dead.
+00:03:34.539836 Server with Id: 5 - Time: 119 - Pokes to check, if target is alive.
+00:03:36.576847 Error i poke. The Target is Dead.
+00:03:38.744431 Server with Id: 6 - Time: 123 - Pokes to check, if target is alive.
+00:03:40.781259 Error i poke. The Target is Dead.
+00:03:42.906292 Server with Id: 7 - Time: 125 - Pokes to check, if target is alive.
+00:03:44.945755 Error i poke. The Target is Dead.
+00:03:48.044838 Server with Id: 1 - Time: 103 - Pokes to check, if target is alive.
+00:03:50.086169 Error i poke. The Target is Dead.
+00:03:52.111089 Server with Id: 1 - Time: 104 - Sends update-request with the change: ImTheNewKing.
+00:03:52.115722 Server with Id: 2 - Time: 107 - Parsed the ImTheNewKing change.
+00:03:52.116256 Server with Id: 1 - Time: 110 - Sends update-request with the change: ImTheNewKing.
+00:03:52.119113 Server with Id: 3 - Time: 131 - Parsed the ImTheNewKing change.
+00:03:52.119700 Server with Id: 1 - Time: 134 - Sends update-request with the change: ImTheNewKing.
+00:03:52.121775 Server with Id: 4 - Time: 135 - Parsed the ImTheNewKing change.
+00:03:52.121775 Server with Id: 1 - Time: 138 - Sends update-request with the change: ImTheNewKing.
+00:03:52.122987 Server with Id: 5 - Time: 139 - Parsed the ImTheNewKing change.
+00:03:52.123535 Server with Id: 1 - Time: 142 - Sends update-request with the change: ImTheNewKing.
+00:03:52.124578 Server with Id: 6 - Time: 143 - Parsed the ImTheNewKing change.
+00:03:52.124578 Server with Id: 1 - Time: 146 - Sends update-request with the change: ImTheNewKing.
+00:03:52.125727 Server with Id: 7 - Time: 147 - Parsed the ImTheNewKing change.
+00:03:52.125727 Server with Id: 1 - Time: 149 - Changes ID to 0.
+00:04:12.099672 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:04:12.100224 Server with Id: 2 - Time: 152 - Throws Hand Sign and is still alive.
+00:04:12.115431 Server with Id: 2 - Time: 153 - Pokes to check, if target is alive.
+00:04:12.115431 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:04:12.115431 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:04:12.115981 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:04:12.115981 Server with Id: 6 - Time: 152 - Throws Hand Sign and is still alive.
+00:04:12.115981 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:04:12.115981 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:04:12.116497 Server with Id: 0 - Time: 155 - Throws Hand Sign and is still alive.
+00:04:12.116578 Server with Id: 3 - Time: 152 - Throws Hand Sign and is still alive.
+00:04:12.116578 Server with Id: 5 - Time: 152 - Throws Hand Sign and is still alive.
+00:04:12.116578 Server with Id: 4 - Time: 152 - Throws Hand Sign and is still alive.
+00:04:12.117082 Server with Id: 7 - Time: 152 - Throws Hand Sign and is still alive.
+00:04:12.130610 Server with Id: 3 - Time: 153 - Pokes to check, if target is alive.
+00:04:12.131608 Server with Id: 4 - Time: 153 - Pokes to check, if target is alive.
+00:04:12.131608 Server with Id: 7 - Time: 153 - Pokes to check, if target is alive.
+00:04:12.155945 Server with Id: 6 - Time: 153 - Pokes to check, if target is alive.
+00:04:12.156297 Server with Id: 5 - Time: 153 - Pokes to check, if target is alive.
+00:04:12.182182 Server with Id: 0 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:12.182726 Server with Id: 0 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:12.183245 Server with Id: 0 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:12.183245 Server with Id: 0 - Time: 165 - Throws Hand Sign and is still alive.
+00:04:12.184243 Server with Id: 0 - Time: 165 - Throws Hand Sign and is still alive.
+00:04:32.124696 Server with Id: 2 - Time: 153 - Pokes to check, if target is alive.
+00:04:32.185864 Server with Id: 7 - Time: 153 - Pokes to check, if target is alive.
+00:04:32.186645 Server with Id: 3 - Time: 153 - Pokes to check, if target is alive.
+00:04:32.187193 Server with Id: 4 - Time: 153 - Pokes to check, if target is alive.
+00:04:32.187193 Server with Id: 6 - Time: 153 - Pokes to check, if target is alive.
+00:04:32.187193 Server with Id: 5 - Time: 153 - Pokes to check, if target is alive.
+00:04:34.168157 Error i poke. The Target is Dead.
+00:04:34.230676 Server with Id: 2 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:34.231208 Server with Id: 2 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:34.231208 Server with Id: 2 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:34.231829 Server with Id: 2 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:34.231829 Server with Id: 2 - Time: 163 - Throws Hand Sign and is still alive.
+00:04:36.200265 Server with Id: 2 - Time: 164 - Sends update-request with the change: ImTheNewKing.
+00:04:36.203545 Server with Id: 3 - Time: 165 - Parsed the ImTheNewKing change.
+00:04:36.205304 Server with Id: 2 - Time: 168 - Sends update-request with the change: ImTheNewKing.
+00:04:36.208344 Server with Id: 4 - Time: 169 - Parsed the ImTheNewKing change.
+00:04:36.209491 Server with Id: 2 - Time: 172 - Sends update-request with the change: ImTheNewKing.
+00:04:36.210767 Server with Id: 5 - Time: 173 - Parsed the ImTheNewKing change.
+00:04:36.210831 Server with Id: 2 - Time: 176 - Sends update-request with the change: ImTheNewKing.
+00:04:36.211880 Server with Id: 6 - Time: 177 - Parsed the ImTheNewKing change.
+00:04:36.212401 Server with Id: 2 - Time: 180 - Sends update-request with the change: ImTheNewKing.
+00:04:36.213430 Server with Id: 7 - Time: 181 - Parsed the ImTheNewKing change.
+00:04:36.213539 Server with Id: 2 - Time: 183 - Changes ID to 0.
+00:04:54.245675 Server with Id: 6 - Time: 179 - Pokes to check, if target is alive.
+00:04:54.245675 Server with Id: 4 - Time: 171 - Pokes to check, if target is alive.
+00:04:54.245675 Server with Id: 3 - Time: 167 - Pokes to check, if target is alive.
+00:04:54.246879 Server with Id: 5 - Time: 175 - Pokes to check, if target is alive.
+00:04:54.247757 Server with Id: 7 - Time: 183 - Pokes to check, if target is alive.
+00:04:56.205824 Server with Id: 3 - Time: 167 - Pokes to check, if target is alive.
+00:04:56.221445 Server with Id: 6 - Time: 179 - Pokes to check, if target is alive.
+00:04:56.221445 Server with Id: 7 - Time: 183 - Pokes to check, if target is alive.
+00:04:56.221445 Server with Id: 4 - Time: 171 - Pokes to check, if target is alive.
+00:04:56.222192 Server with Id: 5 - Time: 175 - Pokes to check, if target is alive.
+00:04:56.299736 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300381 Error i poke. The Target is Dead.
+00:04:56.300915 Error i poke. The Target is Dead.
+00:04:58.320303 Server with Id: 3 - Time: 168 - Sends update-request with the change: ImTheNewKing.
+00:04:58.322944 Server with Id: 4 - Time: 171 - Parsed the ImTheNewKing change.
+00:04:58.322944 Server with Id: 3 - Time: 174 - Sends update-request with the change: ImTheNewKing.
+00:04:58.324199 Server with Id: 5 - Time: 175 - Parsed the ImTheNewKing change.
+00:04:58.324318 Server with Id: 3 - Time: 178 - Sends update-request with the change: ImTheNewKing.
+00:04:58.325363 Server with Id: 6 - Time: 179 - Parsed the ImTheNewKing change.
+00:04:58.325944 Server with Id: 3 - Time: 182 - Sends update-request with the change: ImTheNewKing.
+00:04:58.326470 Server with Id: 7 - Time: 183 - Parsed the ImTheNewKing change.
+00:04:58.327001 Server with Id: 3 - Time: 185 - Changes ID to 0.
+00:05:18.328313 Server with Id: 5 - Time: 177 - Pokes to check, if target is alive.
+00:05:18.328313 Server with Id: 4 - Time: 173 - Pokes to check, if target is alive.
+00:05:18.328313 Server with Id: 6 - Time: 181 - Pokes to check, if target is alive.
+00:05:18.328699 Server with Id: 7 - Time: 185 - Pokes to check, if target is alive.
+00:05:20.367815 Error i poke. The Target is Dead.
+00:05:20.367815 Error i poke. The Target is Dead.
+00:05:20.367815 Error i poke. The Target is Dead.
+00:05:20.368395 Error i poke. The Target is Dead.
+00:05:22.378090 Server with Id: 4 - Time: 174 - Sends update-request with the change: ImTheNewKing.
+00:05:22.378658 Server with Id: 5 - Time: 177 - Parsed the ImTheNewKing change.
+00:05:22.379170 Server with Id: 4 - Time: 180 - Sends update-request with the change: ImTheNewKing.
+00:05:22.380260 Server with Id: 6 - Time: 181 - Parsed the ImTheNewKing change.
+00:05:22.380260 Server with Id: 4 - Time: 184 - Sends update-request with the change: ImTheNewKing.
+00:05:22.381303 Server with Id: 7 - Time: 185 - Parsed the ImTheNewKing change.
+00:05:22.381303 Server with Id: 4 - Time: 187 - Changes ID to 0.
+00:05:42.383449 Server with Id: 7 - Time: 187 - Pokes to check, if target is alive.
+00:05:42.383449 Server with Id: 6 - Time: 183 - Pokes to check, if target is alive.
+00:05:42.383449 Server with Id: 5 - Time: 179 - Pokes to check, if target is alive.
+00:05:44.426904 Error i poke. The Target is Dead.
+00:05:44.426904 Error i poke. The Target is Dead.
+00:05:44.442615 Error i poke. The Target is Dead.
+00:05:46.454439 Server with Id: 5 - Time: 180 - Sends update-request with the change: ImTheNewKing.
+00:05:46.457859 Server with Id: 6 - Time: 183 - Parsed the ImTheNewKing change.
+00:05:46.458858 Server with Id: 5 - Time: 186 - Sends update-request with the change: ImTheNewKing.
+00:05:46.460819 Server with Id: 7 - Time: 187 - Parsed the ImTheNewKing change.
+00:05:46.461351 Server with Id: 5 - Time: 189 - Changes ID to 0.
+00:06:06.453628 Server with Id: 0 - Time: 190 - Pokes to check, if target is alive.
+00:06:06.454214 Server with Id: 0 - Time: 190 - Pokes to check, if target is alive.
+00:06:06.454784 Server with Id: 7 - Time: 192 - Throws Hand Sign and is still alive.
+00:06:06.468808 Server with Id: 7 - Time: 193 - Pokes to check, if target is alive.
+00:06:06.469331 Server with Id: 0 - Time: 195 - Throws Hand Sign and is still alive.
+00:06:08.497579 Error i poke. The Target is Dead.
+00:06:08.497579 Server with Id: 0 - Time: 191 - Sends update-request with the change: ServerLeft.
+00:06:08.499479 Server with Id: 7 - Time: 193 - Parsed the ServerLeft change.
+00:06:26.466358 Server with Id: 0 - Time: 196 - Pokes to check, if target is alive.
+00:06:26.466868 Server with Id: 7 - Time: 198 - Throws Hand Sign and is still alive.
+00:06:26.482104 Server with Id: 7 - Time: 199 - Pokes to check, if target is alive.
+00:06:26.482768 Server with Id: 0 - Time: 201 - Throws Hand Sign and is still alive.
+00:06:46.497415 Server with Id: 7 - Time: 199 - Pokes to check, if target is alive.
+00:06:48.549415 Error i poke. The Target is Dead.
+00:06:50.561662 Server with Id: 7 - Time: 199 - Changes ID to 0.
+00:23:48.715347 Fail to dial leader when joining, setting myself to leader
+00:23:48.720621 Server with ID: 0 - Is up and listening.
+00:23:53.481520 New Server - Sending Joining-Request.
+00:23:53.482565 Server with ID: 19 - Time: 3 - Joined the ServerCommunication.
+00:23:53.483093 Server with Id: 19 - Time: 4 - Initial values set based on JoinResponse.
+00:23:53.483093 Server with Id: 19 - Time: 5 - Sends update-request with the change: CreateNewClient.
+00:23:53.488809 Server with ID: 19 - Is up and listening.
+00:23:53.987106 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+00:23:59.661415 New Server - Sending Joining-Request.
+00:23:59.662950 Server with ID: 18 - Time: 9 - Joined the ServerCommunication.
+00:23:59.663487 Server with Id: 19 - Time: 10 - Initial values set based on JoinResponse.
+00:23:59.664008 Server with Id: 19 - Time: 11 - Sends update-request with the change: CreateNewClient.
+00:23:59.665052 Server with Id: 0 - Time: 12 - Parsed the CreateNewClient change.
+00:23:59.669486 Failed to listen: listen tcp 127.0.0.1:8099: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+00:24:03.483787 Server with Id: 19 - Time: 5 - Pokes to check, if target is alive.
+00:24:03.485618 Server with Id: 0 - Time: 15 - Throws Hand Sign and is still alive.
+00:24:03.997179 Server with Id: 0 - Time: 16 - Pokes to check, if target is alive.
+00:24:03.999050 Server with Id: 19 - Time: 18 - Throws Hand Sign and is still alive.
+00:24:09.669314 Server with Id: 0 - Time: 16 - Pokes to check, if target is alive.
+00:24:09.669314 Server with Id: 19 - Time: 20 - Throws Hand Sign and is still alive.
+00:24:09.915697 New Server - Sending Joining-Request.
+00:24:09.916255 Server with ID: 17 - Time: 17 - Joined the ServerCommunication.
+00:24:09.916773 Server with Id: 0 - Time: 18 - Sends update-request with the change: ServerJoined.
+00:24:13.493033 Server with Id: 19 - Time: 21 - Pokes to check, if target is alive.
+00:24:15.540678 Error i poke. The Target is Dead.
+00:24:17.548732 Server with Id: 19 - Time: 21 - Changes ID to 0.
+00:24:33.811297 New Server - Sending Joining-Request.
+00:24:33.811814 Server with ID: 19 - Time: 23 - Joined the ServerCommunication.
+00:24:33.812361 Server with Id: 19 - Time: 24 - Initial values set based on JoinResponse.
+00:24:33.812919 Server with Id: 19 - Time: 25 - Sends update-request with the change: CreateNewClient.
+00:24:33.813975 Server with Id: 0 - Time: 26 - Parsed the CreateNewClient change.
+00:24:33.818158 Failed to listen: listen tcp 127.0.0.1:8099: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+00:24:43.826582 Server with Id: 0 - Time: 28 - Pokes to check, if target is alive.
+00:24:43.827900 Server with Id: 19 - Time: 30 - Throws Hand Sign and is still alive.
+00:24:53.840445 Server with Id: 0 - Time: 28 - Pokes to check, if target is alive.
+00:24:53.841048 Server with Id: 19 - Time: 32 - Throws Hand Sign and is still alive.
+00:25:07.745615 Fail to dial leader when joining, setting myself to leader
+00:25:07.751340 Server with ID: 0 - Is up and listening.
+00:25:11.538066 New Server - Sending Joining-Request.
+00:25:11.539133 Server with ID: 19 - Time: 3 - Joined the ServerCommunication.
+00:25:11.539651 Server with Id: 19 - Time: 4 - Initial values set based on JoinResponse.
+00:25:11.540174 Server with Id: 19 - Time: 5 - Sends update-request with the change: CreateNewClient.
+00:25:11.545987 Server with ID: 19 - Is up and listening.
+00:25:12.049198 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+00:25:21.550362 Server with Id: 19 - Time: 5 - Pokes to check, if target is alive.
+00:25:21.550906 Server with Id: 0 - Time: 9 - Throws Hand Sign and is still alive.
+00:25:22.063996 Server with Id: 0 - Time: 10 - Pokes to check, if target is alive.
+00:25:22.064976 Server with Id: 19 - Time: 12 - Throws Hand Sign and is still alive.
+00:25:31.041518 Fail to dial leader when joining, setting myself to leader
+00:25:31.054742 Server with ID: 0 - Is up and listening.
+00:25:33.067742 New Server - Sending Joining-Request.
+00:25:33.068743 Server with ID: 1 - Time: 3 - Joined the ServerCommunication.
+00:25:33.069745 Server with Id: 1 - Time: 4 - Initial values set based on JoinResponse.
+00:25:33.069745 Server with Id: 1 - Time: 5 - Sends update-request with the change: CreateNewClient.
+00:25:33.075742 Server with ID: 1 - Is up and listening.
+00:25:33.577027 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+00:25:36.878250 New Server - Sending Joining-Request.
+00:25:36.879619 Server with ID: 2 - Time: 9 - Joined the ServerCommunication.
+00:25:36.879619 Server with Id: 0 - Time: 10 - Sends update-request with the change: ServerJoined.
+00:25:36.880132 Server with Id: 1 - Time: 11 - Parsed the ServerJoined change.
+00:25:36.881217 Server with Id: 2 - Time: 14 - Initial values set based on JoinResponse.
+00:25:36.881737 Server with Id: 2 - Time: 15 - Sends update-request with the change: CreateNewClient.
+00:25:36.887412 Server with ID: 2 - Is up and listening.
+00:25:37.385153 Server with Id: 0 - Time: 16 - Parsed the CreateNewClient change.
+00:25:40.894504 New Server - Sending Joining-Request.
+00:25:40.895531 Server with ID: 3 - Time: 19 - Joined the ServerCommunication.
+00:25:40.895541 Server with Id: 0 - Time: 20 - Sends update-request with the change: ServerJoined.
+00:25:40.896085 Server with Id: 1 - Time: 21 - Parsed the ServerJoined change.
+00:25:40.896607 Server with Id: 0 - Time: 24 - Sends update-request with the change: ServerJoined.
+00:25:40.897129 Server with Id: 2 - Time: 25 - Parsed the ServerJoined change.
+00:25:40.898170 Server with Id: 3 - Time: 28 - Initial values set based on JoinResponse.
+00:25:40.898170 Server with Id: 3 - Time: 29 - Sends update-request with the change: CreateNewClient.
+00:25:40.903408 Server with ID: 3 - Is up and listening.
+00:25:41.407576 Server with Id: 0 - Time: 30 - Parsed the CreateNewClient change.
+00:25:43.589218 Server with Id: 0 - Time: 32 - Pokes to check, if target is alive.
+00:25:45.627879 Error i poke. The Target is Dead.
+00:25:45.628761 Server with Id: 0 - Time: 33 - Sends update-request with the change: ServerLeft.
+00:25:45.628761 Server with Id: 2 - Time: 34 - Parsed the ServerLeft change.
+00:25:45.629417 Server with Id: 0 - Time: 37 - Sends update-request with the change: ServerLeft.
+00:25:45.629929 Server with Id: 3 - Time: 38 - Parsed the ServerLeft change.
+00:25:46.895864 Server with Id: 2 - Time: 36 - Pokes to check, if target is alive.
+00:25:46.896435 Server with Id: 0 - Time: 38 - Throws Hand Sign and is still alive.
+00:25:47.387995 Server with Id: 0 - Time: 39 - Pokes to check, if target is alive.
+00:25:47.388747 Server with Id: 2 - Time: 41 - Throws Hand Sign and is still alive.
+00:25:50.900912 Server with Id: 3 - Time: 40 - Pokes to check, if target is alive.
+00:25:50.900912 Server with Id: 0 - Time: 42 - Throws Hand Sign and is still alive.
+00:25:51.414407 Server with Id: 0 - Time: 43 - Pokes to check, if target is alive.
+00:25:51.415126 Server with Id: 3 - Time: 45 - Throws Hand Sign and is still alive.
+00:25:51.697816 New Server - Sending Joining-Request.
+00:25:51.698819 Server with ID: 1 - Time: 44 - Joined the ServerCommunication.
+00:25:51.698819 Server with Id: 0 - Time: 45 - Sends update-request with the change: ServerJoined.
+00:25:51.699569 Server with Id: 2 - Time: 46 - Parsed the ServerJoined change.
+00:25:51.700113 Server with Id: 3 - Time: 49 - Initial values set based on JoinResponse.
+00:25:51.700644 Server with Id: 3 - Time: 50 - Sends update-request with the change: CreateNewClient.
+00:25:51.701688 Server with Id: 0 - Time: 51 - Parsed the CreateNewClient change.
+00:25:51.706533 Failed to listen: listen tcp 127.0.0.1:8083: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+00:25:56.905132 Server with Id: 2 - Time: 48 - Pokes to check, if target is alive.
+00:25:56.906437 Server with Id: 0 - Time: 54 - Throws Hand Sign and is still alive.
+00:25:57.402178 Server with Id: 0 - Time: 55 - Pokes to check, if target is alive.
+00:25:57.402805 Server with Id: 2 - Time: 57 - Throws Hand Sign and is still alive.
+00:26:00.903207 Server with Id: 3 - Time: 46 - Pokes to check, if target is alive.
+00:26:00.903768 Server with Id: 0 - Time: 56 - Throws Hand Sign and is still alive.
+00:26:01.431138 Server with Id: 0 - Time: 57 - Pokes to check, if target is alive.
+00:26:01.431700 Server with Id: 3 - Time: 59 - Throws Hand Sign and is still alive.
+00:26:01.712233 Server with Id: 0 - Time: 57 - Pokes to check, if target is alive.
+00:26:01.712758 Server with Id: 3 - Time: 61 - Throws Hand Sign and is still alive.
+00:26:06.916373 Server with Id: 2 - Time: 58 - Pokes to check, if target is alive.
+00:26:06.916914 Server with Id: 0 - Time: 60 - Throws Hand Sign and is still alive.
+00:26:07.413198 Server with Id: 0 - Time: 61 - Pokes to check, if target is alive.
+00:26:07.413923 Server with Id: 2 - Time: 63 - Throws Hand Sign and is still alive.
+00:26:10.914735 Server with Id: 3 - Time: 62 - Pokes to check, if target is alive.
+00:26:10.915260 Server with Id: 0 - Time: 64 - Throws Hand Sign and is still alive.
+00:26:11.445701 Server with Id: 0 - Time: 65 - Pokes to check, if target is alive.
+00:26:11.446801 Server with Id: 3 - Time: 67 - Throws Hand Sign and is still alive.
+00:26:11.724881 Server with Id: 0 - Time: 65 - Pokes to check, if target is alive.
+00:26:11.725394 Server with Id: 3 - Time: 69 - Throws Hand Sign and is still alive.
+00:26:15.970310 New Server - Sending Joining-Request.
+00:26:15.971314 Server with ID: 4 - Time: 66 - Joined the ServerCommunication.
+00:26:15.971314 Server with Id: 0 - Time: 67 - Sends update-request with the change: ServerJoined.
+00:26:16.926908 Server with Id: 2 - Time: 64 - Pokes to check, if target is alive.
+00:26:18.971961 Error i poke. The Target is Dead.
+00:26:20.919512 Server with Id: 3 - Time: 70 - Pokes to check, if target is alive.
+00:26:22.968858 Error i poke. The Target is Dead.
+00:31:28.764003 Fail to dial leader when joining, setting myself to leader
+00:31:28.771355 Server with ID: 0 - Is up and listening.
+00:31:34.581172 New Server - Sending Joining-Request.
+00:31:34.582256 Server with ID: 1 - Time: 3 - Joined the ServerCommunication.
+00:31:34.582787 Server with Id: 1 - Time: 4 - Initial values set based on JoinResponse.
+00:31:34.582787 Server with Id: 1 - Time: 5 - Sends update-request with the change: CreateNewClient.
+00:31:34.588030 Server with ID: 1 - Is up and listening.
+00:31:35.091863 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+00:31:40.272916 New Server - Sending Joining-Request.
+00:31:40.273439 Server with ID: 2 - Time: 9 - Joined the ServerCommunication.
+00:31:40.273958 Server with Id: 0 - Time: 10 - Sends update-request with the change: ServerJoined.
+00:31:40.273958 Server with Id: 1 - Time: 11 - Parsed the ServerJoined change.
+00:31:40.275136 Server with Id: 2 - Time: 14 - Initial values set based on JoinResponse.
+00:31:40.275136 Server with Id: 2 - Time: 15 - Sends update-request with the change: CreateNewClient.
+00:31:40.279893 Server with ID: 2 - Is up and listening.
+00:31:40.778826 Server with Id: 0 - Time: 16 - Parsed the CreateNewClient change.
+00:31:43.985543 New Server - Sending Joining-Request.
+00:31:43.986546 Server with ID: 3 - Time: 19 - Joined the ServerCommunication.
+00:31:43.986546 Server with Id: 0 - Time: 20 - Sends update-request with the change: ServerJoined.
+00:31:43.987225 Server with Id: 1 - Time: 21 - Parsed the ServerJoined change.
+00:31:43.987225 Server with Id: 0 - Time: 24 - Sends update-request with the change: ServerJoined.
+00:31:43.987778 Server with Id: 2 - Time: 25 - Parsed the ServerJoined change.
+00:31:43.988834 Server with Id: 3 - Time: 28 - Initial values set based on JoinResponse.
+00:31:43.988834 Server with Id: 3 - Time: 29 - Sends update-request with the change: CreateNewClient.
+00:31:43.993302 Server with ID: 3 - Is up and listening.
+00:31:44.490925 Server with Id: 0 - Time: 30 - Parsed the CreateNewClient change.
+00:31:44.583697 Server with Id: 1 - Time: 23 - Pokes to check, if target is alive.
+00:31:44.584883 Server with Id: 0 - Time: 33 - Throws Hand Sign and is still alive.
+00:31:45.098170 Server with Id: 0 - Time: 34 - Pokes to check, if target is alive.
+00:31:45.100094 Server with Id: 1 - Time: 36 - Throws Hand Sign and is still alive.
+00:31:50.281123 Server with Id: 2 - Time: 27 - Pokes to check, if target is alive.
+00:31:50.281709 Server with Id: 0 - Time: 35 - Throws Hand Sign and is still alive.
+00:31:50.780828 Server with Id: 0 - Time: 36 - Pokes to check, if target is alive.
+00:31:50.782188 Server with Id: 2 - Time: 38 - Throws Hand Sign and is still alive.
+00:31:54.001601 Server with Id: 3 - Time: 29 - Pokes to check, if target is alive.
+00:31:54.003109 Server with Id: 0 - Time: 37 - Throws Hand Sign and is still alive.
+00:31:54.500772 Server with Id: 0 - Time: 38 - Pokes to check, if target is alive.
+00:31:54.501779 Server with Id: 3 - Time: 40 - Throws Hand Sign and is still alive.
+00:31:55.108831 Server with Id: 0 - Time: 38 - Pokes to check, if target is alive.
+00:31:57.153163 Error i poke. The Target is Dead.
+00:31:57.153943 Server with Id: 0 - Time: 39 - Sends update-request with the change: ServerLeft.
+00:31:57.154494 Server with Id: 2 - Time: 40 - Parsed the ServerLeft change.
+00:31:57.155150 Server with Id: 0 - Time: 43 - Sends update-request with the change: ServerLeft.
+00:31:57.155690 Server with Id: 3 - Time: 44 - Parsed the ServerLeft change.
+00:32:00.285711 Server with Id: 2 - Time: 42 - Pokes to check, if target is alive.
+00:32:00.287978 Server with Id: 0 - Time: 44 - Throws Hand Sign and is still alive.
+00:32:00.796660 Server with Id: 0 - Time: 45 - Pokes to check, if target is alive.
+00:32:00.798487 Server with Id: 2 - Time: 47 - Throws Hand Sign and is still alive.
+00:32:04.019704 Server with Id: 3 - Time: 46 - Pokes to check, if target is alive.
+00:32:04.020251 Server with Id: 0 - Time: 48 - Throws Hand Sign and is still alive.
+00:32:04.517596 Server with Id: 0 - Time: 49 - Pokes to check, if target is alive.
+00:32:04.518110 Server with Id: 3 - Time: 51 - Throws Hand Sign and is still alive.
+00:32:09.583485 New Server - Sending Joining-Request.
+00:32:09.584039 Server with ID: 1 - Time: 50 - Joined the ServerCommunication.
+00:32:09.584856 Server with Id: 0 - Time: 51 - Sends update-request with the change: ServerJoined.
+00:32:09.585388 Server with Id: 2 - Time: 52 - Parsed the ServerJoined change.
+00:32:09.585904 Server with Id: 1 - Time: 55 - Initial values set based on JoinResponse.
+00:32:09.586437 Server with Id: 1 - Time: 56 - Sends update-request with the change: CreateNewClient.
+00:32:09.591950 Server with ID: 1 - Is up and listening.
+00:32:10.090383 Server with Id: 0 - Time: 57 - Parsed the CreateNewClient change.
+00:32:10.296463 Server with Id: 2 - Time: 54 - Pokes to check, if target is alive.
+00:32:10.296463 Server with Id: 0 - Time: 60 - Throws Hand Sign and is still alive.
+00:32:10.811643 Server with Id: 0 - Time: 61 - Pokes to check, if target is alive.
+00:32:10.812708 Server with Id: 2 - Time: 63 - Throws Hand Sign and is still alive.
+00:32:14.028915 Server with Id: 3 - Time: 52 - Pokes to check, if target is alive.
+00:32:14.029563 Server with Id: 0 - Time: 62 - Throws Hand Sign and is still alive.
+00:32:14.528190 Server with Id: 0 - Time: 63 - Pokes to check, if target is alive.
+00:32:14.528955 Server with Id: 3 - Time: 65 - Throws Hand Sign and is still alive.
+00:32:19.589058 Server with Id: 1 - Time: 56 - Pokes to check, if target is alive.
+00:32:19.590596 Server with Id: 0 - Time: 64 - Throws Hand Sign and is still alive.
+00:32:20.096471 Server with Id: 0 - Time: 65 - Pokes to check, if target is alive.
+00:32:20.097242 Server with Id: 1 - Time: 67 - Throws Hand Sign and is still alive.
+00:32:20.304375 Server with Id: 2 - Time: 64 - Pokes to check, if target is alive.
+00:32:20.305015 Server with Id: 0 - Time: 66 - Throws Hand Sign and is still alive.
+00:32:20.821730 Server with Id: 0 - Time: 67 - Pokes to check, if target is alive.
+00:32:20.823012 Server with Id: 2 - Time: 69 - Throws Hand Sign and is still alive.
+00:32:22.583745 New Server - Sending Joining-Request.
+00:32:22.584815 Server with ID: 4 - Time: 68 - Joined the ServerCommunication.
+00:32:22.585812 Server with Id: 0 - Time: 69 - Sends update-request with the change: ServerJoined.
+00:32:22.585812 Server with Id: 1 - Time: 70 - Parsed the ServerJoined change.
+00:32:22.587813 Server with Id: 0 - Time: 73 - Sends update-request with the change: ServerJoined.
+00:32:22.588835 Server with Id: 2 - Time: 74 - Parsed the ServerJoined change.
+00:32:22.589456 Server with Id: 0 - Time: 77 - Sends update-request with the change: ServerJoined.
+00:32:24.537529 Server with Id: 0 - Time: 78 - Pokes to check, if target is alive.
+00:32:24.630181 Error i poke. The Target is Dead.
+00:32:24.630181 Server with Id: 0 - Time: 79 - Sends update-request with the change: ServerLeft.
+00:32:29.595559 Server with Id: 1 - Time: 72 - Pokes to check, if target is alive.
+00:32:30.311642 Server with Id: 2 - Time: 76 - Pokes to check, if target is alive.
+00:32:31.638599 Error i poke. The Target is Dead.
+00:32:31.856435 Server with Id: 1 - Time: 78 - Throws Hand Sign and is still alive.
+00:32:41.862575 Server with Id: 2 - Time: 76 - Pokes to check, if target is alive.
+00:32:41.863210 Server with Id: 1 - Time: 80 - Throws Hand Sign and is still alive.
+00:32:43.655100 Server with Id: 1 - Time: 81 - Pokes to check, if target is alive.
+00:32:43.656381 Server with Id: 2 - Time: 83 - Throws Hand Sign and is still alive.
+00:32:53.933100 Fail to dial leader when joining, setting myself to leader
+00:32:53.942712 Server with ID: 0 - Is up and listening.
+00:33:02.027809 New Server - Sending Joining-Request.
+00:33:02.028376 Server with ID: 1 - Time: 3 - Joined the ServerCommunication.
+00:33:02.029436 Server with Id: 1 - Time: 4 - Initial values set based on JoinResponse.
+00:33:02.029436 Server with Id: 1 - Time: 5 - Sends update-request with the change: CreateNewClient.
+00:33:02.034091 Server with ID: 1 - Is up and listening.
+00:33:02.537879 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+00:33:07.850077 New Server - Sending Joining-Request.
+00:33:07.850622 Server with ID: 2 - Time: 9 - Joined the ServerCommunication.
+00:33:07.850622 Server with Id: 0 - Time: 10 - Sends update-request with the change: ServerJoined.
+00:33:07.851189 Server with Id: 1 - Time: 11 - Parsed the ServerJoined change.
+00:33:07.852255 Server with Id: 2 - Time: 14 - Initial values set based on JoinResponse.
+00:33:07.852255 Server with Id: 2 - Time: 15 - Sends update-request with the change: CreateNewClient.
+00:33:07.860855 Server with ID: 2 - Is up and listening.
+00:33:08.359057 Server with Id: 0 - Time: 16 - Parsed the CreateNewClient change.
+00:33:12.040397 Server with Id: 1 - Time: 13 - Pokes to check, if target is alive.
+00:33:12.041612 Server with Id: 0 - Time: 19 - Throws Hand Sign and is still alive.
+00:33:12.550205 Server with Id: 0 - Time: 20 - Pokes to check, if target is alive.
+00:33:12.550831 Server with Id: 1 - Time: 22 - Throws Hand Sign and is still alive.
+00:33:14.085856 New Server - Sending Joining-Request.
+00:33:14.086383 Server with ID: 3 - Time: 21 - Joined the ServerCommunication.
+00:33:14.086383 Server with Id: 0 - Time: 22 - Sends update-request with the change: ServerJoined.
+00:33:14.087032 Server with Id: 1 - Time: 23 - Parsed the ServerJoined change.
+00:33:14.087032 Server with Id: 0 - Time: 26 - Sends update-request with the change: ServerJoined.
+00:33:14.087545 Server with Id: 2 - Time: 27 - Parsed the ServerJoined change.
+00:33:14.088587 Server with Id: 3 - Time: 30 - Initial values set based on JoinResponse.
+00:33:14.088587 Server with Id: 3 - Time: 31 - Sends update-request with the change: CreateNewClient.
+00:33:14.096714 Server with ID: 3 - Is up and listening.
+00:33:14.604093 Server with Id: 0 - Time: 32 - Parsed the CreateNewClient change.
+00:33:17.865247 Server with Id: 2 - Time: 29 - Pokes to check, if target is alive.
+00:33:17.865851 Server with Id: 0 - Time: 35 - Throws Hand Sign and is still alive.
+00:33:18.360983 Server with Id: 0 - Time: 36 - Pokes to check, if target is alive.
+00:33:18.361584 Server with Id: 2 - Time: 38 - Throws Hand Sign and is still alive.
+00:33:22.558257 Server with Id: 0 - Time: 36 - Pokes to check, if target is alive.
+00:33:24.100328 Server with Id: 3 - Time: 31 - Pokes to check, if target is alive.
+00:33:24.102196 Server with Id: 0 - Time: 37 - Throws Hand Sign and is still alive.
+00:33:24.609097 Server with Id: 0 - Time: 38 - Pokes to check, if target is alive.
+00:33:24.609657 Server with Id: 3 - Time: 40 - Throws Hand Sign and is still alive.
+00:33:24.612727 Error i poke. The Target is Dead.
+00:33:24.613507 Server with Id: 0 - Time: 37 - Sends update-request with the change: ServerLeft.
+00:33:24.614171 Server with Id: 2 - Time: 39 - Parsed the ServerLeft change.
+00:33:24.614689 Server with Id: 0 - Time: 42 - Sends update-request with the change: ServerLeft.
+00:33:24.614689 Server with Id: 3 - Time: 43 - Parsed the ServerLeft change.
+00:33:27.880499 Server with Id: 2 - Time: 41 - Pokes to check, if target is alive.
+00:33:27.881038 Server with Id: 0 - Time: 43 - Throws Hand Sign and is still alive.
+00:33:28.365177 Server with Id: 0 - Time: 44 - Pokes to check, if target is alive.
+00:33:28.366348 Server with Id: 2 - Time: 46 - Throws Hand Sign and is still alive.
+00:33:34.113042 Server with Id: 3 - Time: 45 - Pokes to check, if target is alive.
+00:33:34.114497 Server with Id: 0 - Time: 47 - Throws Hand Sign and is still alive.
+00:33:34.614688 Server with Id: 0 - Time: 48 - Pokes to check, if target is alive.
+00:33:34.615241 Server with Id: 3 - Time: 50 - Throws Hand Sign and is still alive.
+00:33:37.895607 Server with Id: 2 - Time: 47 - Pokes to check, if target is alive.
+00:33:37.896484 Server with Id: 0 - Time: 49 - Throws Hand Sign and is still alive.
+00:33:38.379199 Server with Id: 0 - Time: 50 - Pokes to check, if target is alive.
+00:33:38.379711 Server with Id: 2 - Time: 52 - Throws Hand Sign and is still alive.
+00:33:44.119529 Server with Id: 3 - Time: 51 - Pokes to check, if target is alive.
+00:33:44.120537 Server with Id: 0 - Time: 53 - Throws Hand Sign and is still alive.
+00:33:44.620515 Server with Id: 0 - Time: 54 - Pokes to check, if target is alive.
+00:33:44.621743 Server with Id: 3 - Time: 56 - Throws Hand Sign and is still alive.
+00:33:47.899622 Server with Id: 2 - Time: 53 - Pokes to check, if target is alive.
+00:33:47.900136 Server with Id: 0 - Time: 55 - Throws Hand Sign and is still alive.
+00:33:48.382879 Server with Id: 0 - Time: 56 - Pokes to check, if target is alive.
+00:33:48.384108 Server with Id: 2 - Time: 58 - Throws Hand Sign and is still alive.
+00:33:54.129309 Server with Id: 3 - Time: 57 - Pokes to check, if target is alive.
+00:33:54.130231 Server with Id: 0 - Time: 59 - Throws Hand Sign and is still alive.
+00:33:54.628529 Server with Id: 0 - Time: 60 - Pokes to check, if target is alive.
+00:33:54.629955 Server with Id: 3 - Time: 62 - Throws Hand Sign and is still alive.
+00:33:57.913527 Server with Id: 2 - Time: 59 - Pokes to check, if target is alive.
+00:33:57.914075 Server with Id: 0 - Time: 61 - Throws Hand Sign and is still alive.
+00:33:58.396696 Server with Id: 0 - Time: 62 - Pokes to check, if target is alive.
+00:33:58.398281 Server with Id: 2 - Time: 64 - Throws Hand Sign and is still alive.
+00:34:02.377666 New Server - Sending Joining-Request.
+00:34:02.378713 Server with ID: 1 - Time: 63 - Joined the ServerCommunication.
+00:34:02.378713 Server with Id: 0 - Time: 64 - Sends update-request with the change: ServerJoined.
+00:34:02.380754 Server with Id: 2 - Time: 65 - Parsed the ServerJoined change.
+00:34:02.381750 Server with Id: 1 - Time: 68 - Initial values set based on JoinResponse.
+00:34:02.381750 Server with Id: 1 - Time: 69 - Sends update-request with the change: CreateNewClient.
+00:34:02.387200 Server with ID: 1 - Is up and listening.
+00:34:02.897789 Server with Id: 0 - Time: 70 - Parsed the CreateNewClient change.
+00:34:04.144915 Server with Id: 3 - Time: 63 - Pokes to check, if target is alive.
+00:34:04.145427 Server with Id: 0 - Time: 73 - Throws Hand Sign and is still alive.
+00:34:04.644733 Server with Id: 0 - Time: 74 - Pokes to check, if target is alive.
+00:34:04.645612 Server with Id: 3 - Time: 76 - Throws Hand Sign and is still alive.
+00:34:07.916303 Server with Id: 2 - Time: 67 - Pokes to check, if target is alive.
+00:34:07.917415 Server with Id: 0 - Time: 75 - Throws Hand Sign and is still alive.
+00:34:08.400178 Server with Id: 0 - Time: 76 - Pokes to check, if target is alive.
+00:34:08.400942 Server with Id: 2 - Time: 78 - Throws Hand Sign and is still alive.
+00:34:12.384984 Server with Id: 1 - Time: 69 - Pokes to check, if target is alive.
+00:34:12.385494 Server with Id: 0 - Time: 77 - Throws Hand Sign and is still alive.
+00:34:12.900084 Server with Id: 0 - Time: 78 - Pokes to check, if target is alive.
+00:34:12.900750 Server with Id: 1 - Time: 80 - Throws Hand Sign and is still alive.
+00:34:14.147051 Server with Id: 3 - Time: 77 - Pokes to check, if target is alive.
+00:34:14.147760 Server with Id: 0 - Time: 79 - Throws Hand Sign and is still alive.
+00:34:14.656782 Server with Id: 0 - Time: 80 - Pokes to check, if target is alive.
+00:34:14.657562 Server with Id: 3 - Time: 82 - Throws Hand Sign and is still alive.
+00:34:17.925391 Server with Id: 2 - Time: 79 - Pokes to check, if target is alive.
+00:34:17.926831 Server with Id: 0 - Time: 81 - Throws Hand Sign and is still alive.
+00:34:18.406262 Server with Id: 0 - Time: 82 - Pokes to check, if target is alive.
+00:34:18.408328 Server with Id: 2 - Time: 84 - Throws Hand Sign and is still alive.
+00:34:22.395113 Server with Id: 1 - Time: 81 - Pokes to check, if target is alive.
+00:34:22.395783 Server with Id: 0 - Time: 83 - Throws Hand Sign and is still alive.
+00:34:22.910343 Server with Id: 0 - Time: 84 - Pokes to check, if target is alive.
+00:34:22.910858 Server with Id: 1 - Time: 86 - Throws Hand Sign and is still alive.
+00:34:24.156801 Server with Id: 3 - Time: 83 - Pokes to check, if target is alive.
+00:34:24.157320 Server with Id: 0 - Time: 85 - Throws Hand Sign and is still alive.
+00:34:24.657825 Server with Id: 0 - Time: 86 - Pokes to check, if target is alive.
+00:34:24.658751 Server with Id: 3 - Time: 88 - Throws Hand Sign and is still alive.
+00:34:27.928995 Server with Id: 2 - Time: 85 - Pokes to check, if target is alive.
+00:34:27.929970 Server with Id: 0 - Time: 87 - Throws Hand Sign and is still alive.
+00:34:28.412727 Server with Id: 0 - Time: 88 - Pokes to check, if target is alive.
+00:34:28.414173 Server with Id: 2 - Time: 90 - Throws Hand Sign and is still alive.
+00:34:32.399294 Server with Id: 1 - Time: 87 - Pokes to check, if target is alive.
+00:34:32.401290 Server with Id: 0 - Time: 89 - Throws Hand Sign and is still alive.
+00:34:32.913229 Server with Id: 0 - Time: 90 - Pokes to check, if target is alive.
+00:34:32.913890 Server with Id: 1 - Time: 92 - Throws Hand Sign and is still alive.
+00:34:34.160733 Server with Id: 3 - Time: 89 - Pokes to check, if target is alive.
+00:34:34.161555 Server with Id: 0 - Time: 91 - Throws Hand Sign and is still alive.
+00:34:34.672353 Server with Id: 0 - Time: 92 - Pokes to check, if target is alive.
+00:34:34.673202 Server with Id: 3 - Time: 94 - Throws Hand Sign and is still alive.
+00:34:37.937759 Server with Id: 2 - Time: 91 - Pokes to check, if target is alive.
+00:34:37.938881 Server with Id: 0 - Time: 93 - Throws Hand Sign and is still alive.
+00:34:38.419470 Server with Id: 0 - Time: 94 - Pokes to check, if target is alive.
+00:34:38.420091 Server with Id: 2 - Time: 96 - Throws Hand Sign and is still alive.
+00:34:42.405369 Server with Id: 1 - Time: 93 - Pokes to check, if target is alive.
+00:34:42.406050 Server with Id: 0 - Time: 95 - Throws Hand Sign and is still alive.
+00:34:42.918898 Server with Id: 0 - Time: 96 - Pokes to check, if target is alive.
+00:34:42.919673 Server with Id: 1 - Time: 98 - Throws Hand Sign and is still alive.
+00:34:44.165543 Server with Id: 3 - Time: 95 - Pokes to check, if target is alive.
+00:34:44.166326 Server with Id: 0 - Time: 97 - Throws Hand Sign and is still alive.
+00:34:44.676883 Server with Id: 0 - Time: 98 - Pokes to check, if target is alive.
+00:34:44.677442 Server with Id: 3 - Time: 100 - Throws Hand Sign and is still alive.
+00:34:47.949316 Server with Id: 2 - Time: 97 - Pokes to check, if target is alive.
+00:34:47.949861 Server with Id: 0 - Time: 99 - Throws Hand Sign and is still alive.
+00:34:48.431114 Server with Id: 0 - Time: 100 - Pokes to check, if target is alive.
+00:34:48.432296 Server with Id: 2 - Time: 102 - Throws Hand Sign and is still alive.
+00:34:52.410535 Server with Id: 1 - Time: 99 - Pokes to check, if target is alive.
+00:34:52.411147 Server with Id: 0 - Time: 101 - Throws Hand Sign and is still alive.
+00:34:52.935150 Server with Id: 0 - Time: 102 - Pokes to check, if target is alive.
+00:34:52.935673 Server with Id: 1 - Time: 104 - Throws Hand Sign and is still alive.
+00:34:54.170169 Server with Id: 3 - Time: 101 - Pokes to check, if target is alive.
+00:34:54.171592 Server with Id: 0 - Time: 103 - Throws Hand Sign and is still alive.
+00:34:54.683214 Server with Id: 0 - Time: 104 - Pokes to check, if target is alive.
+00:34:54.683753 Server with Id: 3 - Time: 106 - Throws Hand Sign and is still alive.
+00:34:57.956189 Server with Id: 2 - Time: 103 - Pokes to check, if target is alive.
+00:34:57.956928 Server with Id: 0 - Time: 105 - Throws Hand Sign and is still alive.
+00:34:58.442371 Server with Id: 0 - Time: 106 - Pokes to check, if target is alive.
+00:34:58.443665 Server with Id: 2 - Time: 108 - Throws Hand Sign and is still alive.
+00:35:02.413936 Server with Id: 1 - Time: 105 - Pokes to check, if target is alive.
+00:35:02.414883 Server with Id: 0 - Time: 107 - Throws Hand Sign and is still alive.
+00:35:02.945728 Server with Id: 0 - Time: 108 - Pokes to check, if target is alive.
+00:35:02.946437 Server with Id: 1 - Time: 110 - Throws Hand Sign and is still alive.
+00:35:04.173606 Server with Id: 3 - Time: 107 - Pokes to check, if target is alive.
+00:35:04.174164 Server with Id: 0 - Time: 109 - Throws Hand Sign and is still alive.
+00:35:04.685643 Server with Id: 0 - Time: 110 - Pokes to check, if target is alive.
+00:35:04.687813 Server with Id: 3 - Time: 112 - Throws Hand Sign and is still alive.
+00:35:07.959359 Server with Id: 2 - Time: 109 - Pokes to check, if target is alive.
+00:35:07.960089 Server with Id: 0 - Time: 111 - Throws Hand Sign and is still alive.
+00:35:08.455863 Server with Id: 0 - Time: 112 - Pokes to check, if target is alive.
+00:35:08.456560 Server with Id: 2 - Time: 114 - Throws Hand Sign and is still alive.
+00:35:12.419865 Server with Id: 1 - Time: 111 - Pokes to check, if target is alive.
+00:35:12.421765 Server with Id: 0 - Time: 113 - Throws Hand Sign and is still alive.
+00:35:12.949585 Server with Id: 0 - Time: 114 - Pokes to check, if target is alive.
+00:35:12.950181 Server with Id: 1 - Time: 116 - Throws Hand Sign and is still alive.
+00:35:14.177980 Server with Id: 3 - Time: 113 - Pokes to check, if target is alive.
+00:35:14.177980 Server with Id: 0 - Time: 115 - Throws Hand Sign and is still alive.
+00:35:14.471865 New Server - Sending Joining-Request.
+00:35:14.472934 Server with ID: 4 - Time: 117 - Joined the ServerCommunication.
+00:35:14.472934 Server with Id: 0 - Time: 118 - Sends update-request with the change: ServerJoined.
+00:35:14.473460 Server with Id: 1 - Time: 119 - Parsed the ServerJoined change.
+00:35:14.473982 Server with Id: 0 - Time: 122 - Sends update-request with the change: ServerJoined.
+00:35:14.473982 Server with Id: 2 - Time: 123 - Parsed the ServerJoined change.
+00:35:14.474527 Server with Id: 0 - Time: 126 - Sends update-request with the change: ServerJoined.
+00:35:14.474527 Server with Id: 3 - Time: 127 - Parsed the ServerJoined change.
+00:35:14.475561 Server with Id: 4 - Time: 130 - Initial values set based on JoinResponse.
+00:35:14.475561 Server with Id: 4 - Time: 131 - Sends update-request with the change: CreateNewClient.
+00:35:14.480302 Server with ID: 4 - Is up and listening.
+00:35:14.697265 Server with Id: 0 - Time: 133 - Pokes to check, if target is alive.
+00:35:14.698028 Server with Id: 3 - Time: 135 - Throws Hand Sign and is still alive.
+00:35:14.982449 Server with Id: 0 - Time: 132 - Parsed the CreateNewClient change.
+00:35:17.964160 Server with Id: 2 - Time: 125 - Pokes to check, if target is alive.
+00:35:17.964941 Server with Id: 0 - Time: 135 - Throws Hand Sign and is still alive.
+00:35:18.459300 Server with Id: 0 - Time: 136 - Pokes to check, if target is alive.
+00:35:18.460159 Server with Id: 2 - Time: 138 - Throws Hand Sign and is still alive.
+00:35:22.434995 Server with Id: 1 - Time: 121 - Pokes to check, if target is alive.
+00:35:22.435923 Server with Id: 0 - Time: 137 - Throws Hand Sign and is still alive.
+00:35:22.964920 Server with Id: 0 - Time: 138 - Pokes to check, if target is alive.
+00:35:22.966549 Server with Id: 1 - Time: 140 - Throws Hand Sign and is still alive.
+00:35:24.184608 Server with Id: 3 - Time: 136 - Pokes to check, if target is alive.
+00:35:24.186625 Server with Id: 0 - Time: 139 - Throws Hand Sign and is still alive.
+00:35:24.481199 Server with Id: 4 - Time: 131 - Pokes to check, if target is alive.
+00:35:24.481844 Server with Id: 0 - Time: 141 - Throws Hand Sign and is still alive.
+00:35:24.701031 Server with Id: 0 - Time: 142 - Pokes to check, if target is alive.
+00:35:24.702696 Server with Id: 3 - Time: 144 - Throws Hand Sign and is still alive.
+00:35:24.984070 Server with Id: 0 - Time: 142 - Pokes to check, if target is alive.
+00:35:24.984169 Server with Id: 4 - Time: 144 - Throws Hand Sign and is still alive.
+00:35:27.971691 Server with Id: 2 - Time: 139 - Pokes to check, if target is alive.
+00:35:27.973451 Server with Id: 0 - Time: 143 - Throws Hand Sign and is still alive.
+00:35:28.466529 Server with Id: 0 - Time: 144 - Pokes to check, if target is alive.
+00:35:28.468374 Server with Id: 2 - Time: 146 - Throws Hand Sign and is still alive.
+00:35:32.446729 Server with Id: 1 - Time: 141 - Pokes to check, if target is alive.
+00:35:32.448010 Server with Id: 0 - Time: 145 - Throws Hand Sign and is still alive.
+00:35:32.975751 Server with Id: 0 - Time: 146 - Pokes to check, if target is alive.
+00:35:32.976752 Server with Id: 1 - Time: 148 - Throws Hand Sign and is still alive.
+00:35:34.191802 Server with Id: 3 - Time: 145 - Pokes to check, if target is alive.
+00:35:34.192319 Server with Id: 0 - Time: 147 - Throws Hand Sign and is still alive.
+00:35:34.482643 Server with Id: 4 - Time: 145 - Pokes to check, if target is alive.
+00:35:34.483194 Server with Id: 0 - Time: 149 - Throws Hand Sign and is still alive.
+00:35:34.714692 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:35:34.715202 Server with Id: 3 - Time: 152 - Throws Hand Sign and is still alive.
+00:35:34.997596 Server with Id: 0 - Time: 150 - Pokes to check, if target is alive.
+00:35:34.998252 Server with Id: 4 - Time: 152 - Throws Hand Sign and is still alive.
+00:35:37.981572 Server with Id: 2 - Time: 147 - Pokes to check, if target is alive.
+00:35:37.982156 Server with Id: 0 - Time: 151 - Throws Hand Sign and is still alive.
+00:35:38.480658 Server with Id: 0 - Time: 152 - Pokes to check, if target is alive.
+00:35:38.481201 Server with Id: 2 - Time: 154 - Throws Hand Sign and is still alive.
+00:35:42.449352 Server with Id: 1 - Time: 149 - Pokes to check, if target is alive.
+00:35:42.450102 Server with Id: 0 - Time: 153 - Throws Hand Sign and is still alive.
+00:35:42.987105 Server with Id: 0 - Time: 154 - Pokes to check, if target is alive.
+00:35:42.987896 Server with Id: 1 - Time: 156 - Throws Hand Sign and is still alive.
+00:35:44.199319 Server with Id: 3 - Time: 153 - Pokes to check, if target is alive.
+00:35:44.199941 Server with Id: 0 - Time: 155 - Throws Hand Sign and is still alive.
+00:35:44.497396 Server with Id: 4 - Time: 153 - Pokes to check, if target is alive.
+00:35:44.498731 Server with Id: 0 - Time: 157 - Throws Hand Sign and is still alive.
+00:35:44.729926 Server with Id: 0 - Time: 158 - Pokes to check, if target is alive.
+00:35:44.730494 Server with Id: 3 - Time: 160 - Throws Hand Sign and is still alive.
+00:35:45.009458 Server with Id: 0 - Time: 158 - Pokes to check, if target is alive.
+00:35:45.009970 Server with Id: 4 - Time: 160 - Throws Hand Sign and is still alive.
+00:35:48.488413 Server with Id: 0 - Time: 158 - Pokes to check, if target is alive.
+00:35:48.831153 New Server - Sending Joining-Request.
+00:35:48.831677 Server with ID: 5 - Time: 159 - Joined the ServerCommunication.
+00:35:48.831677 Server with Id: 0 - Time: 160 - Sends update-request with the change: ServerJoined.
+00:35:48.832198 Server with Id: 1 - Time: 161 - Parsed the ServerJoined change.
+00:35:48.832716 Server with Id: 0 - Time: 164 - Sends update-request with the change: ServerJoined.
+00:35:50.515224 Error i poke. The Target is Dead.
+00:35:50.515224 Server with Id: 0 - Time: 159 - Sends update-request with the change: ServerLeft.
+00:35:52.465575 Server with Id: 1 - Time: 163 - Pokes to check, if target is alive.
+00:35:54.208560 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:35:54.506165 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:35:54.521644 Error i poke. The Target is Dead.
+00:35:54.725373 Server with Id: 1 - Time: 165 - Throws Hand Sign and is still alive.
+00:35:55.022732 Server with Id: 1 - Time: 167 - Throws Hand Sign and is still alive.
+00:36:04.731274 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:36:04.732044 Server with Id: 1 - Time: 169 - Throws Hand Sign and is still alive.
+00:36:05.027969 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:36:05.029439 Server with Id: 1 - Time: 171 - Throws Hand Sign and is still alive.
+00:36:14.743834 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:36:14.746941 Server with Id: 1 - Time: 173 - Throws Hand Sign and is still alive.
+00:36:15.038854 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:36:15.039681 Server with Id: 1 - Time: 175 - Throws Hand Sign and is still alive.
+00:36:24.757235 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:36:24.757781 Server with Id: 1 - Time: 177 - Throws Hand Sign and is still alive.
+00:36:25.054182 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:36:25.055375 Server with Id: 1 - Time: 179 - Throws Hand Sign and is still alive.
+00:36:34.764419 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:36:34.765279 Server with Id: 1 - Time: 181 - Throws Hand Sign and is still alive.
+00:36:35.060600 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:36:35.061178 Server with Id: 1 - Time: 183 - Throws Hand Sign and is still alive.
+00:36:44.773477 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:36:44.774371 Server with Id: 1 - Time: 185 - Throws Hand Sign and is still alive.
+00:36:45.066855 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:36:45.068076 Server with Id: 1 - Time: 187 - Throws Hand Sign and is still alive.
+00:36:54.775993 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:36:54.776640 Server with Id: 1 - Time: 189 - Throws Hand Sign and is still alive.
+00:36:55.084162 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:36:55.086620 Server with Id: 1 - Time: 191 - Throws Hand Sign and is still alive.
+00:37:04.789550 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:37:04.790060 Server with Id: 1 - Time: 193 - Throws Hand Sign and is still alive.
+00:37:05.102455 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:37:05.103290 Server with Id: 1 - Time: 195 - Throws Hand Sign and is still alive.
+00:37:14.803571 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:37:14.804085 Server with Id: 1 - Time: 197 - Throws Hand Sign and is still alive.
+00:37:15.116912 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:37:15.118530 Server with Id: 1 - Time: 199 - Throws Hand Sign and is still alive.
+00:37:24.817921 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:37:24.819578 Server with Id: 1 - Time: 201 - Throws Hand Sign and is still alive.
+00:37:25.131526 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:37:25.132087 Server with Id: 1 - Time: 203 - Throws Hand Sign and is still alive.
+00:37:34.829036 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:37:34.830301 Server with Id: 1 - Time: 205 - Throws Hand Sign and is still alive.
+00:37:35.141199 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:37:35.141825 Server with Id: 1 - Time: 207 - Throws Hand Sign and is still alive.
+00:37:44.832518 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:37:44.833062 Server with Id: 1 - Time: 209 - Throws Hand Sign and is still alive.
+00:37:45.144616 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:37:45.146736 Server with Id: 1 - Time: 211 - Throws Hand Sign and is still alive.
+00:37:54.841037 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:37:54.842406 Server with Id: 1 - Time: 213 - Throws Hand Sign and is still alive.
+00:37:55.155354 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:37:55.156347 Server with Id: 1 - Time: 215 - Throws Hand Sign and is still alive.
+00:38:04.848007 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:38:04.849207 Server with Id: 1 - Time: 217 - Throws Hand Sign and is still alive.
+00:38:05.157146 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:38:05.158214 Server with Id: 1 - Time: 219 - Throws Hand Sign and is still alive.
+00:38:14.853645 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:38:14.854894 Server with Id: 1 - Time: 221 - Throws Hand Sign and is still alive.
+00:38:15.166630 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:38:15.167692 Server with Id: 1 - Time: 223 - Throws Hand Sign and is still alive.
+00:38:24.860440 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:38:24.861644 Server with Id: 1 - Time: 225 - Throws Hand Sign and is still alive.
+00:38:25.170330 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:38:25.171280 Server with Id: 1 - Time: 227 - Throws Hand Sign and is still alive.
+00:38:34.868034 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:38:34.868549 Server with Id: 1 - Time: 229 - Throws Hand Sign and is still alive.
+00:38:35.181807 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:38:35.183012 Server with Id: 1 - Time: 231 - Throws Hand Sign and is still alive.
+00:38:44.881927 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:38:44.882823 Server with Id: 1 - Time: 233 - Throws Hand Sign and is still alive.
+00:38:45.193081 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:38:45.194290 Server with Id: 1 - Time: 235 - Throws Hand Sign and is still alive.
+00:38:54.893804 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:38:54.894327 Server with Id: 1 - Time: 237 - Throws Hand Sign and is still alive.
+00:38:55.204171 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:38:55.204171 Server with Id: 1 - Time: 239 - Throws Hand Sign and is still alive.
+00:39:04.895703 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:39:04.896223 Server with Id: 1 - Time: 241 - Throws Hand Sign and is still alive.
+00:39:05.207558 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:39:05.208137 Server with Id: 1 - Time: 243 - Throws Hand Sign and is still alive.
+00:39:14.910883 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:39:14.911410 Server with Id: 1 - Time: 245 - Throws Hand Sign and is still alive.
+00:39:15.222691 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:39:15.223329 Server with Id: 1 - Time: 247 - Throws Hand Sign and is still alive.
+00:39:24.920155 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:39:24.921547 Server with Id: 1 - Time: 249 - Throws Hand Sign and is still alive.
+00:39:25.231623 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:39:25.233442 Server with Id: 1 - Time: 251 - Throws Hand Sign and is still alive.
+00:39:34.930793 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:39:34.931667 Server with Id: 1 - Time: 253 - Throws Hand Sign and is still alive.
+00:39:35.240594 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:39:35.241932 Server with Id: 1 - Time: 255 - Throws Hand Sign and is still alive.
+00:39:44.932942 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:39:44.933604 Server with Id: 1 - Time: 257 - Throws Hand Sign and is still alive.
+00:39:45.246707 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:39:45.247391 Server with Id: 1 - Time: 259 - Throws Hand Sign and is still alive.
+00:39:54.946325 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:39:54.947493 Server with Id: 1 - Time: 261 - Throws Hand Sign and is still alive.
+00:39:55.258415 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:39:55.259029 Server with Id: 1 - Time: 263 - Throws Hand Sign and is still alive.
+00:40:04.955970 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:40:04.957710 Server with Id: 1 - Time: 265 - Throws Hand Sign and is still alive.
+00:40:05.271279 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:40:05.273018 Server with Id: 1 - Time: 267 - Throws Hand Sign and is still alive.
+00:40:14.959751 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:40:14.960330 Server with Id: 1 - Time: 269 - Throws Hand Sign and is still alive.
+00:40:15.289238 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:40:15.289798 Server with Id: 1 - Time: 271 - Throws Hand Sign and is still alive.
+00:40:24.967652 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:40:24.968756 Server with Id: 1 - Time: 273 - Throws Hand Sign and is still alive.
+00:40:25.297715 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:40:25.298503 Server with Id: 1 - Time: 275 - Throws Hand Sign and is still alive.
+00:40:34.974032 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:40:34.974550 Server with Id: 1 - Time: 277 - Throws Hand Sign and is still alive.
+00:40:35.301158 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:40:35.301725 Server with Id: 1 - Time: 279 - Throws Hand Sign and is still alive.
+00:40:44.980721 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:40:44.981632 Server with Id: 1 - Time: 281 - Throws Hand Sign and is still alive.
+00:40:45.307242 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:40:45.307767 Server with Id: 1 - Time: 283 - Throws Hand Sign and is still alive.
+00:40:54.993559 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:40:54.994101 Server with Id: 1 - Time: 285 - Throws Hand Sign and is still alive.
+00:40:55.318691 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:40:55.319656 Server with Id: 1 - Time: 287 - Throws Hand Sign and is still alive.
+00:41:05.000846 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:41:05.001466 Server with Id: 1 - Time: 289 - Throws Hand Sign and is still alive.
+00:41:05.329608 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:41:05.330266 Server with Id: 1 - Time: 291 - Throws Hand Sign and is still alive.
+00:41:15.016433 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:41:15.017634 Server with Id: 1 - Time: 293 - Throws Hand Sign and is still alive.
+00:41:15.342914 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:41:15.342914 Server with Id: 1 - Time: 295 - Throws Hand Sign and is still alive.
+00:41:25.019679 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:41:25.020806 Server with Id: 1 - Time: 297 - Throws Hand Sign and is still alive.
+00:41:25.345235 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:41:25.345750 Server with Id: 1 - Time: 299 - Throws Hand Sign and is still alive.
+00:41:35.021790 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:41:35.022346 Server with Id: 1 - Time: 301 - Throws Hand Sign and is still alive.
+00:41:35.348321 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:41:35.349070 Server with Id: 1 - Time: 303 - Throws Hand Sign and is still alive.
+00:41:45.034087 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:41:45.035473 Server with Id: 1 - Time: 305 - Throws Hand Sign and is still alive.
+00:41:45.358966 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:41:45.359678 Server with Id: 1 - Time: 307 - Throws Hand Sign and is still alive.
+00:41:55.046919 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:41:55.048145 Server with Id: 1 - Time: 309 - Throws Hand Sign and is still alive.
+00:41:55.373421 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:41:55.373925 Server with Id: 1 - Time: 311 - Throws Hand Sign and is still alive.
+00:42:05.062788 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:42:05.063363 Server with Id: 1 - Time: 313 - Throws Hand Sign and is still alive.
+00:42:05.388027 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:42:05.388562 Server with Id: 1 - Time: 315 - Throws Hand Sign and is still alive.
+00:42:15.074110 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:42:15.074629 Server with Id: 1 - Time: 317 - Throws Hand Sign and is still alive.
+00:42:15.399481 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:42:15.400713 Server with Id: 1 - Time: 319 - Throws Hand Sign and is still alive.
+00:42:25.077305 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:42:25.077855 Server with Id: 1 - Time: 321 - Throws Hand Sign and is still alive.
+00:42:25.402867 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:42:25.403528 Server with Id: 1 - Time: 323 - Throws Hand Sign and is still alive.
+00:42:35.092093 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:42:35.092396 Server with Id: 1 - Time: 325 - Throws Hand Sign and is still alive.
+00:42:35.415205 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:42:35.415735 Server with Id: 1 - Time: 327 - Throws Hand Sign and is still alive.
+00:42:45.107117 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:42:45.108353 Server with Id: 1 - Time: 329 - Throws Hand Sign and is still alive.
+00:42:45.431197 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:42:45.432603 Server with Id: 1 - Time: 331 - Throws Hand Sign and is still alive.
+00:42:55.108816 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:42:55.109147 Server with Id: 1 - Time: 333 - Throws Hand Sign and is still alive.
+00:42:55.434734 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:42:55.435864 Server with Id: 1 - Time: 335 - Throws Hand Sign and is still alive.
+00:43:05.111695 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:43:05.112690 Server with Id: 1 - Time: 337 - Throws Hand Sign and is still alive.
+00:43:05.438388 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:43:05.439082 Server with Id: 1 - Time: 339 - Throws Hand Sign and is still alive.
+00:43:15.118214 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:43:15.119286 Server with Id: 1 - Time: 341 - Throws Hand Sign and is still alive.
+00:43:15.455247 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:43:15.455845 Server with Id: 1 - Time: 343 - Throws Hand Sign and is still alive.
+00:43:25.124341 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:43:25.125617 Server with Id: 1 - Time: 345 - Throws Hand Sign and is still alive.
+00:43:25.465271 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:43:25.466729 Server with Id: 1 - Time: 347 - Throws Hand Sign and is still alive.
+00:43:35.131880 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:43:35.133093 Server with Id: 1 - Time: 349 - Throws Hand Sign and is still alive.
+00:43:35.473358 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:43:35.474331 Server with Id: 1 - Time: 351 - Throws Hand Sign and is still alive.
+00:43:45.134567 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:43:45.135346 Server with Id: 1 - Time: 353 - Throws Hand Sign and is still alive.
+00:43:45.489803 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:43:45.491012 Server with Id: 1 - Time: 355 - Throws Hand Sign and is still alive.
+00:43:55.147932 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:43:55.148474 Server with Id: 1 - Time: 357 - Throws Hand Sign and is still alive.
+00:43:55.505906 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:43:55.506822 Server with Id: 1 - Time: 359 - Throws Hand Sign and is still alive.
+00:44:05.155326 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:44:05.155871 Server with Id: 1 - Time: 361 - Throws Hand Sign and is still alive.
+00:44:05.513437 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:44:05.514052 Server with Id: 1 - Time: 363 - Throws Hand Sign and is still alive.
+00:44:15.162296 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:44:15.162351 Server with Id: 1 - Time: 365 - Throws Hand Sign and is still alive.
+00:44:15.522230 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:44:15.522977 Server with Id: 1 - Time: 367 - Throws Hand Sign and is still alive.
+00:44:25.169070 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:44:25.169686 Server with Id: 1 - Time: 369 - Throws Hand Sign and is still alive.
+00:44:25.525454 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:44:25.526174 Server with Id: 1 - Time: 371 - Throws Hand Sign and is still alive.
+00:44:35.177227 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:44:35.177829 Server with Id: 1 - Time: 373 - Throws Hand Sign and is still alive.
+00:44:35.538000 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:44:35.538583 Server with Id: 1 - Time: 375 - Throws Hand Sign and is still alive.
+00:44:45.192004 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:44:45.193234 Server with Id: 1 - Time: 377 - Throws Hand Sign and is still alive.
+00:44:45.546811 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:44:45.548147 Server with Id: 1 - Time: 379 - Throws Hand Sign and is still alive.
+00:44:55.207035 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:44:55.208378 Server with Id: 1 - Time: 381 - Throws Hand Sign and is still alive.
+00:44:55.562102 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:44:55.563225 Server with Id: 1 - Time: 383 - Throws Hand Sign and is still alive.
+00:45:05.219043 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:45:05.219655 Server with Id: 1 - Time: 385 - Throws Hand Sign and is still alive.
+00:45:05.565309 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:45:05.566028 Server with Id: 1 - Time: 387 - Throws Hand Sign and is still alive.
+00:45:08.073034 New Server - Sending Joining-Request.
+00:45:08.074035 Server with ID: 1 - Time: 389 - Joined the ServerCommunication.
+00:45:08.074035 Server with Id: 1 - Time: 390 - Sends update-request with the change: ServerJoined.
+00:45:15.226743 Server with Id: 3 - Time: 161 - Pokes to check, if target is alive.
+00:45:15.567821 Server with Id: 4 - Time: 161 - Pokes to check, if target is alive.
+00:45:17.261795 Error i poke. The Target is Dead.
+00:45:17.592834 Error i poke. The Target is Dead.
+00:45:35.853207 Fail to dial leader when joining, setting myself to leader
+00:45:35.863490 Server with ID: 0 - Is up and listening.
+00:45:39.631016 New Server - Sending Joining-Request.
+00:45:39.632061 Server with ID: 1 - Time: 3 - Joined the ServerCommunication.
+00:45:39.632652 Server with Id: 1 - Time: 4 - Initial values set based on JoinResponse.
+00:45:39.633157 Server with Id: 1 - Time: 5 - Sends update-request with the change: CreateNewClient.
+00:45:39.637820 Server with ID: 1 - Is up and listening.
+00:45:40.144379 Server with Id: 0 - Time: 6 - Parsed the CreateNewClient change.
+00:45:47.827046 New Server - Sending Joining-Request.
+00:45:47.827593 Server with ID: 2 - Time: 9 - Joined the ServerCommunication.
+00:45:47.827593 Server with Id: 0 - Time: 10 - Sends update-request with the change: ServerJoined.
+00:45:47.828160 Server with Id: 1 - Time: 11 - Parsed the ServerJoined change.
+00:45:47.828682 Server with Id: 2 - Time: 14 - Initial values set based on JoinResponse.
+00:45:47.829202 Server with Id: 2 - Time: 15 - Sends update-request with the change: CreateNewClient.
+00:45:47.833558 Server with ID: 2 - Is up and listening.
+00:45:48.332162 Server with Id: 0 - Time: 16 - Parsed the CreateNewClient change.
+00:45:49.640490 Server with Id: 1 - Time: 13 - Pokes to check, if target is alive.
+00:45:49.640490 Server with Id: 0 - Time: 19 - Throws Hand Sign and is still alive.
+00:45:50.152630 Server with Id: 0 - Time: 20 - Pokes to check, if target is alive.
+00:45:50.153223 Server with Id: 1 - Time: 22 - Throws Hand Sign and is still alive.
+00:45:57.836576 Server with Id: 2 - Time: 15 - Pokes to check, if target is alive.
+00:45:57.837143 Server with Id: 0 - Time: 21 - Throws Hand Sign and is still alive.
+00:45:58.347563 Server with Id: 0 - Time: 22 - Pokes to check, if target is alive.
+00:45:58.348598 Server with Id: 2 - Time: 24 - Throws Hand Sign and is still alive.
+00:45:58.766376 New Server - Sending Joining-Request.
+00:45:58.766900 Server with ID: 3 - Time: 23 - Joined the ServerCommunication.
+00:45:58.767470 Server with Id: 0 - Time: 24 - Sends update-request with the change: ServerJoined.
+00:45:58.767470 Server with Id: 1 - Time: 25 - Parsed the ServerJoined change.
+00:45:58.768001 Server with Id: 0 - Time: 28 - Sends update-request with the change: ServerJoined.
+00:45:58.768522 Server with Id: 2 - Time: 29 - Parsed the ServerJoined change.
+00:45:58.769034 Server with Id: 3 - Time: 32 - Initial values set based on JoinResponse.
+00:45:58.769034 Server with Id: 3 - Time: 33 - Sends update-request with the change: CreateNewClient.
+00:45:58.774213 Server with ID: 3 - Is up and listening.
+00:45:59.282413 Server with Id: 0 - Time: 34 - Parsed the CreateNewClient change.
+00:45:59.641903 Server with Id: 1 - Time: 27 - Pokes to check, if target is alive.
+00:45:59.642599 Server with Id: 0 - Time: 37 - Throws Hand Sign and is still alive.
+00:46:00.157284 Server with Id: 0 - Time: 38 - Pokes to check, if target is alive.
+00:46:00.157834 Server with Id: 1 - Time: 40 - Throws Hand Sign and is still alive.
+00:46:03.974632 New Server - Sending Joining-Request.
+00:46:03.975217 Server with ID: 4 - Time: 39 - Joined the ServerCommunication.
+00:46:03.975793 Server with Id: 0 - Time: 40 - Sends update-request with the change: ServerJoined.
+00:46:03.977690 Server with Id: 1 - Time: 41 - Parsed the ServerJoined change.
+00:46:03.978688 Server with Id: 0 - Time: 44 - Sends update-request with the change: ServerJoined.
+00:46:03.979688 Server with Id: 2 - Time: 45 - Parsed the ServerJoined change.
+00:46:03.980686 Server with Id: 0 - Time: 48 - Sends update-request with the change: ServerJoined.
+00:46:03.981688 Server with Id: 3 - Time: 49 - Parsed the ServerJoined change.
+00:46:03.982697 Server with Id: 4 - Time: 52 - Initial values set based on JoinResponse.
+00:46:03.983215 Server with Id: 4 - Time: 53 - Sends update-request with the change: CreateNewClient.
+00:46:03.988696 Server with ID: 4 - Is up and listening.
+00:46:04.498422 Server with Id: 0 - Time: 54 - Parsed the CreateNewClient change.
+00:46:07.842850 Server with Id: 2 - Time: 47 - Pokes to check, if target is alive.
+00:46:07.843853 Server with Id: 0 - Time: 57 - Throws Hand Sign and is still alive.
+00:46:08.356476 Server with Id: 0 - Time: 58 - Pokes to check, if target is alive.
+00:46:08.357017 Server with Id: 2 - Time: 60 - Throws Hand Sign and is still alive.
+00:46:08.446200 New Server - Sending Joining-Request.
+00:46:08.446737 Server with ID: 5 - Time: 59 - Joined the ServerCommunication.
+00:46:08.447247 Server with Id: 0 - Time: 60 - Sends update-request with the change: ServerJoined.
+00:46:08.447247 Server with Id: 1 - Time: 61 - Parsed the ServerJoined change.
+00:46:08.447247 Server with Id: 0 - Time: 64 - Sends update-request with the change: ServerJoined.
+00:46:08.447953 Server with Id: 2 - Time: 65 - Parsed the ServerJoined change.
+00:46:08.447953 Server with Id: 0 - Time: 68 - Sends update-request with the change: ServerJoined.
+00:46:08.448613 Server with Id: 3 - Time: 69 - Parsed the ServerJoined change.
+00:46:08.448613 Server with Id: 0 - Time: 72 - Sends update-request with the change: ServerJoined.
+00:46:08.449155 Server with Id: 4 - Time: 73 - Parsed the ServerJoined change.
+00:46:08.449682 Server with Id: 5 - Time: 76 - Initial values set based on JoinResponse.
+00:46:08.450200 Server with Id: 5 - Time: 77 - Sends update-request with the change: CreateNewClient.
+00:46:08.454862 Server with ID: 5 - Is up and listening.
+00:46:08.780055 Server with Id: 3 - Time: 71 - Pokes to check, if target is alive.
+00:46:08.780577 Server with Id: 0 - Time: 80 - Throws Hand Sign and is still alive.
+00:46:08.954166 Server with Id: 0 - Time: 80 - Parsed the CreateNewClient change.
+00:46:09.297283 Server with Id: 0 - Time: 82 - Pokes to check, if target is alive.
+00:46:09.297807 Server with Id: 3 - Time: 84 - Throws Hand Sign and is still alive.
+00:46:09.658592 Server with Id: 1 - Time: 63 - Pokes to check, if target is alive.
+00:46:09.659932 Server with Id: 0 - Time: 83 - Throws Hand Sign and is still alive.
+00:46:10.169279 Server with Id: 0 - Time: 84 - Pokes to check, if target is alive.
+00:46:10.169965 Server with Id: 1 - Time: 86 - Throws Hand Sign and is still alive.
+00:46:13.995192 Server with Id: 4 - Time: 75 - Pokes to check, if target is alive.
+00:46:13.995725 Server with Id: 0 - Time: 85 - Throws Hand Sign and is still alive.
+00:46:14.513637 Server with Id: 0 - Time: 86 - Pokes to check, if target is alive.
+00:46:14.514147 Server with Id: 4 - Time: 88 - Throws Hand Sign and is still alive.
+00:46:17.853138 Server with Id: 2 - Time: 67 - Pokes to check, if target is alive.
+00:46:17.853750 Server with Id: 0 - Time: 87 - Throws Hand Sign and is still alive.
+00:46:18.364208 Server with Id: 0 - Time: 88 - Pokes to check, if target is alive.
+00:46:18.364755 Server with Id: 2 - Time: 90 - Throws Hand Sign and is still alive.
+00:46:18.457936 Server with Id: 5 - Time: 77 - Pokes to check, if target is alive.
+00:46:18.459823 Server with Id: 0 - Time: 89 - Throws Hand Sign and is still alive.
+00:46:18.782655 Server with Id: 3 - Time: 85 - Pokes to check, if target is alive.
+00:46:18.782655 Server with Id: 0 - Time: 91 - Throws Hand Sign and is still alive.
+00:46:18.967639 Server with Id: 0 - Time: 92 - Pokes to check, if target is alive.
+00:46:18.968154 Server with Id: 5 - Time: 94 - Throws Hand Sign and is still alive.
+00:46:19.312423 Server with Id: 0 - Time: 92 - Pokes to check, if target is alive.
+00:46:19.313134 Server with Id: 3 - Time: 94 - Throws Hand Sign and is still alive.
+00:46:20.182835 Server with Id: 0 - Time: 92 - Pokes to check, if target is alive.
+00:46:22.234669 Error i poke. The Target is Dead.
+00:46:22.235612 Server with Id: 0 - Time: 93 - Sends update-request with the change: ServerLeft.
+00:46:22.236345 Server with Id: 2 - Time: 94 - Parsed the ServerLeft change.
+00:46:22.236911 Server with Id: 0 - Time: 97 - Sends update-request with the change: ServerLeft.
+00:46:22.237562 Server with Id: 3 - Time: 98 - Parsed the ServerLeft change.
+00:46:22.238101 Server with Id: 0 - Time: 101 - Sends update-request with the change: ServerLeft.
+00:46:22.238160 Server with Id: 4 - Time: 102 - Parsed the ServerLeft change.
+00:46:22.238825 Server with Id: 0 - Time: 105 - Sends update-request with the change: ServerLeft.
+00:46:22.238825 Server with Id: 5 - Time: 106 - Parsed the ServerLeft change.
+00:46:24.000045 Server with Id: 4 - Time: 104 - Pokes to check, if target is alive.
+00:46:24.000045 Server with Id: 0 - Time: 106 - Throws Hand Sign and is still alive.
+00:46:24.516997 Server with Id: 0 - Time: 107 - Pokes to check, if target is alive.
+00:46:24.517577 Server with Id: 4 - Time: 109 - Throws Hand Sign and is still alive.
+00:46:28.371276 Server with Id: 0 - Time: 107 - Pokes to check, if target is alive.
+00:46:28.462584 Server with Id: 5 - Time: 108 - Pokes to check, if target is alive.
+00:46:28.463271 Server with Id: 0 - Time: 110 - Throws Hand Sign and is still alive.
+00:46:28.789002 Server with Id: 3 - Time: 100 - Pokes to check, if target is alive.
+00:46:28.789578 Server with Id: 0 - Time: 112 - Throws Hand Sign and is still alive.
+00:46:28.978230 Server with Id: 0 - Time: 113 - Pokes to check, if target is alive.
+00:46:28.978851 Server with Id: 5 - Time: 115 - Throws Hand Sign and is still alive.
+00:46:29.319184 Server with Id: 0 - Time: 113 - Pokes to check, if target is alive.
+00:46:29.319749 Server with Id: 3 - Time: 115 - Throws Hand Sign and is still alive.
+00:46:30.425879 Error i poke. The Target is Dead.
+00:46:30.427134 Server with Id: 0 - Time: 108 - Sends update-request with the change: ServerLeft.
+00:46:30.428045 Server with Id: 3 - Time: 116 - Parsed the ServerLeft change.
+00:46:30.429254 Server with Id: 0 - Time: 119 - Sends update-request with the change: ServerLeft.
+00:46:30.430454 Server with Id: 4 - Time: 120 - Parsed the ServerLeft change.
+00:46:30.431551 Server with Id: 0 - Time: 123 - Sends update-request with the change: ServerLeft.
+00:46:30.432876 Server with Id: 5 - Time: 124 - Parsed the ServerLeft change.
+00:46:34.009053 Server with Id: 4 - Time: 122 - Pokes to check, if target is alive.
+00:46:34.009886 Server with Id: 0 - Time: 124 - Throws Hand Sign and is still alive.
+00:46:34.524097 Server with Id: 0 - Time: 125 - Pokes to check, if target is alive.
+00:46:34.525418 Server with Id: 4 - Time: 127 - Throws Hand Sign and is still alive.
+00:46:38.464621 Server with Id: 5 - Time: 126 - Pokes to check, if target is alive.
+00:46:38.465173 Server with Id: 0 - Time: 128 - Throws Hand Sign and is still alive.
+00:46:38.790689 Server with Id: 3 - Time: 118 - Pokes to check, if target is alive.
+00:46:38.791317 Server with Id: 0 - Time: 130 - Throws Hand Sign and is still alive.
+00:46:38.992111 Server with Id: 0 - Time: 131 - Pokes to check, if target is alive.
+00:46:38.992785 Server with Id: 5 - Time: 133 - Throws Hand Sign and is still alive.
+00:46:39.320203 Server with Id: 0 - Time: 131 - Pokes to check, if target is alive.
+00:46:39.321282 Server with Id: 3 - Time: 133 - Throws Hand Sign and is still alive.
+00:46:44.023315 Server with Id: 4 - Time: 128 - Pokes to check, if target is alive.
+00:46:44.024539 Server with Id: 0 - Time: 132 - Throws Hand Sign and is still alive.
+00:46:44.537027 Server with Id: 0 - Time: 133 - Pokes to check, if target is alive.
+00:46:44.537027 Server with Id: 4 - Time: 135 - Throws Hand Sign and is still alive.
+00:46:48.476972 Server with Id: 5 - Time: 134 - Pokes to check, if target is alive.
+00:46:48.477841 Server with Id: 0 - Time: 136 - Throws Hand Sign and is still alive.
+00:46:48.802732 Server with Id: 3 - Time: 134 - Pokes to check, if target is alive.
+00:46:48.803702 Server with Id: 0 - Time: 138 - Throws Hand Sign and is still alive.
+00:46:49.006925 Server with Id: 0 - Time: 139 - Pokes to check, if target is alive.
+00:46:49.007646 Server with Id: 5 - Time: 141 - Throws Hand Sign and is still alive.
+00:46:49.334881 Server with Id: 0 - Time: 139 - Pokes to check, if target is alive.
+00:46:49.336161 Server with Id: 3 - Time: 141 - Throws Hand Sign and is still alive.
+00:46:54.550477 Server with Id: 0 - Time: 139 - Pokes to check, if target is alive.
+00:46:56.594895 Error i poke. The Target is Dead.
+00:46:56.595407 Server with Id: 0 - Time: 140 - Sends update-request with the change: ServerLeft.
+00:46:56.595673 Server with Id: 3 - Time: 142 - Parsed the ServerLeft change.
+00:46:56.595673 Server with Id: 0 - Time: 145 - Sends update-request with the change: ServerLeft.
+00:46:56.596198 Server with Id: 5 - Time: 146 - Parsed the ServerLeft change.
+00:46:58.481841 Server with Id: 5 - Time: 148 - Pokes to check, if target is alive.
+00:46:58.482903 Server with Id: 0 - Time: 150 - Throws Hand Sign and is still alive.
+00:46:58.808228 Server with Id: 3 - Time: 144 - Pokes to check, if target is alive.
+00:46:58.808759 Server with Id: 0 - Time: 152 - Throws Hand Sign and is still alive.
+00:46:59.013724 Server with Id: 0 - Time: 153 - Pokes to check, if target is alive.
+00:46:59.014898 Server with Id: 5 - Time: 155 - Throws Hand Sign and is still alive.
+00:46:59.351158 Server with Id: 0 - Time: 153 - Pokes to check, if target is alive.
+00:46:59.353239 Server with Id: 3 - Time: 155 - Throws Hand Sign and is still alive.
+00:47:02.194710 New Server - Sending Joining-Request.
+00:47:02.195229 Server with ID: 1 - Time: 154 - Joined the ServerCommunication.
+00:47:02.195229 Server with Id: 0 - Time: 155 - Sends update-request with the change: ServerJoined.
+00:47:02.195752 Server with Id: 3 - Time: 156 - Parsed the ServerJoined change.
+00:47:02.195752 Server with Id: 0 - Time: 159 - Sends update-request with the change: ServerJoined.
+00:47:02.196288 Server with Id: 5 - Time: 160 - Parsed the ServerJoined change.
+00:47:02.197325 Server with Id: 1 - Time: 163 - Initial values set based on JoinResponse.
+00:47:02.197362 Server with Id: 1 - Time: 164 - Sends update-request with the change: CreateNewClient.
+00:47:02.203888 Server with ID: 1 - Is up and listening.
+00:47:02.701800 Server with Id: 0 - Time: 165 - Parsed the CreateNewClient change.
+00:47:08.498499 Server with Id: 5 - Time: 162 - Pokes to check, if target is alive.
+00:47:08.499199 Server with Id: 0 - Time: 168 - Throws Hand Sign and is still alive.
+00:47:08.522840 New Server - Sending Joining-Request.
+00:47:08.523357 Server with ID: 2 - Time: 170 - Joined the ServerCommunication.
+00:47:08.523357 Server with Id: 0 - Time: 171 - Sends update-request with the change: ServerJoined.
+00:47:08.523878 Server with Id: 1 - Time: 172 - Parsed the ServerJoined change.
+00:47:08.524396 Server with Id: 0 - Time: 175 - Sends update-request with the change: ServerJoined.
+00:47:08.524945 Server with Id: 3 - Time: 176 - Parsed the ServerJoined change.
+00:47:08.525458 Server with Id: 0 - Time: 179 - Sends update-request with the change: ServerJoined.
+00:47:08.525532 Server with Id: 5 - Time: 180 - Parsed the ServerJoined change.
+00:47:08.526633 Server with Id: 2 - Time: 183 - Initial values set based on JoinResponse.
+00:47:08.526633 Server with Id: 2 - Time: 184 - Sends update-request with the change: CreateNewClient.
+00:47:08.532118 Server with ID: 2 - Is up and listening.
+00:47:08.810710 Server with Id: 3 - Time: 178 - Pokes to check, if target is alive.
+00:47:08.811221 Server with Id: 0 - Time: 187 - Throws Hand Sign and is still alive.
+00:47:09.030469 Server with Id: 0 - Time: 188 - Pokes to check, if target is alive.
+00:47:09.031471 Server with Id: 5 - Time: 190 - Throws Hand Sign and is still alive.
+00:47:09.032228 Server with Id: 0 - Time: 187 - Parsed the CreateNewClient change.
+00:47:09.357772 Server with Id: 0 - Time: 189 - Pokes to check, if target is alive.
+00:47:09.358469 Server with Id: 3 - Time: 191 - Throws Hand Sign and is still alive.
+00:47:12.212393 Server with Id: 1 - Time: 174 - Pokes to check, if target is alive.
+00:47:12.214385 Server with Id: 0 - Time: 190 - Throws Hand Sign and is still alive.
+00:47:12.705969 Server with Id: 0 - Time: 191 - Pokes to check, if target is alive.
+00:47:12.706854 Server with Id: 1 - Time: 193 - Throws Hand Sign and is still alive.
+00:47:13.652954 New Server - Sending Joining-Request.
+00:47:13.653947 Server with ID: 4 - Time: 192 - Joined the ServerCommunication.
+00:47:13.653947 Server with Id: 0 - Time: 193 - Sends update-request with the change: ServerJoined.
+00:47:13.653947 Server with Id: 1 - Time: 194 - Parsed the ServerJoined change.
+00:47:13.654971 Server with Id: 0 - Time: 197 - Sends update-request with the change: ServerJoined.
+00:47:13.654971 Server with Id: 2 - Time: 198 - Parsed the ServerJoined change.
+00:47:13.655506 Server with Id: 0 - Time: 201 - Sends update-request with the change: ServerJoined.
+00:47:13.656023 Server with Id: 3 - Time: 202 - Parsed the ServerJoined change.
+00:47:13.656023 Server with Id: 0 - Time: 205 - Sends update-request with the change: ServerJoined.
+00:47:13.656561 Server with Id: 5 - Time: 206 - Parsed the ServerJoined change.
+00:47:13.657146 Server with Id: 4 - Time: 209 - Initial values set based on JoinResponse.
+00:47:13.657146 Server with Id: 4 - Time: 210 - Sends update-request with the change: CreateNewClient.
+00:47:13.663615 Server with ID: 4 - Is up and listening.
+00:47:14.171770 Server with Id: 0 - Time: 211 - Parsed the CreateNewClient change.
+00:47:18.505707 Server with Id: 5 - Time: 208 - Pokes to check, if target is alive.
+00:47:18.506271 Server with Id: 0 - Time: 214 - Throws Hand Sign and is still alive.
+00:47:18.536498 Server with Id: 2 - Time: 200 - Pokes to check, if target is alive.
+00:47:18.537061 Server with Id: 0 - Time: 216 - Throws Hand Sign and is still alive.
+00:47:18.815500 Server with Id: 3 - Time: 204 - Pokes to check, if target is alive.
+00:47:18.816018 Server with Id: 0 - Time: 218 - Throws Hand Sign and is still alive.
+00:47:19.036423 Server with Id: 0 - Time: 219 - Pokes to check, if target is alive.
+00:47:19.036983 Server with Id: 0 - Time: 219 - Pokes to check, if target is alive.
+00:47:19.036983 Server with Id: 2 - Time: 221 - Throws Hand Sign and is still alive.
+00:47:19.037496 Server with Id: 5 - Time: 221 - Throws Hand Sign and is still alive.
+00:47:19.362731 Server with Id: 0 - Time: 219 - Pokes to check, if target is alive.
+00:47:19.363265 Server with Id: 3 - Time: 221 - Throws Hand Sign and is still alive.
+00:47:22.219807 Server with Id: 1 - Time: 196 - Pokes to check, if target is alive.
+00:47:22.221035 Server with Id: 0 - Time: 220 - Throws Hand Sign and is still alive.
+00:47:22.715893 Server with Id: 0 - Time: 221 - Pokes to check, if target is alive.
+00:47:22.716569 Server with Id: 1 - Time: 223 - Throws Hand Sign and is still alive.
+00:47:23.665441 Server with Id: 4 - Time: 210 - Pokes to check, if target is alive.
+00:47:23.666863 Server with Id: 0 - Time: 222 - Throws Hand Sign and is still alive.
+00:47:24.181040 Server with Id: 0 - Time: 223 - Pokes to check, if target is alive.
+00:47:24.182106 Server with Id: 4 - Time: 225 - Throws Hand Sign and is still alive.
+00:47:28.518430 Server with Id: 5 - Time: 222 - Pokes to check, if target is alive.
+00:47:28.550039 Server with Id: 2 - Time: 222 - Pokes to check, if target is alive.
+00:47:28.816682 Server with Id: 3 - Time: 222 - Pokes to check, if target is alive.
+00:47:30.562168 Error i poke. The Target is Dead.
+00:47:30.593049 Error i poke. The Target is Dead.
+00:47:30.860099 Error i poke. The Target is Dead.
+00:47:32.227513 Server with Id: 1 - Time: 224 - Pokes to check, if target is alive.
+00:47:33.682609 Server with Id: 4 - Time: 226 - Pokes to check, if target is alive.
+00:47:34.272516 Error i poke. The Target is Dead.
+00:47:34.706730 Server with Id: 1 - Time: 228 - Throws Hand Sign and is still alive.
+00:47:36.282506 Server with Id: 1 - Time: 229 - Sends update-request with the change: ImTheNewKing.
+00:47:36.283024 Server with Id: 2 - Time: 230 - Parsed the ImTheNewKing change.
+00:47:36.283544 Server with Id: 1 - Time: 233 - Sends update-request with the change: ImTheNewKing.
+00:47:36.284063 Server with Id: 3 - Time: 234 - Parsed the ImTheNewKing change.
+00:47:36.284585 Server with Id: 1 - Time: 237 - Sends update-request with the change: ImTheNewKing.
+00:47:36.285105 Server with Id: 4 - Time: 238 - Parsed the ImTheNewKing change.
+00:47:36.285105 Server with Id: 1 - Time: 241 - Sends update-request with the change: ImTheNewKing.
+00:47:36.286140 Server with Id: 5 - Time: 242 - Parsed the ImTheNewKing change.
+00:47:36.286665 Server with Id: 1 - Time: 244 - Changes ID to 0.
+00:47:44.713127 Server with Id: 4 - Time: 240 - Pokes to check, if target is alive.
+00:47:44.713788 Server with Id: 0 - Time: 246 - Throws Hand Sign and is still alive.
+00:47:46.289897 Server with Id: 5 - Time: 244 - Pokes to check, if target is alive.
+00:47:46.289897 Server with Id: 3 - Time: 236 - Pokes to check, if target is alive.
+00:47:46.289897 Server with Id: 2 - Time: 232 - Pokes to check, if target is alive.
+00:47:46.289100 Server with Id: 4 - Time: 240 - Pokes to check, if target is alive.
+00:47:46.290446 Server with Id: 0 - Time: 247 - Pokes to check, if target is alive.
+00:47:46.291026 Server with Id: 0 - Time: 247 - Pokes to check, if target is alive.
+00:47:46.291987 Server with Id: 0 - Time: 247 - Pokes to check, if target is alive.
+00:47:46.291987 Server with Id: 4 - Time: 249 - Throws Hand Sign and is still alive.
+00:47:46.292986 Server with Id: 0 - Time: 247 - Pokes to check, if target is alive.
+00:47:46.292986 Server with Id: 0 - Time: 254 - Throws Hand Sign and is still alive.
+00:47:46.292986 Server with Id: 3 - Time: 249 - Throws Hand Sign and is still alive.
+00:47:46.292986 Server with Id: 5 - Time: 249 - Throws Hand Sign and is still alive.
+00:47:46.292986 Server with Id: 0 - Time: 254 - Throws Hand Sign and is still alive.
+00:47:46.292986 Server with Id: 2 - Time: 249 - Throws Hand Sign and is still alive.
+00:47:46.293979 Server with Id: 0 - Time: 254 - Throws Hand Sign and is still alive.
+00:47:46.293979 Server with Id: 0 - Time: 254 - Throws Hand Sign and is still alive.
+00:47:54.720543 Server with Id: 4 - Time: 250 - Pokes to check, if target is alive.
+00:47:54.721093 Server with Id: 0 - Time: 256 - Throws Hand Sign and is still alive.
+00:47:56.303641 Server with Id: 2 - Time: 250 - Pokes to check, if target is alive.
+00:47:56.303641 Server with Id: 4 - Time: 250 - Pokes to check, if target is alive.
+00:47:56.303641 Server with Id: 0 - Time: 257 - Pokes to check, if target is alive.
+00:47:56.303641 Server with Id: 5 - Time: 250 - Pokes to check, if target is alive.
+00:47:56.304327 Server with Id: 3 - Time: 250 - Pokes to check, if target is alive.
+00:47:56.304880 Server with Id: 0 - Time: 257 - Pokes to check, if target is alive.
+00:47:56.305657 Server with Id: 0 - Time: 257 - Pokes to check, if target is alive.
+00:47:56.305945 Server with Id: 5 - Time: 259 - Throws Hand Sign and is still alive.
+00:47:56.306507 Server with Id: 3 - Time: 259 - Throws Hand Sign and is still alive.
+00:47:56.306507 Server with Id: 0 - Time: 257 - Pokes to check, if target is alive.
+00:47:56.308474 Server with Id: 2 - Time: 259 - Throws Hand Sign and is still alive.
+00:47:56.308474 Server with Id: 0 - Time: 264 - Throws Hand Sign and is still alive.
+00:47:56.309296 Server with Id: 0 - Time: 264 - Throws Hand Sign and is still alive.
+00:47:56.309742 Server with Id: 4 - Time: 259 - Throws Hand Sign and is still alive.
+00:47:56.309742 Server with Id: 0 - Time: 264 - Throws Hand Sign and is still alive.
+00:47:56.309742 Server with Id: 0 - Time: 264 - Throws Hand Sign and is still alive.
+00:48:04.728511 Server with Id: 4 - Time: 260 - Pokes to check, if target is alive.
+00:48:04.729189 Server with Id: 0 - Time: 266 - Throws Hand Sign and is still alive.
+00:48:06.310840 Server with Id: 0 - Time: 267 - Pokes to check, if target is alive.
+00:48:06.310840 Server with Id: 0 - Time: 267 - Pokes to check, if target is alive.
+00:48:06.310840 Server with Id: 0 - Time: 267 - Pokes to check, if target is alive.
+00:48:06.311365 Server with Id: 0 - Time: 267 - Pokes to check, if target is alive.
+00:48:06.311365 Server with Id: 2 - Time: 269 - Throws Hand Sign and is still alive.
+00:48:06.311889 Server with Id: 5 - Time: 269 - Throws Hand Sign and is still alive.
+00:48:06.312005 Server with Id: 2 - Time: 270 - Pokes to check, if target is alive.
+00:48:06.312005 Server with Id: 5 - Time: 270 - Pokes to check, if target is alive.
+00:48:06.312675 Server with Id: 0 - Time: 274 - Throws Hand Sign and is still alive.
+00:48:06.313228 Server with Id: 0 - Time: 274 - Throws Hand Sign and is still alive.
+00:48:06.313333 Server with Id: 4 - Time: 260 - Pokes to check, if target is alive.
+00:48:06.313848 Server with Id: 4 - Time: 269 - Throws Hand Sign and is still alive.
+00:48:06.314145 Server with Id: 0 - Time: 276 - Throws Hand Sign and is still alive.
+00:48:08.330396 Error i poke. The Target is Dead.
+00:48:08.330913 Server with Id: 0 - Time: 268 - Sends update-request with the change: ServerLeft.
+00:48:08.331462 Server with Id: 2 - Time: 270 - Parsed the ServerLeft change.
+00:48:08.331519 Server with Id: 0 - Time: 273 - Sends update-request with the change: ServerLeft.
+00:48:08.332063 Server with Id: 4 - Time: 274 - Parsed the ServerLeft change.
+00:48:08.332574 Server with Id: 0 - Time: 277 - Sends update-request with the change: ServerLeft.
+00:48:08.333234 Server with Id: 5 - Time: 278 - Parsed the ServerLeft change.
+00:48:14.730665 Server with Id: 4 - Time: 276 - Pokes to check, if target is alive.
+00:48:14.731201 Server with Id: 0 - Time: 278 - Throws Hand Sign and is still alive.
+00:48:16.325747 Server with Id: 4 - Time: 276 - Pokes to check, if target is alive.
+00:48:16.325747 Server with Id: 2 - Time: 272 - Pokes to check, if target is alive.
+00:48:16.325747 Server with Id: 0 - Time: 279 - Pokes to check, if target is alive.
+00:48:16.325747 Server with Id: 5 - Time: 280 - Pokes to check, if target is alive.
+00:48:16.325747 Server with Id: 0 - Time: 279 - Pokes to check, if target is alive.
+00:48:16.326514 Server with Id: 0 - Time: 279 - Pokes to check, if target is alive.
+00:48:16.326514 Server with Id: 2 - Time: 281 - Throws Hand Sign and is still alive.
+00:48:16.326514 Server with Id: 0 - Time: 284 - Throws Hand Sign and is still alive.
+00:48:16.326514 Server with Id: 5 - Time: 281 - Throws Hand Sign and is still alive.
+00:48:16.326514 Server with Id: 0 - Time: 284 - Throws Hand Sign and is still alive.
+00:48:16.326514 Server with Id: 4 - Time: 281 - Throws Hand Sign and is still alive.
+00:48:16.327060 Server with Id: 0 - Time: 284 - Throws Hand Sign and is still alive.
+00:48:24.743672 Server with Id: 4 - Time: 282 - Pokes to check, if target is alive.
+00:48:24.744236 Server with Id: 0 - Time: 286 - Throws Hand Sign and is still alive.
+00:48:26.334134 Server with Id: 4 - Time: 282 - Pokes to check, if target is alive.
+00:48:26.334134 Server with Id: 0 - Time: 287 - Pokes to check, if target is alive.
+00:48:26.334970 Server with Id: 2 - Time: 282 - Pokes to check, if target is alive.
+00:48:26.334970 Server with Id: 0 - Time: 287 - Pokes to check, if target is alive.
+00:48:26.335524 Server with Id: 5 - Time: 282 - Pokes to check, if target is alive.
+00:48:26.335660 Server with Id: 4 - Time: 289 - Throws Hand Sign and is still alive.
+00:48:26.336291 Server with Id: 0 - Time: 287 - Pokes to check, if target is alive.
+00:48:26.336924 Server with Id: 2 - Time: 289 - Throws Hand Sign and is still alive.
+00:48:26.336924 Server with Id: 0 - Time: 292 - Throws Hand Sign and is still alive.
+00:48:26.337640 Server with Id: 5 - Time: 289 - Throws Hand Sign and is still alive.
+00:48:26.337640 Server with Id: 0 - Time: 292 - Throws Hand Sign and is still alive.
+00:48:26.338235 Server with Id: 0 - Time: 292 - Throws Hand Sign and is still alive.
+00:48:34.756217 Server with Id: 4 - Time: 290 - Pokes to check, if target is alive.
+00:48:36.350093 Server with Id: 4 - Time: 290 - Pokes to check, if target is alive.
+00:48:36.350093 Server with Id: 5 - Time: 290 - Pokes to check, if target is alive.
+00:48:36.350093 Server with Id: 2 - Time: 290 - Pokes to check, if target is alive.
+00:48:36.800191 Error i poke. The Target is Dead.
+00:48:36.800869 Error i poke. The Target is Dead.
+00:48:38.390908 Error i poke. The Target is Dead.
+00:48:38.392296 Error i poke. The Target is Dead.
+00:48:40.415315 Server with Id: 2 - Time: 291 - Sends update-request with the change: ImTheNewKing.
+00:48:40.418586 Server with Id: 4 - Time: 292 - Parsed the ImTheNewKing change.
+00:48:40.419874 Server with Id: 2 - Time: 295 - Sends update-request with the change: ImTheNewKing.
+00:48:40.423244 Server with Id: 5 - Time: 296 - Parsed the ImTheNewKing change.
+00:48:40.423805 Server with Id: 2 - Time: 298 - Changes ID to 0.
+00:48:50.426309 Server with Id: 0 - Time: 299 - Pokes to check, if target is alive.
+00:48:50.426309 Server with Id: 4 - Time: 294 - Pokes to check, if target is alive.
+00:48:50.426309 Server with Id: 5 - Time: 298 - Pokes to check, if target is alive.
+00:48:50.426921 Server with Id: 0 - Time: 299 - Pokes to check, if target is alive.
+00:48:50.426921 Server with Id: 5 - Time: 301 - Throws Hand Sign and is still alive.
+00:48:50.426921 Server with Id: 0 - Time: 302 - Throws Hand Sign and is still alive.
+00:48:50.426921 Server with Id: 4 - Time: 301 - Throws Hand Sign and is still alive.
+00:48:50.427534 Server with Id: 0 - Time: 302 - Throws Hand Sign and is still alive.
+00:49:00.438678 Server with Id: 4 - Time: 302 - Pokes to check, if target is alive.
+00:49:00.438678 Server with Id: 0 - Time: 303 - Pokes to check, if target is alive.
+00:49:00.438678 Server with Id: 5 - Time: 302 - Pokes to check, if target is alive.
+00:49:00.439223 Server with Id: 0 - Time: 303 - Pokes to check, if target is alive.
+00:49:00.439223 Server with Id: 0 - Time: 306 - Throws Hand Sign and is still alive.
+00:49:00.439223 Server with Id: 4 - Time: 305 - Throws Hand Sign and is still alive.
+00:49:00.439223 Server with Id: 0 - Time: 306 - Throws Hand Sign and is still alive.
+00:49:00.439223 Server with Id: 5 - Time: 305 - Throws Hand Sign and is still alive.
+00:49:10.446755 Server with Id: 4 - Time: 306 - Pokes to check, if target is alive.
+00:49:10.446755 Server with Id: 5 - Time: 306 - Pokes to check, if target is alive.
+00:49:12.480488 Error i poke. The Target is Dead.
+00:49:12.480488 Error i poke. The Target is Dead.
+00:49:14.483584 Server with Id: 4 - Time: 307 - Sends update-request with the change: ImTheNewKing.
+00:49:14.484463 Server with Id: 5 - Time: 308 - Parsed the ImTheNewKing change.
+00:49:14.484463 Server with Id: 4 - Time: 310 - Changes ID to 0.
+00:49:24.484431 Server with Id: 5 - Time: 310 - Pokes to check, if target is alive.
+00:49:24.484431 Server with Id: 0 - Time: 311 - Pokes to check, if target is alive.
+00:49:24.484960 Server with Id: 5 - Time: 313 - Throws Hand Sign and is still alive.
+00:49:24.485480 Server with Id: 0 - Time: 312 - Throws Hand Sign and is still alive.
+00:49:31.311191 New Server - Sending Joining-Request.
+00:49:31.311919 Server with ID: 1 - Time: 314 - Joined the ServerCommunication.
+00:49:31.312438 Server with Id: 1 - Time: 315 - Initial values set based on JoinResponse.
+00:49:31.312956 Server with Id: 1 - Time: 316 - Sends update-request with the change: CreateNewClient.
+00:49:31.320040 Server with ID: 1 - Is up and listening.
+00:49:31.827685 Server with Id: 0 - Time: 317 - Parsed the CreateNewClient change.
+00:49:34.492874 Server with Id: 5 - Time: 314 - Pokes to check, if target is alive.
+00:49:34.492874 Server with Id: 0 - Time: 319 - Pokes to check, if target is alive.
+00:49:34.493429 Server with Id: 5 - Time: 321 - Throws Hand Sign and is still alive.
+00:49:34.493429 Server with Id: 0 - Time: 320 - Throws Hand Sign and is still alive.
+00:49:40.605391 New Server - Sending Joining-Request.
+00:49:40.605909 Server with ID: 2 - Time: 322 - Joined the ServerCommunication.
+00:49:40.605909 Server with Id: 0 - Time: 323 - Sends update-request with the change: ServerJoined.
+00:49:40.606439 Server with Id: 1 - Time: 324 - Parsed the ServerJoined change.
+00:49:40.607494 Server with Id: 2 - Time: 327 - Initial values set based on JoinResponse.
+00:49:40.607494 Server with Id: 2 - Time: 328 - Sends update-request with the change: CreateNewClient.
+00:49:40.613272 Server with ID: 2 - Is up and listening.
+00:49:41.128903 Server with Id: 0 - Time: 329 - Parsed the CreateNewClient change.
+00:49:41.324223 Server with Id: 1 - Time: 326 - Pokes to check, if target is alive.
+00:49:41.324742 Server with Id: 0 - Time: 332 - Throws Hand Sign and is still alive.
+00:49:41.842414 Server with Id: 0 - Time: 333 - Pokes to check, if target is alive.
+00:49:41.843264 Server with Id: 1 - Time: 335 - Throws Hand Sign and is still alive.
+00:49:44.507560 Server with Id: 5 - Time: 322 - Pokes to check, if target is alive.
+00:49:44.507560 Server with Id: 0 - Time: 333 - Pokes to check, if target is alive.
+00:49:44.508089 Server with Id: 0 - Time: 334 - Throws Hand Sign and is still alive.
+00:49:44.508089 Server with Id: 5 - Time: 335 - Throws Hand Sign and is still alive.
+00:49:50.622503 Server with Id: 2 - Time: 328 - Pokes to check, if target is alive.
+00:49:51.337731 Server with Id: 1 - Time: 336 - Pokes to check, if target is alive.
+00:49:52.663734 Error i poke. The Target is Dead.
+00:49:53.379371 Error i poke. The Target is Dead.
+00:49:54.515119 Server with Id: 5 - Time: 336 - Pokes to check, if target is alive.
+00:49:54.518710 Server with Id: 1 - Time: 338 - Throws Hand Sign and is still alive.
+00:49:55.390389 Server with Id: 1 - Time: 339 - Sends update-request with the change: ImTheNewKing.
+00:49:55.391457 Server with Id: 2 - Time: 340 - Parsed the ImTheNewKing change.
+00:49:55.391976 Server with Id: 1 - Time: 343 - Sends update-request with the change: ImTheNewKing.
+00:49:55.392500 Server with Id: 5 - Time: 344 - Parsed the ImTheNewKing change.
+00:49:55.392500 Server with Id: 1 - Time: 346 - Changes ID to 0.
+00:50:04.524352 Server with Id: 5 - Time: 346 - Pokes to check, if target is alive.
+00:50:04.525002 Server with Id: 0 - Time: 348 - Throws Hand Sign and is still alive.
+00:50:05.400413 Server with Id: 2 - Time: 342 - Pokes to check, if target is alive.
+00:50:05.400413 Server with Id: 5 - Time: 346 - Pokes to check, if target is alive.
+00:50:05.400413 Server with Id: 0 - Time: 349 - Pokes to check, if target is alive.
+00:50:05.400920 Server with Id: 0 - Time: 349 - Pokes to check, if target is alive.
+00:50:05.400932 Server with Id: 0 - Time: 352 - Throws Hand Sign and is still alive.
+00:50:05.400932 Server with Id: 5 - Time: 351 - Throws Hand Sign and is still alive.
+00:50:05.400932 Server with Id: 2 - Time: 351 - Throws Hand Sign and is still alive.
+00:50:05.400932 Server with Id: 0 - Time: 352 - Throws Hand Sign and is still alive.
+00:50:13.919500 New Server - Sending Joining-Request.
+00:50:13.920073 Server with ID: 1 - Time: 354 - Joined the ServerCommunication.
+00:50:13.920586 Server with Id: 0 - Time: 355 - Sends update-request with the change: ServerJoined.
+00:50:13.921428 Server with Id: 2 - Time: 356 - Parsed the ServerJoined change.
+00:50:13.922506 Server with Id: 1 - Time: 359 - Initial values set based on JoinResponse.
+00:50:13.922506 Server with Id: 1 - Time: 360 - Sends update-request with the change: CreateNewClient.
+00:50:13.923550 Server with Id: 0 - Time: 361 - Parsed the CreateNewClient change.
+00:50:13.927170 Failed to listen: listen tcp 127.0.0.1:8081: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+00:50:14.533069 Server with Id: 5 - Time: 352 - Pokes to check, if target is alive.
+00:50:14.533675 Server with Id: 0 - Time: 364 - Throws Hand Sign and is still alive.
+00:50:15.410924 Server with Id: 2 - Time: 358 - Pokes to check, if target is alive.
+00:50:15.410924 Server with Id: 0 - Time: 365 - Pokes to check, if target is alive.
+00:50:15.410924 Server with Id: 5 - Time: 352 - Pokes to check, if target is alive.
+00:50:15.410924 Server with Id: 0 - Time: 365 - Pokes to check, if target is alive.
+00:50:15.410924 Server with Id: 2 - Time: 367 - Throws Hand Sign and is still alive.
+00:50:15.411930 Server with Id: 0 - Time: 368 - Throws Hand Sign and is still alive.
+00:50:15.411930 Server with Id: 5 - Time: 367 - Throws Hand Sign and is still alive.
+00:50:15.411930 Server with Id: 0 - Time: 368 - Throws Hand Sign and is still alive.
+00:50:23.933819 Server with Id: 0 - Time: 369 - Pokes to check, if target is alive.
+00:50:23.934947 Server with Id: 1 - Time: 371 - Throws Hand Sign and is still alive.
+00:50:24.543591 Server with Id: 5 - Time: 368 - Pokes to check, if target is alive.
+00:50:24.544662 Server with Id: 0 - Time: 370 - Throws Hand Sign and is still alive.
+00:50:25.426406 Server with Id: 2 - Time: 368 - Pokes to check, if target is alive.
+00:50:25.426406 Server with Id: 5 - Time: 368 - Pokes to check, if target is alive.
+00:50:25.427479 Server with Id: 0 - Time: 371 - Pokes to check, if target is alive.
+00:50:25.427753 Server with Id: 0 - Time: 374 - Throws Hand Sign and is still alive.
+00:50:25.428311 Server with Id: 0 - Time: 371 - Pokes to check, if target is alive.
+00:50:25.428311 Server with Id: 5 - Time: 373 - Throws Hand Sign and is still alive.
+00:50:25.428831 Server with Id: 0 - Time: 374 - Throws Hand Sign and is still alive.
+00:50:25.428865 Server with Id: 2 - Time: 373 - Throws Hand Sign and is still alive.
+00:50:33.935937 Server with Id: 0 - Time: 375 - Pokes to check, if target is alive.
+00:50:33.936623 Server with Id: 1 - Time: 377 - Throws Hand Sign and is still alive.
+00:50:34.558490 Server with Id: 5 - Time: 374 - Pokes to check, if target is alive.
+00:50:34.559124 Server with Id: 0 - Time: 376 - Throws Hand Sign and is still alive.
+00:50:35.433612 Server with Id: 0 - Time: 377 - Pokes to check, if target is alive.
+00:50:35.433612 Server with Id: 2 - Time: 374 - Pokes to check, if target is alive.
+00:50:35.433612 Server with Id: 5 - Time: 374 - Pokes to check, if target is alive.
+00:50:35.434144 Server with Id: 0 - Time: 377 - Pokes to check, if target is alive.
+00:50:35.434144 Server with Id: 5 - Time: 379 - Throws Hand Sign and is still alive.
+00:50:35.434144 Server with Id: 0 - Time: 380 - Throws Hand Sign and is still alive.
+00:50:35.434144 Server with Id: 0 - Time: 380 - Throws Hand Sign and is still alive.
+00:50:35.434144 Server with Id: 2 - Time: 379 - Throws Hand Sign and is still alive.
+00:50:43.946543 Server with Id: 0 - Time: 381 - Pokes to check, if target is alive.
+00:50:43.947169 Server with Id: 1 - Time: 383 - Throws Hand Sign and is still alive.
+00:50:44.571103 Server with Id: 5 - Time: 380 - Pokes to check, if target is alive.
+00:50:44.571103 Server with Id: 0 - Time: 382 - Throws Hand Sign and is still alive.
+00:50:45.445737 Server with Id: 2 - Time: 380 - Pokes to check, if target is alive.
+00:50:45.445737 Server with Id: 0 - Time: 383 - Pokes to check, if target is alive.
+00:50:45.445737 Server with Id: 5 - Time: 380 - Pokes to check, if target is alive.
+00:50:45.446416 Server with Id: 0 - Time: 383 - Pokes to check, if target is alive.
+00:50:45.447013 Server with Id: 0 - Time: 386 - Throws Hand Sign and is still alive.
+00:50:45.447013 Server with Id: 5 - Time: 385 - Throws Hand Sign and is still alive.
+00:50:45.447598 Server with Id: 2 - Time: 385 - Throws Hand Sign and is still alive.
+00:50:45.448149 Server with Id: 0 - Time: 386 - Throws Hand Sign and is still alive.
+00:50:53.947585 Server with Id: 0 - Time: 387 - Pokes to check, if target is alive.
+00:50:53.947585 Server with Id: 1 - Time: 389 - Throws Hand Sign and is still alive.
+00:50:54.580761 Server with Id: 5 - Time: 386 - Pokes to check, if target is alive.
+00:50:54.580761 Server with Id: 0 - Time: 388 - Throws Hand Sign and is still alive.
+00:50:55.448208 Server with Id: 0 - Time: 389 - Pokes to check, if target is alive.
+00:50:55.448208 Server with Id: 5 - Time: 386 - Pokes to check, if target is alive.
+00:50:55.448771 Server with Id: 0 - Time: 389 - Pokes to check, if target is alive.
+00:50:55.448771 Server with Id: 5 - Time: 391 - Throws Hand Sign and is still alive.
+00:50:55.448771 Server with Id: 0 - Time: 390 - Throws Hand Sign and is still alive.
+00:50:57.501552 Error i poke. The Target is Dead.
+00:50:57.502562 Server with Id: 0 - Time: 390 - Sends update-request with the change: ServerLeft.
+00:50:57.503823 Server with Id: 1 - Time: 391 - Parsed the ServerLeft change.
+00:50:57.505039 Server with Id: 0 - Time: 394 - Sends update-request with the change: ServerLeft.
+00:50:57.505667 Server with Id: 5 - Time: 395 - Parsed the ServerLeft change.
+00:51:03.962454 Server with Id: 0 - Time: 391 - Pokes to check, if target is alive.
+00:51:03.963487 Server with Id: 1 - Time: 394 - Throws Hand Sign and is still alive.
+00:51:04.586212 Server with Id: 5 - Time: 397 - Pokes to check, if target is alive.
+00:51:04.587488 Server with Id: 0 - Time: 399 - Throws Hand Sign and is still alive.
+00:51:05.457669 Server with Id: 0 - Time: 400 - Pokes to check, if target is alive.
+00:51:05.457669 Server with Id: 5 - Time: 397 - Pokes to check, if target is alive.
+00:51:05.458190 Server with Id: 0 - Time: 401 - Throws Hand Sign and is still alive.
+00:51:05.458190 Server with Id: 5 - Time: 402 - Throws Hand Sign and is still alive.
+00:51:13.975377 Server with Id: 0 - Time: 402 - Pokes to check, if target is alive.
+00:51:13.976523 Server with Id: 1 - Time: 404 - Throws Hand Sign and is still alive.
+00:51:14.596505 Server with Id: 5 - Time: 403 - Pokes to check, if target is alive.
+00:51:14.597671 Server with Id: 0 - Time: 405 - Throws Hand Sign and is still alive.
+00:51:15.468142 Server with Id: 0 - Time: 406 - Pokes to check, if target is alive.
+00:51:15.468142 Server with Id: 5 - Time: 403 - Pokes to check, if target is alive.
+00:51:15.469501 Server with Id: 5 - Time: 408 - Throws Hand Sign and is still alive.
+00:51:15.469501 Server with Id: 0 - Time: 407 - Throws Hand Sign and is still alive.
+00:51:22.490783 New Server - Sending Joining-Request.
+00:51:22.491817 Server with ID: 2 - Time: 409 - Joined the ServerCommunication.
+00:51:22.491817 Server with Id: 0 - Time: 410 - Sends update-request with the change: ServerJoined.
+00:51:22.492362 Server with Id: 1 - Time: 411 - Parsed the ServerJoined change.
+00:51:22.492921 Server with Id: 2 - Time: 414 - Initial values set based on JoinResponse.
+00:51:22.492921 Server with Id: 2 - Time: 415 - Sends update-request with the change: CreateNewClient.
+00:51:22.499183 Server with ID: 2 - Is up and listening.
+00:51:23.004361 Server with Id: 0 - Time: 416 - Parsed the CreateNewClient change.
+00:51:23.981003 Server with Id: 0 - Time: 418 - Pokes to check, if target is alive.
+00:51:23.981003 Server with Id: 1 - Time: 420 - Throws Hand Sign and is still alive.
+00:51:24.603446 Server with Id: 5 - Time: 409 - Pokes to check, if target is alive.
+00:51:24.604075 Server with Id: 0 - Time: 419 - Throws Hand Sign and is still alive.
+00:51:25.473415 Server with Id: 0 - Time: 420 - Pokes to check, if target is alive.
+00:51:25.473415 Server with Id: 5 - Time: 409 - Pokes to check, if target is alive.
+00:51:25.473415 Server with Id: 0 - Time: 421 - Throws Hand Sign and is still alive.
+00:51:25.474233 Server with Id: 5 - Time: 422 - Throws Hand Sign and is still alive.
+00:51:32.496630 Server with Id: 2 - Time: 415 - Pokes to check, if target is alive.
+00:51:34.552926 Error i poke. The Target is Dead.
+00:51:34.615008 Server with Id: 5 - Time: 423 - Pokes to check, if target is alive.
+00:51:35.474507 Server with Id: 5 - Time: 423 - Pokes to check, if target is alive.
+00:51:36.676355 Error i poke. The Target is Dead.
+00:51:36.676917 Error i poke. The Target is Dead.
+00:51:38.688716 Server with Id: 5 - Time: 423 - Changes ID to 0.

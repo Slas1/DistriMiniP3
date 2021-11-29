@@ -74,20 +74,30 @@ func (s *Server) JoinCommunication(ctx context.Context, request *replicatepb.Joi
 	log.SetOutput(&s.ServerLogFile)
 	s.LamportTime.update(int(request.LamportTime))
 
-	s.HighestServerID++
-	s.AllServerIDs[s.HighestServerID] = true
-	s.LamportTime.increment()
-
-	fmt.Printf("Server with ID: %s - Time: %s - Joined the ServerCommunication.\n", strconv.Itoa(int(s.HighestServerID)), strconv.Itoa(s.LamportTime.time))
-	log.Printf("Server with ID: %s - Time: %s - Joined the ServerCommunication.\n", strconv.Itoa(int(s.HighestServerID)), strconv.Itoa(s.LamportTime.time))
-
-	for i := 1; i < int(s.HighestServerID); i++ {
-		if s.AllServerIDs[i] {
-			s.serverInformationUpdate(s.Clients[i], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "ServerJoined", NewValue: []int32{s.HighestServerID}})
+	var lowestFreeID int
+	for i := 1; i < len(s.AllServerIDs); i++ {
+		if !s.AllServerIDs[i] {
+			lowestFreeID = i
+			break
 		}
 	}
 
-	return &replicatepb.JoinResponse{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, HighestServerID: s.HighestServerID, AllServerIDs: s.AllServerIDs}, nil
+	if lowestFreeID > int(s.HighestServerID) {
+		s.HighestServerID = int32(lowestFreeID)
+	}
+	s.AllServerIDs[lowestFreeID] = true
+	s.LamportTime.increment()
+
+	fmt.Printf("Server with ID: %s - Time: %s - Joined the ServerCommunication.\n", strconv.Itoa(lowestFreeID), strconv.Itoa(s.LamportTime.time))
+	log.Printf("Server with ID: %s - Time: %s - Joined the ServerCommunication.\n", strconv.Itoa(lowestFreeID), strconv.Itoa(s.LamportTime.time))
+
+	for i := 1; i < len(s.AllServerIDs); i++ {
+		if s.AllServerIDs[i] && i != lowestFreeID {
+			s.serverInformationUpdate(s.Clients[i], replicatepb.SIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, ChangeName: "ServerJoined", NewValue: []int32{int32(lowestFreeID)}})
+		}
+	}
+
+	return &replicatepb.JoinResponse{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, YourNewID: int32(lowestFreeID), AllServerIDs: s.AllServerIDs}, nil
 }
 
 func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicatepb.SIUpdateRequest) (*replicatepb.SIUpdateResponse, error) {
@@ -99,7 +109,9 @@ func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicate
 		s.ServerID = request.NewValue[0]
 	case "ServerJoined":
 		s.AllServerIDs[request.NewValue[0]] = true
-		s.HighestServerID++
+		if request.NewValue[0] > s.HighestServerID {
+			s.HighestServerID = request.NewValue[0]
+		}
 	case "ServerLeft":
 		s.AllServerIDs[request.NewValue[0]] = false
 		if request.NewValue[0] == s.HighestServerID {
@@ -168,8 +180,13 @@ func (s *Server) joinCommunication(client replicatepb.ServerCommunicationClient,
 	if err != nil {
 	}
 
-	s.ServerID = response.HighestServerID
-	s.HighestServerID = response.HighestServerID
+	s.ServerID = response.YourNewID
+	for i := 1; i < len(s.AllServerIDs); i++ {
+		if s.AllServerIDs[i] {
+			s.HighestServerID = int32(i)
+			
+		}
+	}
 	s.AllServerIDs = response.AllServerIDs
 	s.LamportTime.update(int(response.LamportTime))
 	fmt.Printf("Server with Id: %s - Time: %s - Initial values set based on JoinResponse.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
@@ -243,7 +260,7 @@ func (s *Server) changeHostPort(NewServerID int) {
 	replicatepb.RegisterServerCommunicationServer(grpcServer, s)
 
 	go func ()  {
-		time.Sleep(time.Second * 10)
+		time.Sleep(time.Second * 2)
 		s.AllServerIDs[0] = true
 		
 		for i := 1; i < len(s.AllServerIDs); i++ {
@@ -260,7 +277,6 @@ func (s *Server) changeHostPort(NewServerID int) {
 		log.Printf("Server with Id: %s - Time: %s - Changes ID to 0.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 		s.ServerID = int32(NewServerID)
 	}()
-	time.Sleep(time.Second * 5)
 	grpcServer.Serve(listener)
 }
 
@@ -277,7 +293,7 @@ func (s *Server) createNewServerClient(TargetServerID int) {
 
 	go func() {
 		for {
-			time.Sleep(20 * time.Second)
+			time.Sleep(10 * time.Second)
 			result := pokeAction(*s, TargetServerID)
 			if !result {
 				break
@@ -379,7 +395,7 @@ func main() {
 
 		go func() {
 			for {
-				time.Sleep(30 * time.Second)
+				time.Sleep(10 * time.Second)
 				result := pokeAction(*s, 0)
 				if !result {
 					break

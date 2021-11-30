@@ -185,8 +185,6 @@ func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicate
 	s.LamportTime.update(int(request.LamportTime))
 
 	switch request.ChangeName {
-	case "ChangeYourServerID":
-		s.ServerID = request.NewValue[0]
 	case "ServerJoined":
 		s.AllServerIDs[request.NewValue[0]] = true
 		if request.NewValue[0] > s.HighestServerID {
@@ -199,14 +197,6 @@ func (s *Server) ServerInformationUpdate(ctx context.Context, request *replicate
 				if v {
 					s.HighestServerID = int32(i)
 				}
-			}
-		}
-	case "NewAllServerList":
-		for i := 0; i < len(s.AllServerIDs); i++ {
-			if request.NewValue[i] == 1 {
-				s.AllServerIDs[i] = true
-			} else {
-				s.AllServerIDs[i] = false
 			}
 		}
 	case "CreateNewClient":

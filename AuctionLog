@@ -1,0 +1,232 @@
+11:09:18.702882 Client with id: 0 - Error when calling JoinAuction: rpc error: code = Unimplemented desc = unknown service replicatepb.AuctionCommunication
+11:09:30.066006 Client with id: 0 - Error when calling JoinAuction: rpc error: code = Unimplemented desc = unknown service replicatepb.AuctionCommunication
+11:09:50.724322 Client with id: 0 - Error when calling JoinAuction: rpc error: code = Unimplemented desc = unknown service replicatepb.AuctionCommunication
+11:10:24.724652 Client with id: 0 - Error when calling JoinAuction: rpc error: code = Unimplemented desc = unknown service replicatepb.AuctionCommunication
+11:10:42.785811 Client with id: 0 - Error when calling JoinAuction: rpc error: code = Unimplemented desc = unknown service replicatepb.AuctionCommunication
+11:12:30.912646 Client with id: 0 - Error when calling JoinAuction: rpc error: code = Unimplemented desc = unknown service replicatepb.AuctionCommunication
+11:16:01.845990 AuctionClient with ID: 1 - Time: 18 - Joined the AuctionCommunication.
+11:16:01.846537 Client with id: 0 - Got ID from server
+11:16:01.847058 AuctionClient with ID: 1 - Time: 22 - Asked for auction Result.
+11:16:01.847058 Client with id: 1 - Asked for status - IsActionOngion: false, HighestBid: 0
+11:18:01.504690 AuctionClient with ID: 1 - Time: 32 - Joined the AuctionCommunication.
+11:18:01.504690 Client with id: 0 - Got ID from server
+11:18:01.505691 AuctionClient with ID: 1 - Time: 36 - Asked for auction Result.
+11:18:01.505691 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+11:18:11.234075 AuctionClient with ID: 1 - Time: 43 - Bid is higher than current, and is set to the highest.
+11:18:11.234243 Server with Id: 0 - Time: 44 - Sends update-request with the change in Auction.
+11:18:11.234839 Server with Id: 0 - Time: 48 - Sends update-request with the change in Auction.
+11:18:11.235359 Client with id: 1 - Submitted a bid and got status: Success
+11:19:21.442028 AuctionClient with ID: 2 - Time: 92 - Joined the AuctionCommunication.
+11:19:21.443337 Client with id: 0 - Got ID from server
+11:19:21.444446 AuctionClient with ID: 2 - Time: 96 - Asked for auction Result.
+11:19:21.445131 Client with id: 2 - Asked for status - IsActionOngion: true, HighestBid: 1000000
+11:19:33.700080 AuctionClient with ID: 2 - Time: 103 - Bid was to low, not recorded.
+11:19:33.700080 Client with id: 2 - Submitted a bid and got status: Fail
+11:19:46.185047 AuctionClient with ID: 2 - Time: 113 - Bid was to low, not recorded.
+11:19:46.185047 Client with id: 2 - Submitted a bid and got status: Fail
+11:20:28.260590 Client with id: 0 - Error when calling JoinAuction: rpc error: code = Unimplemented desc = unknown service replicatepb.AuctionCommunication
+11:22:12.529100 AuctionClient with ID: 1 - Time: 18 - Joined the AuctionCommunication.
+11:22:12.529100 Client with id: 0 - Got ID from server
+11:22:12.530099 AuctionClient with ID: 1 - Time: 22 - Asked for auction Result.
+11:22:12.530099 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+11:22:19.095423 AuctionClient with ID: 1 - Time: 29 - Bid is higher than current, and is set to the highest.
+11:22:19.095423 Server with Id: 0 - Time: 30 - Sends update-request with the change in Auction.
+11:22:19.096461 Server with Id: 0 - Time: 34 - Sends update-request with the change in Auction.
+11:22:19.096983 Client with id: 1 - Submitted a bid and got status: Success
+11:22:19.140213 Server with Id: 0 - Time: 38 - Pokes to check, if target is alive.
+11:22:29.835184 AuctionClient with ID: 1 - Time: 45 - Bid was to low, not recorded.
+11:22:29.835695 Client with id: 1 - Submitted a bid and got status: Fail
+11:22:32.064070 AuctionClient with ID: 1 - Time: 49 - Bid is higher than current, and is set to the highest.
+11:22:32.064686 Server with Id: 0 - Time: 50 - Sends update-request with the change in Auction.
+11:22:32.065210 Server with Id: 0 - Time: 54 - Sends update-request with the change in Auction.
+11:22:32.065726 Client with id: 1 - Submitted a bid and got status: Success
+11:22:37.937425 AuctionClient with ID: 2 - Time: 60 - Joined the AuctionCommunication.
+11:22:37.937994 Client with id: 0 - Got ID from server
+11:22:37.938538 AuctionClient with ID: 2 - Time: 64 - Asked for auction Result.
+11:22:37.938538 Client with id: 2 - Asked for status - IsActionOngion: true, HighestBid: 11
+11:22:40.306704 AuctionClient with ID: 2 - Time: 69 - Bid is higher than current, and is set to the highest.
+11:22:40.306704 Server with Id: 0 - Time: 70 - Sends update-request with the change in Auction.
+11:22:40.307243 Server with Id: 0 - Time: 74 - Sends update-request with the change in Auction.
+11:22:40.307763 Client with id: 2 - Submitted a bid and got status: Success
+11:23:01.919358 AuctionClient with ID: 2 - Time: 89 - Bid was to low, not recorded.
+11:23:01.919870 Client with id: 1 - Submitted a bid and got status: Fail
+11:25:00.441116 AuctionClient with ID: 1 - Time: 172 - Joined the AuctionCommunication.
+11:25:00.441638 Client with id: 0 - Got ID from server
+11:25:00.442713 AuctionClient with ID: 1 - Time: 176 - Asked for auction Result.
+11:25:00.442713 Client with id: 1 - Asked for status - IsActionOngion: false, HighestBid: 10
+11:25:53.422275 Client with id: 1 - Error when calling newBid: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :8080: connectex: No connection could be made because the target machine actively refused it."
+11:26:32.811569 AuctionClient with ID: 1 - Time: 18 - Joined the AuctionCommunication.
+11:26:32.812089 Client with id: 0 - Got ID from server
+11:26:32.812668 AuctionClient with ID: 1 - Time: 22 - Asked for auction Result.
+11:26:32.812668 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+11:26:38.502076 AuctionClient with ID: 2 - Time: 26 - Joined the AuctionCommunication.
+11:26:38.502076 Client with id: 0 - Got ID from server
+11:26:38.503076 AuctionClient with ID: 2 - Time: 30 - Asked for auction Result.
+11:26:38.503076 Client with id: 2 - Asked for status - IsActionOngion: true, HighestBid: 0
+11:26:40.410522 AuctionClient with ID: 2 - Time: 35 - Bid is higher than current, and is set to the highest.
+11:26:40.411049 Server with Id: 0 - Time: 36 - Sends update-request with the change in Auction.
+11:26:40.411588 Server with Id: 0 - Time: 40 - Sends update-request with the change in Auction.
+11:26:40.412466 Client with id: 1 - Submitted a bid and got status: Success
+11:26:56.288830 AuctionClient with ID: 2 - Time: 49 - Bid is higher than current, and is set to the highest.
+11:26:56.289408 Server with Id: 0 - Time: 50 - Sends update-request with the change in Auction.
+11:26:56.289922 Server with Id: 0 - Time: 54 - Sends update-request with the change in Auction.
+11:26:56.290447 Client with id: 1 - Submitted a bid and got status: Success
+11:27:25.803479 AuctionClient with ID: 3 - Time: 74 - Joined the AuctionCommunication.
+11:27:25.804336 Client with id: 0 - Got ID from server
+11:27:25.804336 AuctionClient with ID: 3 - Time: 78 - Asked for auction Result.
+11:27:25.804336 Client with id: 3 - Asked for status - IsActionOngion: true, HighestBid: 3
+11:27:27.085898 AuctionClient with ID: 3 - Time: 83 - Bid is higher than current, and is set to the highest.
+11:27:27.085908 Server with Id: 0 - Time: 84 - Sends update-request with the change in Auction.
+11:27:27.086427 Server with Id: 0 - Time: 88 - Sends update-request with the change in Auction.
+11:27:27.086950 Client with id: 3 - Submitted a bid and got status: Success
+11:27:27.122574 Server with Id: 0 - Time: 92 - Pokes to check, if target is alive.
+11:27:40.106537 AuctionClient with ID: 3 - Time: 101 - Bid is higher than current, and is set to the highest.
+11:27:40.107057 Server with Id: 0 - Time: 102 - Sends update-request with the change in Auction.
+11:27:40.107590 Server with Id: 0 - Time: 106 - Sends update-request with the change in Auction.
+11:27:40.108171 Client with id: 3 - Submitted a bid and got status: Success
+11:28:20.798103 AuctionClient with ID: 4 - Time: 132 - Joined the AuctionCommunication.
+11:28:20.798617 Client with id: 0 - Got ID from server
+11:28:20.799194 AuctionClient with ID: 4 - Time: 136 - Asked for auction Result.
+11:28:20.799706 Client with id: 4 - Asked for status - IsActionOngion: true, HighestBid: 11
+11:28:22.333482 AuctionClient with ID: 4 - Time: 141 - Bid is higher than current, and is set to the highest.
+11:28:22.333999 Server with Id: 0 - Time: 142 - Sends update-request with the change in Auction.
+11:28:22.334522 Server with Id: 0 - Time: 146 - Sends update-request with the change in Auction.
+11:28:22.335677 Client with id: 4 - Submitted a bid and got status: Success
+11:28:31.405688 AuctionClient with ID: 4 - Time: 155 - Bid is higher than current, and is set to the highest.
+11:28:31.405688 Server with Id: 0 - Time: 156 - Sends update-request with the change in Auction.
+11:28:31.406208 Server with Id: 0 - Time: 160 - Sends update-request with the change in Auction.
+11:28:31.406721 Client with id: 4 - Submitted a bid and got status: Success
+11:28:57.249792 AuctionClient with ID: 5 - Time: 184 - Joined the AuctionCommunication.
+11:28:57.250791 Client with id: 0 - Got ID from server
+11:28:57.250791 AuctionClient with ID: 5 - Time: 188 - Asked for auction Result.
+11:28:57.250791 Client with id: 5 - Asked for status - IsActionOngion: false, HighestBid: 14
+11:30:47.575967 AuctionClient with ID: 6 - Time: 254 - Joined the AuctionCommunication.
+11:30:47.575967 Client with id: 0 - Got ID from server
+11:30:47.577599 AuctionClient with ID: 6 - Time: 258 - Asked for auction Result.
+11:30:47.577599 Client with id: 6 - Asked for status - IsActionOngion: false, HighestBid: 14
+11:30:48.459721 AuctionClient with ID: 6 - Time: 263 - Bid denied, auction is over.
+11:30:48.460101 Client with id: 6 - Submitted a bid and got status: Exeption
+11:30:55.993644 AuctionClient with ID: 6 - Time: 267 - Bid denied, auction is over.
+11:30:55.993691 Client with id: 6 - Submitted a bid and got status: Exeption
+11:31:00.955918 AuctionClient with ID: 6 - Time: 272 - Asked for auction Result.
+11:31:00.956448 Client with id: 6 - Asked for status - IsActionOngion: false, HighestBid: 14
+11:31:44.295790 AuctionClient with ID: 1 - Time: 298 - Joined the AuctionCommunication.
+11:31:44.296315 Client with id: 0 - Got ID from server
+11:31:44.296853 AuctionClient with ID: 1 - Time: 302 - Asked for auction Result.
+11:31:44.296853 Client with id: 1 - Asked for status - IsActionOngion: false, HighestBid: 1
+11:31:48.086849 AuctionClient with ID: 1 - Time: 307 - Bid denied, auction is over.
+11:31:48.087402 Client with id: 1 - Submitted a bid and got status: Exeption
+11:31:53.647006 AuctionClient with ID: 1 - Time: 312 - Asked for auction Result.
+11:31:53.647567 Client with id: 1 - Asked for status - IsActionOngion: false, HighestBid: 1
+11:36:17.572902 AuctionClient with ID: 1 - Time: 22 - Joined the AuctionCommunication.
+11:36:17.574409 Client with id: 0 - Got ID from server
+11:36:17.575500 AuctionClient with ID: 1 - Time: 26 - Asked for auction Result.
+11:36:17.575500 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+11:36:19.511754 AuctionClient with ID: 1 - Time: 31 - Bid is higher than current, and is set to the highest.
+11:36:19.512281 Server with Id: 0 - Time: 32 - Sends update-request with the change in Auction.
+11:36:19.512798 Server with Id: 0 - Time: 36 - Sends update-request with the change in Auction.
+11:36:19.513315 Client with id: 1 - Submitted a bid and got status: Success
+11:36:34.019153 AuctionClient with ID: 0 - Time: 50 - Asked for auction Result.
+11:36:34.019153 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 10
+11:36:51.216721 AuctionClient with ID: 1 - Time: 62 - Joined the AuctionCommunication.
+11:36:51.217345 Client with id: 0 - Got ID from server
+11:36:51.217864 AuctionClient with ID: 1 - Time: 66 - Asked for auction Result.
+11:36:51.217864 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 10
+11:36:52.329991 Server with Id: 0 - Time: 68 - Pokes to check, if target is alive.
+11:36:53.794879 AuctionClient with ID: 1 - Time: 71 - Bid was to low, not recorded.
+11:36:53.794879 Client with id: 1 - Submitted a bid and got status: Fail
+11:36:56.829038 AuctionClient with ID: 1 - Time: 74 - Asked for auction Result.
+11:36:56.829038 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 10
+11:37:02.345669 Server with Id: 0 - Time: 76 - Pokes to check, if target is alive.
+11:40:50.607152 AuctionClient with ID: 1 - Time: 124 - Joined the AuctionCommunication.
+11:40:50.607921 Client with id: 0 - Got ID from server
+11:40:50.608464 AuctionClient with ID: 1 - Time: 128 - Asked for auction Result.
+11:40:50.609011 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+11:40:51.753243 AuctionClient with ID: 1 - Time: 133 - Bid is higher than current, and is set to the highest.
+11:40:51.753764 Server with Id: 0 - Time: 134 - Sends update-request with the change in Auction.
+11:40:51.754803 Server with Id: 0 - Time: 138 - Sends update-request with the change in Auction.
+11:40:51.755848 Server with Id: 0 - Time: 142 - Sends update-request with the change in Auction.
+11:40:51.756916 Client with id: 1 - Submitted a bid and got status: Success
+11:40:55.120504 AuctionClient with ID: 1 - Time: 148 - Asked for auction Result.
+11:40:55.120504 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 12
+12:00:09.201331 AuctionClient with ID: 1 - Time: 20 - Joined the AuctionCommunication.
+12:00:09.201947 Client with id: 0 - Got ID from server
+12:00:09.202484 AuctionClient with ID: 1 - Time: 24 - Asked for auction Result.
+12:00:09.202484 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+12:00:09.239298 Server with Id: 0 - Time: 26 - Pokes to check, if target is alive.
+12:00:10.587955 Server with Id: 0 - Time: 29 - Sends update-request with the change in Auction.
+12:00:10.588459 AuctionClient with ID: 1 - Time: 33 - Bid is higher than current, and is set to the highest.
+12:00:10.588472 Server with Id: 0 - Time: 34 - Sends update-request with the change in Auction.
+12:00:10.588984 Client with id: 1 - Submitted a bid and got status: Success
+12:01:52.079136 AuctionClient with ID: 1 - Time: 12 - Joined the AuctionCommunication.
+12:01:52.079663 Client with id: 0 - Got ID from server
+12:01:52.081113 AuctionClient with ID: 1 - Time: 16 - Asked for auction Result.
+12:01:52.081113 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+12:01:56.101581 Server with Id: 0 - Time: 21 - Sends update-request with the change in Auction.
+12:01:56.261415 Server with Id: 0 - Time: 22 - Pokes to check, if target is alive.
+12:02:03.599648 Client with id: 1 - Error when calling newBid: rpc error: code = Unavailable desc = error reading from server: read tcp 127.0.0.1:65218->127.0.0.1:8080: wsarecv: An existing connection was forcibly closed by the remote host.
+12:07:09.505394 AuctionClient with ID: 1 - Time: 12 - Joined the AuctionCommunication.
+12:07:09.505918 Client with id: 0 - Got ID from server
+12:07:09.506435 AuctionClient with ID: 1 - Time: 16 - Asked for auction Result.
+12:07:09.506953 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+12:07:13.832742 Server with Id: 0 - Time: 21 - Sends update-request with the change in Auction.
+12:07:13.892215 Server with Id: 0 - Time: 22 - Pokes to check, if target is alive.
+12:07:19.688054 Client with id: 1 - Error when calling newBid: rpc error: code = Unavailable desc = error reading from server: read tcp 127.0.0.1:65315->127.0.0.1:8080: wsarecv: An existing connection was forcibly closed by the remote host.
+12:57:57.525126 AuctionClient with ID: 1 - Time: 2 - Joined the AuctionCommunication.
+12:57:57.525646 Client with id: 0 - Got ID from server
+12:57:57.526811 AuctionClient with ID: 1 - Time: 6 - Asked for auction Result.
+12:57:57.526811 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+12:58:16.377728 AuctionClient with ID: 2 - Time: 34 - Joined the AuctionCommunication.
+12:58:16.378248 Client with id: 0 - Got ID from server
+12:58:16.378766 AuctionClient with ID: 2 - Time: 38 - Asked for auction Result.
+12:58:16.378766 Client with id: 2 - Asked for status - IsActionOngion: true, HighestBid: 0
+12:58:20.402052 Server with Id: 0 - Time: 43 - Sends update-request with the change in Auction.
+12:58:20.402569 Server with Id: 0 - Time: 47 - Sends update-request with the change in Auction.
+12:58:20.403080 AuctionClient with ID: 2 - Time: 51 - Bid is higher than current, and is set to the highest.
+12:58:20.403080 Server with Id: 0 - Time: 52 - Sends update-request with the change in Auction.
+12:58:20.403603 Server with Id: 0 - Time: 56 - Sends update-request with the change in Auction.
+12:58:20.404758 Client with id: 2 - Submitted a bid and got status: Success
+12:58:33.477061 AuctionClient with ID: 2 - Time: 69 - Bid is higher than current, and is set to the highest.
+12:58:33.477061 Server with Id: 0 - Time: 70 - Sends update-request with the change in Auction.
+12:58:33.477580 Server with Id: 0 - Time: 74 - Sends update-request with the change in Auction.
+12:58:33.478118 Client with id: 2 - Submitted a bid and got status: Success
+12:58:33.787615 Server with Id: 0 - Time: 78 - Pokes to check, if target is alive.
+12:58:47.822572 AuctionClient with ID: 2 - Time: 86 - Asked for auction Result.
+12:58:47.822572 Client with id: 2 - Asked for status - IsActionOngion: true, HighestBid: 12
+13:01:30.249420 AuctionClient with ID: 2 - Time: 182 - Asked for auction Result.
+13:01:30.249946 Client with id: 2 - Asked for status - IsActionOngion: true, HighestBid: 12
+13:01:50.275724 Server with Id: 0 - Time: 195 - Sends update-request with the change in Auction.
+13:01:50.276817 Server with Id: 0 - Time: 199 - Sends update-request with the change in Auction.
+13:01:50.277336 AuctionClient with ID: 2 - Time: 203 - Bid denied, auction is over.
+13:01:50.277336 Client with id: 2 - Submitted a bid and got status: Exeption
+13:05:34.645798 AuctionClient with ID: 1 - Time: 28 - Joined the AuctionCommunication.
+13:05:34.646348 Client with id: 0 - Got ID from server
+13:05:34.646873 AuctionClient with ID: 1 - Time: 32 - Asked for auction Result.
+13:05:34.646873 Server with Id: 0 - Time: 33 - Sends update-request with the change in Auction.
+13:05:34.647421 Server with Id: 0 - Time: 37 - Sends update-request with the change in Auction.
+13:05:34.648511 Client with id: 1 - Asked for status - IsActionOngion: false, HighestBid: 0
+13:05:38.557905 Server with Id: 0 - Time: 45 - Sends update-request with the change in Auction.
+13:05:38.558448 Server with Id: 0 - Time: 49 - Sends update-request with the change in Auction.
+13:05:38.558972 AuctionClient with ID: 1 - Time: 53 - Bid denied, auction is over.
+13:05:38.559486 Client with id: 1 - Submitted a bid and got status: Exeption
+13:06:23.079918 AuctionClient with ID: 1 - Time: 80 - Asked for auction Result.
+13:06:23.079938 Client with id: 1 - Asked for status - IsActionOngion: false, HighestBid: 0
+13:06:23.300224 Server with Id: 0 - Time: 82 - Pokes to check, if target is alive.
+13:06:28.618120 Server with Id: 0 - Time: 85 - Sends update-request with the change in Auction.
+13:06:28.619161 Server with Id: 0 - Time: 89 - Sends update-request with the change in Auction.
+13:06:28.619161 AuctionClient with ID: 1 - Time: 93 - Bid denied, auction is over.
+13:06:28.619683 Client with id: 1 - Submitted a bid and got status: Exeption
+13:07:21.761135 AuctionClient with ID: 1 - Time: 28 - Joined the AuctionCommunication.
+13:07:21.761744 Client with id: 0 - Got ID from server
+13:07:21.762264 AuctionClient with ID: 1 - Time: 32 - Asked for auction Result.
+13:07:21.762787 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 0
+13:07:52.818647 Server with Id: 0 - Time: 51 - Sends update-request with the change in Auction.
+13:07:52.819231 Server with Id: 0 - Time: 56 - Sends update-request with the change in Auction.
+13:07:52.819231 AuctionClient with ID: 1 - Time: 60 - Bid is higher than current, and is set to the highest.
+13:07:52.819776 Server with Id: 0 - Time: 61 - Sends update-request with the change in Auction.
+13:07:52.819776 Server with Id: 0 - Time: 65 - Sends update-request with the change in Auction.
+13:07:52.820297 Client with id: 1 - Submitted a bid and got status: Success
+13:07:56.431358 AuctionClient with ID: 1 - Time: 71 - Asked for auction Result.
+13:07:56.431358 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 10
+13:09:07.624908 AuctionClient with ID: 1 - Time: 113 - Asked for auction Result.
+13:09:07.624908 Client with id: 1 - Asked for status - IsActionOngion: true, HighestBid: 10

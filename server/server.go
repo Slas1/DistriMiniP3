@@ -30,10 +30,12 @@ type Server struct {
 	LamportTime     lamportTime
 	Clients         []replicatepb.ServerCommunicationClient
 
+	replicatepb.UnimplementedAuctionCommunicationServer
 	HighestBidderID  int32
-	HigestBid        int32
+	HighestBid       int32
 	isAuctionOnGoing bool
-	HistestClientID  int32
+	HighestClientID  int32
+	ActionTime       int32
 
 	ServerLogFile  os.File
 	AuctionLogFile os.File
@@ -79,23 +81,35 @@ func (s *Server) JoinAuction(ctx context.Context, request *replicatepb.JoinReque
 	log.SetOutput(&s.AuctionLogFile)
 	s.LamportTime.update(int(request.LamportTime))
 
-	s.HistestClientID++
-	fmt.Printf("AuctionClient with ID: %s - Time: %s - Joined the AuctionCommunication.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
-	log.Printf("AuctionClient with ID: %s - Time: %s - Joined the AuctionCommunication.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
+	s.HighestClientID++
+	fmt.Printf("AuctionClient with ID: %s - Time: %s - Joined the AuctionCommunication.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+	log.Printf("AuctionClient with ID: %s - Time: %s - Joined the AuctionCommunication.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
 
 	s.LamportTime.increment()
-	return &replicatepb.JoinResponse{LamportTime: int32(s.LamportTime.time), YourNewID: s.HistestClientID}, nil
+	return &replicatepb.JoinResponse{LamportTime: int32(s.LamportTime.time), YourNewID: s.HighestClientID}, nil
 }
 func (s *Server) NewBid(ctx context.Context, request *replicatepb.BidRequest) (*replicatepb.BidResponse, error) {
 	log.SetOutput(&s.AuctionLogFile)
 	s.LamportTime.update(int(request.LamportTime))
 
+	if s.HighestBid == 0 {
+		s.ActionTime = int32(s.LamportTime.time)+120
+		for i := 1; i < len(s.AllServerIDs); i++ {
+			if s.AllServerIDs[i] {
+				s.auctionInformationUpdate(s.Clients[i], replicatepb.AIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, AuctionStatus: s.isAuctionOnGoing, BidderID: request.ID, BidValue: request.BidValue, AuctionTimer: s.ActionTime})
+			}
+		}
+		
+	}
+
+	s.checkForAuctionTimeOut()
+
 	s.LamportTime.increment()
-	if request.BidValue > s.HigestBid {
-		s.HigestBid = request.BidValue
+	if request.BidValue > s.HighestBid && s.isAuctionOnGoing {
+		s.HighestBid = request.BidValue
 		s.HighestBidderID = request.ID
-		fmt.Printf("AuctionClient with ID: %s - Time: %s - Bid is higher than current, and is set to the highest.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
-		log.Printf("AuctionClient with ID: %s - Time: %s - Bid is higher than current, and is set to the highest.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
+		fmt.Printf("AuctionClient with ID: %s - Time: %s - Bid is higher than current, and is set to the highest.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+		log.Printf("AuctionClient with ID: %s - Time: %s - Bid is higher than current, and is set to the highest.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
 		for i := 1; i < len(s.AllServerIDs); i++ {
 			if s.AllServerIDs[i] {
 				s.auctionInformationUpdate(s.Clients[i], replicatepb.AIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, AuctionStatus: s.isAuctionOnGoing, BidderID: request.ID, BidValue: request.BidValue})
@@ -103,26 +117,33 @@ func (s *Server) NewBid(ctx context.Context, request *replicatepb.BidRequest) (*
 		}
 		return &replicatepb.BidResponse{LamportTime: int32(s.LamportTime.time), YourBidStatus: "Success"}, nil
 
-	} else if request.BidValue < s.HigestBid+1 {
-		fmt.Printf("AuctionClient with ID: %s - Time: %s - Bid was to low, not recorded.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
-		log.Printf("AuctionClient with ID: %s - Time: %s - Bid was to low, not recorded.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
+	} else if request.BidValue < s.HighestBid+1 && s.isAuctionOnGoing {
+		fmt.Printf("AuctionClient with ID: %s - Time: %s - Bid was to low, not recorded.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+		log.Printf("AuctionClient with ID: %s - Time: %s - Bid was to low, not recorded.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
 		return &replicatepb.BidResponse{LamportTime: int32(s.LamportTime.time), YourBidStatus: "Fail"}, nil
+	} else if !s.isAuctionOnGoing {
+		fmt.Printf("AuctionClient with ID: %s - Time: %s - Bid denied, auction is over.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+		log.Printf("AuctionClient with ID: %s - Time: %s - Bid denied, auction is over.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+		return &replicatepb.BidResponse{LamportTime: int32(s.LamportTime.time), YourBidStatus: "Exeption"}, nil
+
 	} else {
-		fmt.Printf("Error when dealing with bid from AuctionClient with ID: %s - Time: %s\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
-		log.Printf("Error when dealing with bid from AuctionClient with ID: %s - Time: %s\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
+		fmt.Printf("Error when dealing with bid from AuctionClient with ID: %s - Time: %s\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+		log.Printf("Error when dealing with bid from AuctionClient with ID: %s - Time: %s\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
 		return &replicatepb.BidResponse{LamportTime: int32(s.LamportTime.time), YourBidStatus: "Exception"}, nil
 	}
 }
 
-func (s *Server) Result(ctx context.Context, request replicatepb.ResultRequest) (*replicatepb.ResultResponse, error) {
+func (s *Server) Result(ctx context.Context, request *replicatepb.ResultRequest) (*replicatepb.ResultResponse, error) {
 	log.SetOutput(&s.AuctionLogFile)
 	s.LamportTime.update(int(request.LamportTime))
 
-	fmt.Printf("AuctionClient with ID: %s - Time: %s - Asked for auction Result.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
-	log.Printf("AuctionClient with ID: %s - Time: %s - Asked for auction Result.\n", strconv.Itoa(int(s.HistestClientID)), strconv.Itoa(s.LamportTime.time))
-		
+	fmt.Printf("AuctionClient with ID: %s - Time: %s - Asked for auction Result.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+	log.Printf("AuctionClient with ID: %s - Time: %s - Asked for auction Result.\n", strconv.Itoa(int(s.HighestClientID)), strconv.Itoa(s.LamportTime.time))
+
+	s.checkForAuctionTimeOut()
+
 	s.LamportTime.increment()
-	return &replicatepb.ResultResponse{LamportTime: int32(s.LamportTime.time), AuctionOngoing: s.isAuctionOnGoing, HighestBid: s.HigestBid}, nil
+	return &replicatepb.ResultResponse{LamportTime: int32(s.LamportTime.time), AuctionOngoing: s.isAuctionOnGoing, HighestBid: s.HighestBid}, nil
 }
 
 //
@@ -208,7 +229,11 @@ func (s *Server) AuctionInformationUpdate(ctx context.Context, request *replicat
 
 	s.isAuctionOnGoing = request.AuctionStatus
 	s.HighestBidderID = request.BidderID
-	s.HigestBid = request.BidValue
+	s.HighestBid = request.BidValue
+
+	if request.AuctionTimer > 0 {
+		s.ActionTime = request.AuctionTimer
+	}
 
 	fmt.Printf("Server with Id: %s - Time: %s - Parsed the AuctionInformation change.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 	log.Printf("Server with Id: %s - Time: %s - Parsed the AuctionInformation change.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
@@ -276,7 +301,6 @@ func (s *Server) auctionInformationUpdate(client replicatepb.ServerCommunication
 	fmt.Printf("Server with Id: %s - Time: %s - Sends update-request with the change in Auction.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 	log.Printf("Server with Id: %s - Time: %s - Sends update-request with the change in Auction.\n", strconv.Itoa(int(s.ServerID)), strconv.Itoa(s.LamportTime.time))
 
-
 	response, err := client.AuctionInformationUpdate(context.Background(), &request)
 	if err != nil {
 	}
@@ -309,6 +333,16 @@ func (s *Server) isAlive(client replicatepb.ServerCommunicationClient, request r
 //
 //
 //Helping functions
+func (s *Server) checkForAuctionTimeOut(){
+	if s.LamportTime.time > int(s.ActionTime) && s.ActionTime > 0  {
+		s.isAuctionOnGoing = false
+		for i := 1; i < len(s.AllServerIDs); i++ {
+			if s.AllServerIDs[i] {
+				s.auctionInformationUpdate(s.Clients[i], replicatepb.AIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, AuctionStatus: s.isAuctionOnGoing, BidderID: s.HighestBidderID, BidValue: s.HighestBid})
+			}
+		}
+	}
+}
 func (s *Server) changeServerID(NewServerID int32) {
 	s.AllServerIDs[s.ServerID] = false
 
@@ -326,6 +360,7 @@ func (s *Server) changeHostPort(NewServerID int) {
 	grpcS := grpc.NewServer(opts...)
 	grpcServer = grpcS
 	replicatepb.RegisterServerCommunicationServer(grpcServer, s)
+	replicatepb.RegisterAuctionCommunicationServer(grpcServer, s)
 
 	go func() {
 		time.Sleep(time.Second * 2)
@@ -359,6 +394,8 @@ func (s *Server) createNewServerClient(TargetServerID int) {
 	client := replicatepb.NewServerCommunicationClient(conn)
 	s.Clients[TargetServerID] = client
 
+	s.auctionInformationUpdate(s.Clients[TargetServerID], replicatepb.AIUpdateRequest{LamportTime: int32(s.LamportTime.time), ID: s.ServerID, AuctionStatus: s.isAuctionOnGoing, BidderID: s.HighestBidderID, BidValue: s.HighestBid, AuctionTimer: s.ActionTime})
+
 	go func() {
 		for {
 			time.Sleep(10 * time.Second)
@@ -390,11 +427,12 @@ func (s *Server) TheKingIsDead() {
 //Initialisation
 func newServer() *Server {
 	s := &Server{
-		LamportTime:     lamportTime{0, new(sync.Mutex)},
-		ServerID:        -1,
-		HighestServerID: -1,
-		AllServerIDs:    make([]bool, 20),
-		Clients:         make([]replicatepb.ServerCommunicationClient, 20),
+		LamportTime:      lamportTime{0, new(sync.Mutex)},
+		ServerID:         -1,
+		HighestServerID:  -1,
+		AllServerIDs:     make([]bool, 20),
+		Clients:          make([]replicatepb.ServerCommunicationClient, 20),
+		isAuctionOnGoing: true,
 	}
 	return s
 }
@@ -460,7 +498,6 @@ func main() {
 		go func() {
 			parallel <- newClient(*s)
 		}()
-
 		go func() {
 			for {
 				time.Sleep(10 * time.Second)
@@ -484,6 +521,7 @@ func main() {
 	grpcS := grpc.NewServer(opts...)
 	grpcServer = grpcS
 	replicatepb.RegisterServerCommunicationServer(grpcServer, s)
+	replicatepb.RegisterAuctionCommunicationServer(grpcServer, s)
 	fmt.Printf("Server with ID: %s - Is up and listening.\n", strconv.Itoa(int(s.ServerID)))
 	log.Printf("Server with ID: %s - Is up and listening.\n", strconv.Itoa(int(s.ServerID)))
 	grpcServer.Serve(listener)

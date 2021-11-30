@@ -47,6 +47,7 @@ message AIUpdateRequest {
     bool AuctionStatus = 3;
     int32 BidderID = 4;
     int32 BidValue = 5;
+    int32 AuctionTimer = 6;
 }
 
 message AIUpdateResponse {

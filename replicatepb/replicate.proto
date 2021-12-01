@@ -11,6 +11,12 @@ service ServerCommunication {
     rpc IsAlive(Poke) returns (HandSign){}
 }
 
+service AuctionCommunication {
+    rpc JoinAuction(JoinRequest) returns (JoinResponse){}
+    rpc NewBid(BidRequest) returns (BidResponse){}
+    rpc Result(ResultRequest) returns (ResultResponse){}
+}
+
 message JoinRequest {
     int32 LamportTime = 1;
     int32 ID = 2;
@@ -19,7 +25,7 @@ message JoinRequest {
 message JoinResponse {
     int32 LamportTime = 1;
     int32 ID = 2;
-    int32 HighestServerID = 3;
+    int32 YourNewID = 3;
     repeated bool AllServerIDs = 4;
 }
 
@@ -38,6 +44,10 @@ message SIUpdateResponse {
 message AIUpdateRequest {
     int32 LamportTime = 1;
     int32 ID = 2;
+    bool AuctionStatus = 3;
+    int32 BidderID = 4;
+    int32 BidValue = 5;
+    int32 AuctionTimer = 6;
 }
 
 message AIUpdateResponse {
@@ -53,4 +63,26 @@ message Poke {
 message HandSign {
     int32 LamportTime = 1;
     int32 ID = 2;
+}
+
+message BidRequest {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+    int32 BidValue = 3;
+}
+
+message BidResponse {
+    int32 LamportTime = 1; 
+    string YourBidStatus = 2;
+}
+
+message ResultRequest {
+    int32 LamportTime = 1;
+    int32 ID = 2;
+}
+
+message ResultResponse {
+    int32 LamportTime = 1;
+    bool AuctionOngoing = 2;
+    int32 HighestBid = 3;
 }

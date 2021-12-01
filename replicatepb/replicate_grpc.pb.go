@@ -207,3 +207,161 @@ var ServerCommunication_ServiceDesc = grpc.ServiceDesc{
 	Streams:  []grpc.StreamDesc{},
 	Metadata: "replicatepb/replicate.proto",
 }
+
+// AuctionCommunicationClient is the client API for AuctionCommunication service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
+type AuctionCommunicationClient interface {
+	JoinAuction(ctx context.Context, in *JoinRequest, opts ...grpc.CallOption) (*JoinResponse, error)
+	NewBid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*BidResponse, error)
+	Result(ctx context.Context, in *ResultRequest, opts ...grpc.CallOption) (*ResultResponse, error)
+}
+
+type auctionCommunicationClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewAuctionCommunicationClient(cc grpc.ClientConnInterface) AuctionCommunicationClient {
+	return &auctionCommunicationClient{cc}
+}
+
+func (c *auctionCommunicationClient) JoinAuction(ctx context.Context, in *JoinRequest, opts ...grpc.CallOption) (*JoinResponse, error) {
+	out := new(JoinResponse)
+	err := c.cc.Invoke(ctx, "/replicatepb.AuctionCommunication/JoinAuction", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *auctionCommunicationClient) NewBid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*BidResponse, error) {
+	out := new(BidResponse)
+	err := c.cc.Invoke(ctx, "/replicatepb.AuctionCommunication/NewBid", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *auctionCommunicationClient) Result(ctx context.Context, in *ResultRequest, opts ...grpc.CallOption) (*ResultResponse, error) {
+	out := new(ResultResponse)
+	err := c.cc.Invoke(ctx, "/replicatepb.AuctionCommunication/Result", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// AuctionCommunicationServer is the server API for AuctionCommunication service.
+// All implementations must embed UnimplementedAuctionCommunicationServer
+// for forward compatibility
+type AuctionCommunicationServer interface {
+	JoinAuction(context.Context, *JoinRequest) (*JoinResponse, error)
+	NewBid(context.Context, *BidRequest) (*BidResponse, error)
+	Result(context.Context, *ResultRequest) (*ResultResponse, error)
+	mustEmbedUnimplementedAuctionCommunicationServer()
+}
+
+// UnimplementedAuctionCommunicationServer must be embedded to have forward compatible implementations.
+type UnimplementedAuctionCommunicationServer struct {
+}
+
+func (UnimplementedAuctionCommunicationServer) JoinAuction(context.Context, *JoinRequest) (*JoinResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method JoinAuction not implemented")
+}
+func (UnimplementedAuctionCommunicationServer) NewBid(context.Context, *BidRequest) (*BidResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method NewBid not implemented")
+}
+func (UnimplementedAuctionCommunicationServer) Result(context.Context, *ResultRequest) (*ResultResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Result not implemented")
+}
+func (UnimplementedAuctionCommunicationServer) mustEmbedUnimplementedAuctionCommunicationServer() {}
+
+// UnsafeAuctionCommunicationServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to AuctionCommunicationServer will
+// result in compilation errors.
+type UnsafeAuctionCommunicationServer interface {
+	mustEmbedUnimplementedAuctionCommunicationServer()
+}
+
+func RegisterAuctionCommunicationServer(s grpc.ServiceRegistrar, srv AuctionCommunicationServer) {
+	s.RegisterService(&AuctionCommunication_ServiceDesc, srv)
+}
+
+func _AuctionCommunication_JoinAuction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(JoinRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuctionCommunicationServer).JoinAuction(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/replicatepb.AuctionCommunication/JoinAuction",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuctionCommunicationServer).JoinAuction(ctx, req.(*JoinRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuctionCommunication_NewBid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BidRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuctionCommunicationServer).NewBid(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/replicatepb.AuctionCommunication/NewBid",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuctionCommunicationServer).NewBid(ctx, req.(*BidRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuctionCommunication_Result_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ResultRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuctionCommunicationServer).Result(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/replicatepb.AuctionCommunication/Result",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuctionCommunicationServer).Result(ctx, req.(*ResultRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// AuctionCommunication_ServiceDesc is the grpc.ServiceDesc for AuctionCommunication service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var AuctionCommunication_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "replicatepb.AuctionCommunication",
+	HandlerType: (*AuctionCommunicationServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "JoinAuction",
+			Handler:    _AuctionCommunication_JoinAuction_Handler,
+		},
+		{
+			MethodName: "NewBid",
+			Handler:    _AuctionCommunication_NewBid_Handler,
+		},
+		{
+			MethodName: "Result",
+			Handler:    _AuctionCommunication_Result_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "replicatepb/replicate.proto",
+}

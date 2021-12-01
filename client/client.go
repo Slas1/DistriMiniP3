@@ -185,14 +185,8 @@ func main() {
 	}
 
 	clientStruct.Client = client
-
-	fmt.Println("KOmmer jeg her?5")
-
 	clientStruct.joinAuction(replicatepb.JoinRequest{LamportTime: int32(clientStruct.LamportTime.time)})
-	fmt.Println("KOmmer jeg her?6")
 	clientStruct.result(replicatepb.ResultRequest{LamportTime: int32(clientStruct.LamportTime.time), ID: clientStruct.ClientId})
-
-	fmt.Println("Kommer jeg her?7")
 
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {

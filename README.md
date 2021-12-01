@@ -1,4 +1,19 @@
 # Mini_Project3
+
+## How to use (Target: TA)
+
+Limitations: Maximum 20 servers.
+
+1. Start server by typing: "go run server.go" in a terminal while in the server folder. You can create up to 20 servers, remove and add as many times as you want. However please wait for the change to be processed before adding or removeing new servers. (detect time can be improved by lovering the poke action time out, but that will spam the log/terminal with alot of calls.)
+
+1. Start client by typing: "go run client.go" in a terminal while in the client folder. You can now summit a bid by writing a number in the terminal. You can also see the result by typing "Result" in the terminal. 
+
+## Description of Submited LogFile (before TA runs)
+The program includes 2 logs. A log for auctionclient and leading server communication called AuctionLog and a log for internal servercommunication called ServerComsLog.
+In the logs, we created 3 servers, then killed a backup (ID 2), a new server join and got the lowest avaible ID. (ID 2)
+We created one auction client, and bidded. We created another client and over bid. And so on...
+Atlast we slowly killed server leader and then next server leader until non were left. 
+
 ## == A Distributed Auction System ==
 You must implement a **distributed auction system** using replication: a distributed component which handles auctions, and provides operations for bidding and querying the state of an auction. The component must faithfully implement the semantics of the system described below, and must at least be resilient to one (1) crash failure.
 
